@@ -1,0 +1,3949 @@
+plants:
+  - file: true_positives/ai_ml/openai.env
+    line: 2
+    detector_id: openai_api_key
+    expected_fire: true
+    matched_text_starts: sk-kCOsR
+    notes: OpenAI legacy key with T3BlbkFJ marker
+  - file: true_positives/ai_ml/openai.env
+    line: 3
+    detector_id: openai_api_key_project
+    expected_fire: true
+    matched_text_starts: sk-proj-zygH
+    notes: OpenAI sk-proj- key
+  - file: true_positives/ai_ml/openai.env
+    line: 4
+    detector_id: openai_admin_key
+    expected_fire: true
+    matched_text_starts: sk-admin-8Yo
+    notes: OpenAI sk-admin key
+  - file: true_positives/ai_ml/openai.env
+    line: 5
+    detector_id: openai_user_key
+    expected_fire: true
+    matched_text_starts: sk-None-s_pZ
+    notes: OpenAI sk-None user key
+  - file: true_positives/ai_ml/openai.env
+    line: 6
+    detector_id: openai_organization_id
+    expected_fire: true
+    matched_text_starts: org-2GsC
+    notes: "OpenAI org-* identifier"
+  - file: true_positives/ai_ml/openai.env
+    line: 7
+    detector_id: openai_assistant_key
+    expected_fire: true
+    matched_text_starts: sk-asst-OS
+    notes: OpenAI sk-asst- assistant key
+  - file: true_positives/ai_ml/openai.env
+    line: 8
+    detector_id: openai_service_account_key
+    expected_fire: true
+    matched_text_starts: sk-svcacct-7GF
+    notes: OpenAI sk-svcacct service account key
+  - file: true_positives/ai_ml/openai_client.py
+    line: 6
+    detector_id: openai_api_key
+    expected_fire: true
+    matched_text_starts: sk-uVieu
+    notes: Legacy OpenAI key hard-coded in Python module
+  - file: true_positives/ai_ml/openai_client.py
+    line: 13
+    detector_id: openai_api_key_project
+    expected_fire: true
+    matched_text_starts: sk-proj-tSgJ
+    notes: sk-proj- key in Python module
+  - file: true_positives/ai_ml/openai_config.yaml
+    line: 6
+    detector_id: openai_api_key
+    expected_fire: true
+    matched_text_starts: sk-9RQ86
+    notes: OpenAI legacy key in YAML config
+  - file: true_positives/ai_ml/openai_config.yaml
+    line: 7
+    detector_id: openai_api_key_project
+    expected_fire: true
+    matched_text_starts: sk-proj-Go_c
+    notes: sk-proj- key in YAML config
+  - file: true_positives/ai_ml/anthropic.env
+    line: 1
+    detector_id: anthropic_api_key
+    expected_fire: true
+    matched_text_starts: sk-ant-api03-
+    notes: Anthropic API key sk-ant-api03 prefix
+  - file: true_positives/ai_ml/anthropic.env
+    line: 2
+    detector_id: anthropic_api_key
+    expected_fire: true
+    matched_text_starts: sk-ant-admin01-
+    notes: Anthropic admin key
+  - file: true_positives/ai_ml/anthropic_client.ts
+    line: 4
+    detector_id: anthropic_api_key
+    expected_fire: true
+    matched_text_starts: sk-ant-api04-
+    notes: Anthropic key in TS file
+  - file: true_positives/ai_ml/anthropic_admin.json
+    line: 4
+    detector_id: anthropic_api_key
+    expected_fire: true
+    matched_text_starts: sk-ant-api02-
+    notes: Anthropic key in JSON config
+  - file: true_positives/ai_ml/stability_ai.env
+    line: 1
+    detector_id: stability_ai_key
+    expected_fire: true
+    matched_text_starts: sk-kls
+    notes: Stability AI sk- key
+  - file: true_positives/ai_ml/stability_ai.env
+    line: 2
+    detector_id: stability_ai_key
+    expected_fire: true
+    matched_text_starts: sk-Hka
+    notes: Stability AI sk- key longer
+  - file: true_positives/ai_ml/stability.toml
+    line: 2
+    detector_id: stability_ai_key
+    expected_fire: true
+    matched_text_starts: sk-may
+    notes: Stability AI sk- in TOML
+  - file: true_positives/ai_ml/mistral.env
+    line: 2
+    detector_id: mistral_api_key
+    expected_fire: true
+    matched_text_starts: pKBAE1
+    notes: Mistral 32-char key with mistral context
+  - file: true_positives/ai_ml/mistral_client.py
+    line: 3
+    detector_id: mistral_api_key
+    expected_fire: true
+    matched_text_starts: zzvjkf
+    notes: Mistral key in Python with mistral keyword
+  - file: true_positives/ai_ml/mistral_config.yaml
+    line: 2
+    detector_id: mistral_api_key
+    expected_fire: true
+    matched_text_starts: axjbHf
+    notes: Mistral key in YAML with mistral context
+  - file: true_positives/ai_ml/cohere.env
+    line: 1
+    detector_id: cohere_api_token
+    expected_fire: true
+    matched_text_starts: QhbYja
+    notes: Cohere 40-char token with context
+  - file: true_positives/ai_ml/cohere.env
+    line: 2
+    detector_id: cohere_api_token
+    expected_fire: true
+    matched_text_starts: v1k4JJ
+    notes: Cohere via CO_API_KEY context
+  - file: true_positives/ai_ml/cohere_client.py
+    line: 3
+    detector_id: cohere_api_token
+    expected_fire: true
+    matched_text_starts: Xgs5cI
+    notes: Cohere token with cohere context
+  - file: true_positives/ai_ml/assemblyai.env
+    line: 1
+    detector_id: assemblyai_api_key
+    expected_fire: true
+    matched_text_starts: 5hlfbr
+    notes: AssemblyAI 32-char lowercase key
+  - file: true_positives/ai_ml/assemblyai_client.js
+    line: 2
+    detector_id: assemblyai_api_key
+    expected_fire: true
+    matched_text_starts: q2o2ae
+    notes: AssemblyAI key in JS
+  - file: true_positives/ai_ml/assemblyai.yaml
+    line: 2
+    detector_id: assemblyai_api_key
+    expected_fire: true
+    matched_text_starts: 9f8jno
+    notes: AssemblyAI key in YAML
+  - file: true_positives/ai_ml/deepgram.env
+    line: 1
+    detector_id: deepgram_api_key
+    expected_fire: true
+    matched_text_starts: erm7nw
+    notes: Deepgram 40-char key
+  - file: true_positives/ai_ml/deepgram_client.py
+    line: 2
+    detector_id: deepgram_api_key
+    expected_fire: true
+    matched_text_starts: yq1xg0
+    notes: Deepgram key in Python
+  - file: true_positives/ai_ml/deepgram_config.json
+    line: 2
+    detector_id: deepgram_api_key
+    expected_fire: true
+    matched_text_starts: 5ss4nx
+    notes: Deepgram key in JSON
+  - file: true_positives/ai_ml/elevenlabs.env
+    line: 1
+    detector_id: elevenlabs_api_key
+    expected_fire: true
+    matched_text_starts: sk_
+    notes: ElevenLabs sk_+48hex
+  - file: true_positives/ai_ml/elevenlabs_client.ts
+    line: 1
+    detector_id: elevenlabs_api_key
+    expected_fire: true
+    matched_text_starts: sk_
+    notes: ElevenLabs key in TS
+  - file: true_positives/ai_ml/elevenlabs.yaml
+    line: 2
+    detector_id: elevenlabs_api_key
+    expected_fire: true
+    matched_text_starts: sk_
+    notes: ElevenLabs key in YAML
+  - file: true_positives/ai_ml/replicate.env
+    line: 1
+    detector_id: replicate_api_token
+    expected_fire: true
+    matched_text_starts: r8_
+    notes: Replicate r8_ token
+  - file: true_positives/ai_ml/replicate_client.py
+    line: 2
+    detector_id: replicate_api_token
+    expected_fire: true
+    matched_text_starts: r8_
+    notes: Replicate token in Python
+  - file: true_positives/ai_ml/replicate.toml
+    line: 2
+    detector_id: replicate_api_token
+    expected_fire: true
+    matched_text_starts: r8_
+    notes: Replicate token in TOML
+  - file: true_positives/ai_ml/firecrawl.env
+    line: 1
+    detector_id: firecrawl_api_key
+    expected_fire: true
+    matched_text_starts: fc-
+    notes: Firecrawl fc- key
+  - file: true_positives/ai_ml/firecrawl_client.ts
+    line: 1
+    detector_id: firecrawl_api_key
+    expected_fire: true
+    matched_text_starts: fc-
+    notes: Firecrawl key in TS
+  - file: true_positives/ai_ml/firecrawl.yaml
+    line: 2
+    detector_id: firecrawl_api_key
+    expected_fire: true
+    matched_text_starts: fc-
+    notes: Firecrawl key in YAML
+  - file: true_positives/ai_ml/huggingface.env
+    line: 1
+    detector_id: huggingface_token
+    expected_fire: true
+    matched_text_starts: hf_
+    notes: HuggingFace token
+  - file: true_positives/ai_ml/huggingface.env
+    line: 2
+    detector_id: huggingface_token
+    expected_fire: true
+    matched_text_starts: hf_
+    notes: HuggingFace HUGGINGFACE_API_KEY
+  - file: true_positives/ai_ml/huggingface_client.py
+    line: 2
+    detector_id: huggingface_token
+    expected_fire: true
+    matched_text_starts: hf_
+    notes: HF token in Python
+  - file: true_positives/ai_ml/pinecone.env
+    line: 1
+    detector_id: pinecone_api_key
+    expected_fire: true
+    matched_text_starts: pckey_
+    notes: Pinecone pckey_ token
+  - file: true_positives/ai_ml/pinecone_client.py
+    line: 2
+    detector_id: pinecone_api_key
+    expected_fire: true
+    matched_text_starts: pckey_
+    notes: Pinecone key in Python
+  - file: true_positives/ai_ml/pinecone.yaml
+    line: 2
+    detector_id: pinecone_api_key
+    expected_fire: true
+    matched_text_starts: pckey_
+    notes: Pinecone key in YAML
+  - file: true_positives/ai_ml/openrouter.env
+    line: 1
+    detector_id: openrouter_api_key
+    expected_fire: true
+    matched_text_starts: sk-or-v1-
+    notes: OpenRouter sk-or-v1 key
+  - file: true_positives/ai_ml/openrouter_client.js
+    line: 1
+    detector_id: openrouter_api_key
+    expected_fire: true
+    matched_text_starts: sk-or-v1-
+    notes: OpenRouter in JS
+  - file: true_positives/ai_ml/openrouter.toml
+    line: 2
+    detector_id: openrouter_api_key
+    expected_fire: true
+    matched_text_starts: sk-or-v1-
+    notes: OpenRouter in TOML
+  - file: true_positives/ai_ml/fireworks.env
+    line: 1
+    detector_id: fireworks_ai_key
+    expected_fire: true
+    matched_text_starts: fw_
+    notes: Fireworks AI fw_ key
+  - file: true_positives/ai_ml/fireworks_client.py
+    line: 1
+    detector_id: fireworks_ai_key
+    expected_fire: true
+    matched_text_starts: fw_
+    notes: Fireworks key in Python
+  - file: true_positives/ai_ml/fireworks.yaml
+    line: 2
+    detector_id: fireworks_ai_key
+    expected_fire: true
+    matched_text_starts: fw_
+    notes: Fireworks key in YAML
+  - file: true_positives/ai_ml/tavily.env
+    line: 1
+    detector_id: tavily_api_key
+    expected_fire: true
+    matched_text_starts: tvly-
+    notes: Tavily key
+  - file: true_positives/ai_ml/tavily_client.py
+    line: 1
+    detector_id: tavily_api_key
+    expected_fire: true
+    matched_text_starts: tvly-
+    notes: Tavily in Python
+  - file: true_positives/ai_ml/tavily.toml
+    line: 2
+    detector_id: tavily_api_key
+    expected_fire: true
+    matched_text_starts: tvly-
+    notes: Tavily in TOML
+  - file: true_positives/ai_ml/jina.env
+    line: 1
+    detector_id: jina_api_key
+    expected_fire: true
+    matched_text_starts: jina_
+    notes: Jina AI key
+  - file: true_positives/ai_ml/jina_client.py
+    line: 1
+    detector_id: jina_api_key
+    expected_fire: true
+    matched_text_starts: jina_
+    notes: Jina in Python
+  - file: true_positives/ai_ml/jina.yaml
+    line: 2
+    detector_id: jina_api_key
+    expected_fire: true
+    matched_text_starts: jina_
+    notes: Jina in YAML
+  - file: true_positives/ai_ml/deepseek.env
+    line: 1
+    detector_id: deepseek_api_key
+    expected_fire: true
+    matched_text_starts: sk-
+    notes: DeepSeek sk- + 32 with deepseek context
+  - file: true_positives/ai_ml/deepseek_client.py
+    line: 2
+    detector_id: deepseek_api_key
+    expected_fire: true
+    matched_text_starts: sk-
+    notes: DeepSeek key in Python
+  - file: true_positives/ai_ml/deepseek.yaml
+    line: 2
+    detector_id: deepseek_api_key
+    expected_fire: true
+    matched_text_starts: sk-
+    notes: DeepSeek key in YAML
+  - file: true_positives/ai_ml/clarifai.env
+    line: 1
+    detector_id: clarifai_api_key
+    expected_fire: true
+    matched_text_starts: ErN7N3
+    notes: Clarifai PAT
+  - file: true_positives/ai_ml/clarifai.env
+    line: 2
+    detector_id: clarifai_api_key
+    expected_fire: true
+    matched_text_starts: 62vCyT
+    notes: Clarifai API key
+  - file: true_positives/ai_ml/groq.env
+    line: 1
+    detector_id: groq_api_key
+    expected_fire: true
+    matched_text_starts: gsk_
+    notes: Groq gsk_ key
+  - file: true_positives/ai_ml/groq_client.py
+    line: 1
+    detector_id: groq_api_key
+    expected_fire: true
+    matched_text_starts: gsk_
+    notes: Groq in Python
+  - file: true_positives/ai_ml/groq.toml
+    line: 2
+    detector_id: groq_api_key
+    expected_fire: true
+    matched_text_starts: gsk_
+    notes: Groq in TOML
+  - file: true_positives/ai_ml/xai.env
+    line: 1
+    detector_id: xai_api_key
+    expected_fire: true
+    matched_text_starts: xai-
+    notes: xAI xai- key
+  - file: true_positives/ai_ml/xai_client.py
+    line: 1
+    detector_id: xai_api_key
+    expected_fire: true
+    matched_text_starts: xai-
+    notes: xAI in Python
+  - file: true_positives/ai_ml/perplexity.env
+    line: 1
+    detector_id: perplexity_api_key
+    expected_fire: true
+    matched_text_starts: pplx-
+    notes: Perplexity key
+  - file: true_positives/ai_ml/perplexity_client.py
+    line: 1
+    detector_id: perplexity_api_key
+    expected_fire: true
+    matched_text_starts: pplx-
+    notes: Perplexity in Python
+  - file: true_positives/ai_ml/langsmith.env
+    line: 1
+    detector_id: langsmith_api_key
+    expected_fire: true
+    matched_text_starts: lsv2_pt_
+    notes: LangSmith personal token
+  - file: true_positives/ai_ml/langsmith.env
+    line: 2
+    detector_id: langsmith_api_key
+    expected_fire: true
+    matched_text_starts: lsv2_sk_
+    notes: LangSmith service key
+  - file: true_positives/ai_ml/nvidia_ngc.env
+    line: 1
+    detector_id: nvidia_ngc_api_key
+    expected_fire: true
+    matched_text_starts: nvapi-
+    notes: NVIDIA NGC key
+  - file: true_positives/ai_ml/anyscale.env
+    line: 1
+    detector_id: anyscale_api_key
+    expected_fire: true
+    matched_text_starts: esecret_
+    notes: Anyscale key
+  - file: true_positives/ai_ml/anyscale_client.py
+    line: 1
+    detector_id: anyscale_api_key
+    expected_fire: true
+    matched_text_starts: esecret_
+    notes: Anyscale in Python
+  - file: true_positives/cloud/aws_keys.env
+    line: 3
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS Access Key ID canonical env
+  - file: true_positives/cloud/aws_keys.env
+    line: 4
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: LkBuEO
+    notes: AWS Secret Access Key paired with AKIA
+  - file: true_positives/cloud/aws_temporary.env
+    line: 1
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: ASIA
+    notes: AWS temporary STS access key id
+  - file: true_positives/cloud/aws_temporary.env
+    line: 2
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: qxIVN7
+    notes: AWS secret access key paired with ASIA
+  - file: true_positives/cloud/aws_credentials
+    line: 2
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS credentials file ~/.aws/credentials
+  - file: true_positives/cloud/aws_credentials
+    line: 3
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: AgHP02
+    notes: AWS secret in credentials file
+  - file: true_positives/cloud/terraform.tfvars
+    line: 2
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS access key in terraform.tfvars
+  - file: true_positives/cloud/terraform.tfvars
+    line: 3
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: IiMIIj
+    notes: AWS secret in terraform.tfvars
+  - file: true_positives/cloud/aws_python_client.py
+    line: 5
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS AKIA in Python client
+  - file: true_positives/cloud/aws_python_client.py
+    line: 6
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: SSzRGc
+    notes: AWS secret in Python client
+  - file: true_positives/cloud/github_workflow_aws.yml
+    line: 9
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS AKIA literal in GitHub workflow (anti-pattern)
+  - file: true_positives/cloud/github_workflow_aws.yml
+    line: 10
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: v6R7dG
+    notes: AWS secret literal in GitHub workflow
+  - file: true_positives/cloud/aws_session.env
+    line: 1
+    detector_id: aws_session_token
+    expected_fire: true
+    matched_text_starts: FwoGZX
+    notes: AWS session token FwoGZX prefix
+  - file: true_positives/cloud/google_maps.env
+    line: 1
+    detector_id: google_api_key
+    expected_fire: true
+    matched_text_starts: AIza
+    notes: Google Maps AIza key
+  - file: true_positives/cloud/google_maps.env
+    line: 2
+    detector_id: google_api_key
+    expected_fire: true
+    matched_text_starts: AIza
+    notes: Google API key generic env var
+  - file: true_positives/cloud/firebase_config.js
+    line: 2
+    detector_id: google_api_key
+    expected_fire: true
+    matched_text_starts: AIza
+    notes: Firebase config AIza key in JS
+  - file: true_positives/cloud/google_oauth.env
+    line: 1
+    detector_id: google_oauth_client_secret
+    expected_fire: true
+    matched_text_starts: GOCSPX-
+    notes: Google OAuth client secret
+  - file: true_positives/cloud/oauth_config.json
+    line: 4
+    detector_id: google_oauth_client_secret
+    expected_fire: true
+    matched_text_starts: GOCSPX-
+    notes: Google OAuth client secret in JSON
+  - file: true_positives/cloud/digitalocean.env
+    line: 1
+    detector_id: digitalocean_pat
+    expected_fire: true
+    matched_text_starts: dop_v1_
+    notes: DigitalOcean PAT
+  - file: true_positives/cloud/do_provisioning.tf
+    line: 2
+    detector_id: digitalocean_pat
+    expected_fire: true
+    matched_text_starts: dop_v1_
+    notes: DigitalOcean PAT in Terraform
+  - file: true_positives/cloud/do_client.py
+    line: 1
+    detector_id: digitalocean_pat
+    expected_fire: true
+    matched_text_starts: dop_v1_
+    notes: DigitalOcean PAT in Python
+  - file: true_positives/cloud/do_oauth.env
+    line: 1
+    detector_id: digitalocean_oauth
+    expected_fire: true
+    matched_text_starts: doo_v1_
+    notes: DigitalOcean OAuth token
+  - file: true_positives/cloud/do_refresh.env
+    line: 1
+    detector_id: digitalocean_refresh
+    expected_fire: true
+    matched_text_starts: dor_v1_
+    notes: DigitalOcean refresh token
+  - file: true_positives/cloud/heroku.env
+    line: 1
+    detector_id: heroku_api_key_legacy
+    expected_fire: true
+    matched_text_starts: HRKU-
+    notes: Heroku HRKU- legacy API key
+  - file: true_positives/cloud/alibaba.env
+    line: 1
+    detector_id: alibaba_access_key_id
+    expected_fire: true
+    matched_text_starts: LTAI
+    notes: Alibaba LTAI access key id
+  - file: true_positives/cloud/aliyun.tf
+    line: 2
+    detector_id: alibaba_access_key_id
+    expected_fire: true
+    matched_text_starts: LTAI
+    notes: Alibaba access key in Terraform
+  - file: true_positives/cloud/scaleway.env
+    line: 1
+    detector_id: scaleway_access_key
+    expected_fire: true
+    matched_text_starts: SCW
+    notes: Scaleway access key
+  - file: true_positives/cloud/tencent.env
+    line: 1
+    detector_id: tencent_secret_id
+    expected_fire: true
+    matched_text_starts: AKID
+    notes: Tencent AKID secret ID
+  - file: true_positives/cloud/tencent_client.py
+    line: 1
+    detector_id: tencent_secret_id
+    expected_fire: true
+    matched_text_starts: AKID
+    notes: Tencent AKID in Python
+  - file: true_positives/cloud/backblaze.env
+    line: 1
+    detector_id: backblaze_application_key
+    expected_fire: true
+    matched_text_starts: K001
+    notes: Backblaze B2 application key
+  - file: true_positives/cloud/b2_client.py
+    line: 2
+    detector_id: backblaze_application_key
+    expected_fire: true
+    matched_text_starts: K002
+    notes: Backblaze key in Python
+  - file: true_positives/cloud/cloudinary.env
+    line: 1
+    detector_id: cloudinary_url
+    expected_fire: true
+    matched_text_starts: "cloudinary://"
+    notes: Cloudinary connection URL
+  - file: true_positives/cloud/cloudinary.js
+    line: 1
+    detector_id: cloudinary_url
+    expected_fire: true
+    matched_text_starts: "cloudinary://"
+    notes: Cloudinary URL in JS
+  - file: true_positives/cloud/ngrok.env
+    line: 1
+    detector_id: ngrok_api_key
+    expected_fire: true
+    matched_text_starts: ngrok_
+    notes: ngrok auth token
+  - file: true_positives/cloud/vultr.env
+    line: 1
+    detector_id: vultr_api_key
+    expected_fire: true
+    matched_text_starts: KK5ZKD
+    notes: Vultr 36-char uppercase key
+  - file: true_positives/cloud/vultr_provision.sh
+    line: 3
+    detector_id: vultr_api_key
+    expected_fire: true
+    matched_text_starts: 2F8RBZ
+    notes: Vultr key in shell script
+  - file: true_positives/cloud/linode.env
+    line: 1
+    detector_id: linode_pat
+    expected_fire: true
+    matched_text_starts: 6568bc
+    notes: Linode PAT with linode context
+  - file: true_positives/cloud/linode.tf
+    line: 2
+    detector_id: linode_pat
+    expected_fire: true
+    matched_text_starts: 318f47
+    notes: Linode PAT in Terraform
+  - file: true_positives/cloud/scaleway_api.env
+    line: 1
+    detector_id: scaleway_api_token
+    expected_fire: true
+    matched_text_starts: 5414d7b4
+    notes: Scaleway UUID token
+  - file: true_positives/cloud/scaleway_api.env
+    line: 2
+    detector_id: scaleway_api_token
+    expected_fire: true
+    matched_text_starts: 98b0e9e0
+    notes: Scaleway SCW_SECRET_KEY UUID
+  - file: true_positives/cloud/gcp_service_account.json
+    line: 5
+    detector_id: gcp_service_account
+    expected_fire: true
+    matched_text_starts: "\\\\\\\"private_key\\\\\\\""
+    notes: GCP service account JSON with private_key
+  - file: true_positives/cloud/azure_cosmosdb.env
+    line: 2
+    detector_id: azure_cosmosdb_master_key
+    expected_fire: true
+    matched_text_starts: 27kWSxWU
+    notes: Azure Cosmos DB master key
+  - file: true_positives/cloud/azure_storage.env
+    line: 2
+    detector_id: azure_storage_account_key
+    expected_fire: true
+    matched_text_starts: 1vQ0xC0i
+    notes: Azure storage account key env var
+  - file: true_positives/cloud/azure_sas.env
+    line: 1
+    detector_id: azure_sas_token
+    expected_fire: true
+    matched_text_starts: sig=
+    notes: Azure SAS signature token
+  - file: true_positives/cloud/azure_servicebus.env
+    line: 1
+    detector_id: azure_service_bus_connection_string
+    expected_fire: true
+    matched_text_starts: "Endpoint=sb://"
+    notes: Azure Service Bus connection string
+  - file: true_positives/cloud/azure_eventhub.env
+    line: 1
+    detector_id: azure_event_hub_connection_string
+    expected_fire: true
+    matched_text_starts: "Endpoint=sb://"
+    notes: Azure Event Hub connection string
+  - file: true_positives/cloud/azure_sql.env
+    line: 1
+    detector_id: azure_sql_connection_string
+    expected_fire: true
+    matched_text_starts: "Server=tcp:"
+    notes: Azure SQL connection string
+  - file: true_positives/cloud/heroku_netrc
+    line: 3
+    detector_id: heroku_api_key
+    expected_fire: true
+    matched_text_starts: 6c2d0027
+    notes: Heroku API key UUID in .netrc
+  - file: true_positives/cloud/azure_cosmosdb_cs.env
+    line: 1
+    detector_id: azure_cosmosdb_connection_string
+    expected_fire: true
+    matched_text_starts: AccountEndpoint=
+    notes: Azure Cosmos DB connection string with AccountKey
+  - file: true_positives/cloud/firebase_db.env
+    line: 1
+    detector_id: firebase_database_url
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: Firebase Realtime DB URL
+  - file: true_positives/cloud/oci.env
+    line: 1
+    detector_id: oci_api_key
+    expected_fire: true
+    matched_text_starts: ocid1.
+    notes: OCI ocid1 identifier
+  - file: true_positives/cloud/rancher.env
+    line: 1
+    detector_id: rancher_api_token
+    expected_fire: true
+    matched_text_starts: token-
+    notes: "Rancher token-XXXXX:54 chars"
+  - file: true_positives/cloud/portainer.env
+    line: 1
+    detector_id: portainer_api_token
+    expected_fire: true
+    matched_text_starts: ptr_
+    notes: Portainer API token
+  - file: true_positives/cloud/k8s_secret.yaml
+    line: 8
+    detector_id: kubernetes_secret
+    expected_fire: true
+    matched_text_starts: k5cT6F
+    notes: K8s Secret data field base64
+  - file: true_positives/cloud/k8s_secret_stringdata.yaml
+    line: 7
+    detector_id: kubernetes_secret_plaintext
+    expected_fire: true
+    matched_text_starts: "password:"
+    notes: K8s plaintext password in stringData
+  - file: true_positives/cloud/aws_keys.env
+    line: 3
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS Access Key ID canonical env
+  - file: true_positives/cloud/aws_keys.env
+    line: 4
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: LkBuEO
+    notes: AWS Secret Access Key paired with AKIA
+  - file: true_positives/cloud/aws_temporary.env
+    line: 1
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: ASIA
+    notes: AWS temporary STS access key id
+  - file: true_positives/cloud/aws_temporary.env
+    line: 2
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: qxIVN7
+    notes: AWS secret access key paired with ASIA
+  - file: true_positives/cloud/aws_credentials
+    line: 2
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS credentials file ~/.aws/credentials
+  - file: true_positives/cloud/aws_credentials
+    line: 3
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: AgHP02
+    notes: AWS secret in credentials file
+  - file: true_positives/cloud/terraform.tfvars
+    line: 2
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS access key in terraform.tfvars
+  - file: true_positives/cloud/terraform.tfvars
+    line: 3
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: IiMIIj
+    notes: AWS secret in terraform.tfvars
+  - file: true_positives/cloud/aws_python_client.py
+    line: 5
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS AKIA in Python client
+  - file: true_positives/cloud/aws_python_client.py
+    line: 6
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: SSzRGc
+    notes: AWS secret in Python client
+  - file: true_positives/cloud/github_workflow_aws.yml
+    line: 9
+    detector_id: aws_access_key_id
+    expected_fire: true
+    matched_text_starts: AKIA
+    notes: AWS AKIA literal in GitHub workflow (anti-pattern)
+  - file: true_positives/cloud/github_workflow_aws.yml
+    line: 10
+    detector_id: aws_secret_access_key
+    expected_fire: true
+    matched_text_starts: v6R7dG
+    notes: AWS secret literal in GitHub workflow
+  - file: true_positives/cloud/aws_session.env
+    line: 1
+    detector_id: aws_session_token
+    expected_fire: true
+    matched_text_starts: FwoGZX
+    notes: AWS session token FwoGZX prefix
+  - file: true_positives/cloud/google_maps.env
+    line: 1
+    detector_id: google_api_key
+    expected_fire: true
+    matched_text_starts: AIza
+    notes: Google Maps AIza key
+  - file: true_positives/cloud/google_maps.env
+    line: 2
+    detector_id: google_api_key
+    expected_fire: true
+    matched_text_starts: AIza
+    notes: Google API key generic env var
+  - file: true_positives/cloud/firebase_config.js
+    line: 2
+    detector_id: google_api_key
+    expected_fire: true
+    matched_text_starts: AIza
+    notes: Firebase config AIza key in JS
+  - file: true_positives/cloud/google_oauth.env
+    line: 1
+    detector_id: google_oauth_client_secret
+    expected_fire: true
+    matched_text_starts: GOCSPX-
+    notes: Google OAuth client secret
+  - file: true_positives/cloud/oauth_config.json
+    line: 4
+    detector_id: google_oauth_client_secret
+    expected_fire: true
+    matched_text_starts: GOCSPX-
+    notes: Google OAuth client secret in JSON
+  - file: true_positives/cloud/digitalocean.env
+    line: 1
+    detector_id: digitalocean_pat
+    expected_fire: true
+    matched_text_starts: dop_v1_
+    notes: DigitalOcean PAT
+  - file: true_positives/cloud/do_provisioning.tf
+    line: 2
+    detector_id: digitalocean_pat
+    expected_fire: true
+    matched_text_starts: dop_v1_
+    notes: DigitalOcean PAT in Terraform
+  - file: true_positives/cloud/do_client.py
+    line: 1
+    detector_id: digitalocean_pat
+    expected_fire: true
+    matched_text_starts: dop_v1_
+    notes: DigitalOcean PAT in Python
+  - file: true_positives/cloud/do_oauth.env
+    line: 1
+    detector_id: digitalocean_oauth
+    expected_fire: true
+    matched_text_starts: doo_v1_
+    notes: DigitalOcean OAuth token
+  - file: true_positives/cloud/do_refresh.env
+    line: 1
+    detector_id: digitalocean_refresh
+    expected_fire: true
+    matched_text_starts: dor_v1_
+    notes: DigitalOcean refresh token
+  - file: true_positives/cloud/heroku.env
+    line: 1
+    detector_id: heroku_api_key_legacy
+    expected_fire: true
+    matched_text_starts: HRKU-
+    notes: Heroku HRKU- legacy API key
+  - file: true_positives/cloud/alibaba.env
+    line: 1
+    detector_id: alibaba_access_key_id
+    expected_fire: true
+    matched_text_starts: LTAI
+    notes: Alibaba LTAI access key id
+  - file: true_positives/cloud/aliyun.tf
+    line: 2
+    detector_id: alibaba_access_key_id
+    expected_fire: true
+    matched_text_starts: LTAI
+    notes: Alibaba access key in Terraform
+  - file: true_positives/cloud/scaleway.env
+    line: 1
+    detector_id: scaleway_access_key
+    expected_fire: true
+    matched_text_starts: SCW
+    notes: Scaleway access key
+  - file: true_positives/cloud/tencent.env
+    line: 1
+    detector_id: tencent_secret_id
+    expected_fire: true
+    matched_text_starts: AKID
+    notes: Tencent AKID secret ID
+  - file: true_positives/cloud/tencent_client.py
+    line: 1
+    detector_id: tencent_secret_id
+    expected_fire: true
+    matched_text_starts: AKID
+    notes: Tencent AKID in Python
+  - file: true_positives/cloud/backblaze.env
+    line: 1
+    detector_id: backblaze_application_key
+    expected_fire: true
+    matched_text_starts: K001
+    notes: Backblaze B2 application key
+  - file: true_positives/cloud/b2_client.py
+    line: 2
+    detector_id: backblaze_application_key
+    expected_fire: true
+    matched_text_starts: K002
+    notes: Backblaze key in Python
+  - file: true_positives/cloud/cloudinary.env
+    line: 1
+    detector_id: cloudinary_url
+    expected_fire: true
+    matched_text_starts: "cloudinary://"
+    notes: Cloudinary connection URL
+  - file: true_positives/cloud/cloudinary.js
+    line: 1
+    detector_id: cloudinary_url
+    expected_fire: true
+    matched_text_starts: "cloudinary://"
+    notes: Cloudinary URL in JS
+  - file: true_positives/cloud/ngrok.env
+    line: 1
+    detector_id: ngrok_api_key
+    expected_fire: true
+    matched_text_starts: ngrok_
+    notes: ngrok auth token
+  - file: true_positives/cloud/vultr.env
+    line: 1
+    detector_id: vultr_api_key
+    expected_fire: true
+    matched_text_starts: KK5ZKD
+    notes: Vultr 36-char uppercase key
+  - file: true_positives/cloud/vultr_provision.sh
+    line: 3
+    detector_id: vultr_api_key
+    expected_fire: true
+    matched_text_starts: 2F8RBZ
+    notes: Vultr key in shell script
+  - file: true_positives/cloud/linode.env
+    line: 1
+    detector_id: linode_pat
+    expected_fire: true
+    matched_text_starts: 6568bc
+    notes: Linode PAT with linode context
+  - file: true_positives/cloud/linode.tf
+    line: 2
+    detector_id: linode_pat
+    expected_fire: true
+    matched_text_starts: 318f47
+    notes: Linode PAT in Terraform
+  - file: true_positives/cloud/scaleway_api.env
+    line: 1
+    detector_id: scaleway_api_token
+    expected_fire: true
+    matched_text_starts: 5414d7b4
+    notes: Scaleway UUID token
+  - file: true_positives/cloud/scaleway_api.env
+    line: 2
+    detector_id: scaleway_api_token
+    expected_fire: true
+    matched_text_starts: 98b0e9e0
+    notes: Scaleway SCW_SECRET_KEY UUID
+  - file: true_positives/cloud/gcp_service_account.json
+    line: 5
+    detector_id: gcp_service_account
+    expected_fire: true
+    matched_text_starts: "\\\"private_key\\\""
+    notes: GCP service account JSON with private_key
+  - file: true_positives/cloud/azure_cosmosdb.env
+    line: 2
+    detector_id: azure_cosmosdb_master_key
+    expected_fire: true
+    matched_text_starts: 27kWSxWU
+    notes: Azure Cosmos DB master key
+  - file: true_positives/cloud/azure_storage.env
+    line: 2
+    detector_id: azure_storage_account_key
+    expected_fire: true
+    matched_text_starts: 1vQ0xC0i
+    notes: Azure storage account key env var
+  - file: true_positives/cloud/azure_sas.env
+    line: 1
+    detector_id: azure_sas_token
+    expected_fire: true
+    matched_text_starts: sig=
+    notes: Azure SAS signature token
+  - file: true_positives/cloud/azure_servicebus.env
+    line: 1
+    detector_id: azure_service_bus_connection_string
+    expected_fire: true
+    matched_text_starts: "Endpoint=sb://"
+    notes: Azure Service Bus connection string
+  - file: true_positives/cloud/azure_eventhub.env
+    line: 1
+    detector_id: azure_event_hub_connection_string
+    expected_fire: true
+    matched_text_starts: "Endpoint=sb://"
+    notes: Azure Event Hub connection string
+  - file: true_positives/cloud/azure_sql.env
+    line: 1
+    detector_id: azure_sql_connection_string
+    expected_fire: true
+    matched_text_starts: "Server=tcp:"
+    notes: Azure SQL connection string
+  - file: true_positives/cloud/heroku_netrc
+    line: 3
+    detector_id: heroku_api_key
+    expected_fire: true
+    matched_text_starts: 6c2d0027
+    notes: Heroku API key UUID in .netrc
+  - file: true_positives/cloud/azure_cosmosdb_cs.env
+    line: 1
+    detector_id: azure_cosmosdb_connection_string
+    expected_fire: true
+    matched_text_starts: AccountEndpoint=
+    notes: Azure Cosmos DB connection string with AccountKey
+  - file: true_positives/cloud/firebase_db.env
+    line: 1
+    detector_id: firebase_database_url
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: Firebase Realtime DB URL
+  - file: true_positives/cloud/oci.env
+    line: 1
+    detector_id: oci_api_key
+    expected_fire: true
+    matched_text_starts: ocid1.
+    notes: OCI ocid1 identifier
+  - file: true_positives/cloud/rancher.env
+    line: 1
+    detector_id: rancher_api_token
+    expected_fire: true
+    matched_text_starts: token-
+    notes: "Rancher token-XXXXX:54 chars"
+  - file: true_positives/cloud/portainer.env
+    line: 1
+    detector_id: portainer_api_token
+    expected_fire: true
+    matched_text_starts: ptr_
+    notes: Portainer API token
+  - file: true_positives/cloud/k8s_secret.yaml
+    line: 8
+    detector_id: kubernetes_secret
+    expected_fire: true
+    matched_text_starts: k5cT6F
+    notes: K8s Secret data field base64
+  - file: true_positives/cloud/k8s_secret_stringdata.yaml
+    line: 7
+    detector_id: kubernetes_secret_plaintext
+    expected_fire: true
+    matched_text_starts: "password:"
+    notes: K8s plaintext password in stringData
+  - file: true_positives/ci_cd/github_pat.env
+    line: 2
+    detector_id: github_pat_classic
+    expected_fire: true
+    matched_text_starts: ghp_
+    notes: GitHub classic PAT
+  - file: true_positives/ci_cd/release_workflow.yml
+    line: 9
+    detector_id: github_pat_classic
+    expected_fire: true
+    matched_text_starts: ghp_
+    notes: GitHub PAT literal in workflow env
+  - file: true_positives/ci_cd/github_curl.sh
+    line: 2
+    detector_id: github_pat_classic
+    expected_fire: true
+    matched_text_starts: ghp_
+    notes: GitHub PAT in bash script
+  - file: true_positives/ci_cd/github_pat_python.py
+    line: 1
+    detector_id: github_pat_classic
+    expected_fire: true
+    matched_text_starts: ghp_
+    notes: GitHub PAT in Python
+  - file: true_positives/ci_cd/github_npmrc
+    line: 1
+    detector_id: github_pat_classic
+    expected_fire: true
+    matched_text_starts: ghp_
+    notes: GitHub PAT in .npmrc
+  - file: true_positives/ci_cd/github_finegrained.env
+    line: 1
+    detector_id: github_pat_fine_grained
+    expected_fire: true
+    matched_text_starts: github_pat_
+    notes: GitHub fine-grained PAT
+  - file: true_positives/ci_cd/github_finegrained_repo.yml
+    line: 2
+    detector_id: github_pat_fine_grained
+    expected_fire: true
+    matched_text_starts: github_pat_
+    notes: Fine-grained PAT in YAML
+  - file: true_positives/ci_cd/github_finegrained.sh
+    line: 1
+    detector_id: github_pat_fine_grained
+    expected_fire: true
+    matched_text_starts: github_pat_
+    notes: Fine-grained PAT in shell
+  - file: true_positives/ci_cd/github_oauth.env
+    line: 1
+    detector_id: github_oauth
+    expected_fire: true
+    matched_text_starts: gho_
+    notes: GitHub OAuth access token
+  - file: true_positives/ci_cd/github_app.env
+    line: 1
+    detector_id: github_app_token
+    expected_fire: true
+    matched_text_starts: ghu_
+    notes: GitHub App user-to-server token
+  - file: true_positives/ci_cd/github_app.env
+    line: 2
+    detector_id: github_app_token
+    expected_fire: true
+    matched_text_starts: ghs_
+    notes: GitHub App server-to-server token
+  - file: true_positives/ci_cd/github_refresh.env
+    line: 1
+    detector_id: github_refresh_token
+    expected_fire: true
+    matched_text_starts: ghr_
+    notes: GitHub refresh token
+  - file: true_positives/ci_cd/gitlab_pat.env
+    line: 1
+    detector_id: gitlab_pat
+    expected_fire: true
+    matched_text_starts: glpat-
+    notes: GitLab PAT
+  - file: true_positives/ci_cd/gitlab_ci.yml
+    line: 2
+    detector_id: gitlab_pat
+    expected_fire: true
+    matched_text_starts: glpat-
+    notes: GitLab PAT in .gitlab-ci.yml
+  - file: true_positives/ci_cd/gitlab_curl.sh
+    line: 1
+    detector_id: gitlab_pat
+    expected_fire: true
+    matched_text_starts: glpat-
+    notes: GitLab PAT in curl
+  - file: true_positives/ci_cd/gitlab_pipeline.env
+    line: 1
+    detector_id: gitlab_pipeline_token
+    expected_fire: true
+    matched_text_starts: glptt-
+    notes: GitLab pipeline token
+  - file: true_positives/ci_cd/gitlab_runner.toml
+    line: 2
+    detector_id: gitlab_runner_token
+    expected_fire: true
+    matched_text_starts: GR1348941
+    notes: GitLab Runner registration token
+  - file: true_positives/ci_cd/gitlab_misc_tokens.env
+    line: 1
+    detector_id: gitlab_deploy_token
+    expected_fire: true
+    matched_text_starts: gldt-
+    notes: GitLab deploy token
+  - file: true_positives/ci_cd/gitlab_misc_tokens.env
+    line: 2
+    detector_id: gitlab_cicd_job_token
+    expected_fire: true
+    matched_text_starts: glcbt-
+    notes: GitLab CI job token
+  - file: true_positives/ci_cd/gitlab_misc_tokens.env
+    line: 3
+    detector_id: gitlab_feed_token
+    expected_fire: true
+    matched_text_starts: glft-
+    notes: GitLab feed token
+  - file: true_positives/ci_cd/gitlab_misc_tokens.env
+    line: 4
+    detector_id: gitlab_scim_token
+    expected_fire: true
+    matched_text_starts: glsoat-
+    notes: GitLab SCIM token
+  - file: true_positives/ci_cd/gitlab_misc_tokens.env
+    line: 5
+    detector_id: gitlab_incoming_email_token
+    expected_fire: true
+    matched_text_starts: glimt-
+    notes: GitLab incoming email token
+  - file: true_positives/ci_cd/gitlab_misc_tokens.env
+    line: 6
+    detector_id: gitlab_oauth_secret
+    expected_fire: true
+    matched_text_starts: gloas-
+    notes: GitLab OAuth secret
+  - file: true_positives/ci_cd/npmrc
+    line: 1
+    detector_id: npm_access_token
+    expected_fire: true
+    matched_text_starts: npm_
+    notes: NPM access token in .npmrc
+  - file: true_positives/ci_cd/npm_publish.yml
+    line: 2
+    detector_id: npm_access_token
+    expected_fire: true
+    matched_text_starts: npm_
+    notes: NPM token in CI workflow env
+  - file: true_positives/ci_cd/pypirc
+    line: 3
+    detector_id: pypi_api_token
+    expected_fire: true
+    matched_text_starts: pypi-
+    notes: PyPI macaroon token in .pypirc
+  - file: true_positives/ci_cd/docker_login.sh
+    line: 1
+    detector_id: dockerhub_pat
+    expected_fire: true
+    matched_text_starts: dckr_pat_
+    notes: Docker Hub PAT in shell
+  - file: true_positives/ci_cd/dockerhub.env
+    line: 1
+    detector_id: dockerhub_pat
+    expected_fire: true
+    matched_text_starts: dckr_pat_
+    notes: Docker Hub PAT env var
+  - file: true_positives/ci_cd/vercel.env
+    line: 1
+    detector_id: vercel_auth_token
+    expected_fire: true
+    matched_text_starts: vcp_
+    notes: Vercel auth token
+  - file: true_positives/ci_cd/vercel_deploy.yml
+    line: 2
+    detector_id: vercel_auth_token
+    expected_fire: true
+    matched_text_starts: vcp_
+    notes: Vercel token in workflow
+  - file: true_positives/ci_cd/netlify.env
+    line: 1
+    detector_id: netlify_personal_access_token
+    expected_fire: true
+    matched_text_starts: nfp_
+    notes: Netlify PAT
+  - file: true_positives/ci_cd/netlify_ci.toml
+    line: 2
+    detector_id: netlify_personal_access_token
+    expected_fire: true
+    matched_text_starts: nfp_
+    notes: Netlify PAT in netlify.toml
+  - file: true_positives/ci_cd/render.env
+    line: 1
+    detector_id: render_api_key
+    expected_fire: true
+    matched_text_starts: rnd_
+    notes: Render API key
+  - file: true_positives/ci_cd/flyio.env
+    line: 1
+    detector_id: flyio_api_token
+    expected_fire: true
+    matched_text_starts: fo1_
+    notes: Fly.io API token fo1_
+  - file: true_positives/ci_cd/flyio_v0.env
+    line: 1
+    detector_id: flyio_api_token
+    expected_fire: true
+    matched_text_starts: fo0_
+    notes: Fly.io API token fo0_
+  - file: true_positives/ci_cd/doppler.env
+    line: 1
+    detector_id: doppler_token
+    expected_fire: true
+    matched_text_starts: dp.st.
+    notes: Doppler service token
+  - file: true_positives/ci_cd/doppler.env
+    line: 2
+    detector_id: doppler_token
+    expected_fire: true
+    matched_text_starts: dp.ct.
+    notes: Doppler CLI token
+  - file: true_positives/ci_cd/doppler.env
+    line: 3
+    detector_id: doppler_token
+    expected_fire: true
+    matched_text_starts: dp.pt.
+    notes: Doppler personal token
+  - file: true_positives/ci_cd/vault.env
+    line: 1
+    detector_id: vault_token
+    expected_fire: true
+    matched_text_starts: hvs.
+    notes: HashiCorp Vault hvs. token
+  - file: true_positives/ci_cd/terraform_cloud.env
+    line: 1
+    detector_id: terraform_cloud_token
+    expected_fire: true
+    matched_text_starts: atlasv1.
+    notes: Terraform Cloud token
+  - file: true_positives/ci_cd/tfe.env
+    line: 1
+    detector_id: terraform_enterprise_token
+    expected_fire: true
+    matched_text_starts: op0VXa
+    notes: Terraform Enterprise token
+  - file: true_positives/ci_cd/buildkite.env
+    line: 1
+    detector_id: buildkite_access_token
+    expected_fire: true
+    matched_text_starts: bkua_
+    notes: Buildkite access token
+  - file: true_positives/ci_cd/deno.env
+    line: 1
+    detector_id: deno_deploy_token
+    expected_fire: true
+    matched_text_starts: ddp_
+    notes: Deno Deploy token
+  - file: true_positives/ci_cd/sonarcloud.env
+    line: 1
+    detector_id: sonarcloud_token
+    expected_fire: true
+    matched_text_starts: sqc_
+    notes: SonarCloud token
+  - file: true_positives/ci_cd/gem_credentials
+    line: 1
+    detector_id: rubygems_api_key
+    expected_fire: true
+    matched_text_starts: rubygems_
+    notes: RubyGems API key
+  - file: true_positives/ci_cd/nuget.env
+    line: 1
+    detector_id: nuget_api_key
+    expected_fire: true
+    matched_text_starts: oy2
+    notes: NuGet API key
+  - file: true_positives/ci_cd/cratesio.env
+    line: 1
+    detector_id: crates_io_token
+    expected_fire: true
+    matched_text_starts: cio
+    notes: Crates.io token
+  - file: true_positives/ci_cd/circleci.env
+    line: 1
+    detector_id: circleci_api_token
+    expected_fire: true
+    matched_text_starts: CCIPAT_
+    notes: CircleCI personal API token
+  - file: true_positives/ci_cd/octopus.env
+    line: 1
+    detector_id: octopus_deploy_api_key
+    expected_fire: true
+    matched_text_starts: API-
+    notes: Octopus Deploy API key
+  - file: true_positives/ci_cd/jenkins.env
+    line: 1
+    detector_id: jenkins_api_token
+    expected_fire: true
+    matched_text_starts: bbc4de
+    notes: Jenkins 34-hex API token
+  - file: true_positives/ci_cd/harness.env
+    line: 1
+    detector_id: harness_pat
+    expected_fire: true
+    matched_text_starts: pat.
+    notes: Harness PAT
+  - file: true_positives/ci_cd/rapidapi.env
+    line: 2
+    detector_id: rapidapi_application_key
+    expected_fire: true
+    matched_text_starts: -dx3al
+    notes: RapidAPI 50-char key with context
+  - file: true_positives/ci_cd/drone.env
+    line: 1
+    detector_id: droneci_access_token
+    expected_fire: true
+    matched_text_starts: BlXZTy
+    notes: DroneCI token with drone context
+  - file: true_positives/ci_cd/travisci.env
+    line: 2
+    detector_id: travisci_access_token
+    expected_fire: true
+    matched_text_starts: 5GTAN6
+    notes: TravisCI token
+  - file: true_positives/ci_cd/cloudsmith.env
+    line: 1
+    detector_id: cloudsmith_api_key
+    expected_fire: true
+    matched_text_starts: ad5d86
+    notes: Cloudsmith 40-hex key with context
+  - file: true_positives/ci_cd/codecov.env
+    line: 2
+    detector_id: codecov_upload_token
+    expected_fire: true
+    matched_text_starts: 0a81d28e
+    notes: Codecov upload UUID token
+  - file: true_positives/ci_cd/jfrog.env
+    line: 1
+    detector_id: jfrog_artifactory_api_key
+    expected_fire: true
+    matched_text_starts: AKC
+    notes: JFrog Artifactory AKC API key
+  - file: true_positives/ci_cd/packagecloud.env
+    line: 1
+    detector_id: packagecloud_master_token
+    expected_fire: true
+    matched_text_starts: 4130eb
+    notes: PackageCloud master token
+  - file: true_positives/ci_cd/docker_registry.env
+    line: 1
+    detector_id: docker_registry_password
+    expected_fire: true
+    matched_text_starts: DOCKER_PASSWORD
+    notes: Docker registry password
+  - file: true_positives/ci_cd/docker_registry.env
+    line: 2
+    detector_id: docker_registry_password
+    expected_fire: true
+    matched_text_starts: REGISTRY_PASSWORD
+    notes: Registry password
+  - file: true_positives/ci_cd/docker_config.json
+    line: 4
+    detector_id: docker_auth_config
+    expected_fire: true
+    matched_text_starts: "\"auth\""
+    notes: Docker auth config base64 credentials
+  - file: true_positives/payment/stripe.env
+    line: 2
+    detector_id: stripe_live_secret
+    expected_fire: true
+    matched_text_starts: sk_live_
+    notes: Stripe live secret key
+  - file: true_positives/payment/stripe.env
+    line: 3
+    detector_id: stripe_live_publishable
+    expected_fire: true
+    matched_text_starts: pk_live_
+    notes: Stripe live publishable key
+  - file: true_positives/payment/stripe.env
+    line: 4
+    detector_id: stripe_webhook_secret
+    expected_fire: true
+    matched_text_starts: whsec_
+    notes: Stripe webhook secret
+  - file: true_positives/payment/stripe_test.env
+    line: 1
+    detector_id: stripe_test_secret
+    expected_fire: true
+    matched_text_starts: sk_test_
+    notes: Stripe test secret
+  - file: true_positives/payment/stripe_test.env
+    line: 2
+    detector_id: stripe_test_publishable
+    expected_fire: true
+    matched_text_starts: pk_test_
+    notes: Stripe test publishable
+  - file: true_positives/payment/stripe_restricted.env
+    line: 1
+    detector_id: stripe_restricted_live
+    expected_fire: true
+    matched_text_starts: rk_live_
+    notes: Stripe restricted live key
+  - file: true_positives/payment/stripe_restricted.env
+    line: 2
+    detector_id: stripe_restricted_test
+    expected_fire: true
+    matched_text_starts: rk_test_
+    notes: Stripe restricted test key
+  - file: true_positives/payment/stripe_client.js
+    line: 2
+    detector_id: stripe_live_secret
+    expected_fire: true
+    matched_text_starts: sk_live_
+    notes: Stripe key in JS module
+  - file: true_positives/payment/stripe_terraform.tfvars
+    line: 1
+    detector_id: stripe_live_secret
+    expected_fire: true
+    matched_text_starts: sk_live_
+    notes: Stripe key in terraform.tfvars
+  - file: true_positives/payment/square.env
+    line: 1
+    detector_id: square_access_token
+    expected_fire: true
+    matched_text_starts: sq0atp-
+    notes: Square production access token
+  - file: true_positives/payment/square.env
+    line: 2
+    detector_id: square_oauth_secret
+    expected_fire: true
+    matched_text_starts: sq0csp-
+    notes: Square OAuth secret
+  - file: true_positives/payment/square.env
+    line: 3
+    detector_id: square_sandbox_token
+    expected_fire: true
+    matched_text_starts: EAAAECa
+    notes: Square sandbox token
+  - file: true_positives/payment/paypal.env
+    line: 2
+    detector_id: paypal_client_id
+    expected_fire: true
+    matched_text_starts: A
+    notes: PayPal client ID with paypal context
+  - file: true_positives/payment/paypal.env
+    line: 3
+    detector_id: paypal_client_secret
+    expected_fire: true
+    matched_text_starts: E
+    notes: PayPal client secret with paypal context
+  - file: true_positives/payment/plaid.env
+    line: 1
+    detector_id: plaid_access_token
+    expected_fire: true
+    matched_text_starts: access-sandbox-
+    notes: Plaid sandbox access token
+  - file: true_positives/payment/plaid.env
+    line: 2
+    detector_id: plaid_access_token
+    expected_fire: true
+    matched_text_starts: access-production-
+    notes: Plaid production access token
+  - file: true_positives/payment/plaid.env
+    line: 3
+    detector_id: plaid_access_token
+    expected_fire: true
+    matched_text_starts: access-development-
+    notes: Plaid development access token
+  - file: true_positives/payment/braintree.env
+    line: 1
+    detector_id: braintree_access_token
+    expected_fire: true
+    matched_text_starts: access_token$
+    notes: Braintree access token
+  - file: true_positives/payment/adyen.env
+    line: 1
+    detector_id: adyen_api_key
+    expected_fire: true
+    matched_text_starts: AQE
+    notes: Adyen API key
+  - file: true_positives/payment/razorpay.env
+    line: 1
+    detector_id: razorpay_api_key
+    expected_fire: true
+    matched_text_starts: rzp_live_
+    notes: Razorpay live key
+  - file: true_positives/payment/razorpay.env
+    line: 2
+    detector_id: razorpay_api_key
+    expected_fire: true
+    matched_text_starts: rzp_test_
+    notes: Razorpay test key
+  - file: true_positives/payment/flutterwave.env
+    line: 1
+    detector_id: flutterwave_secret_key
+    expected_fire: true
+    matched_text_starts: FLWSECK-
+    notes: Flutterwave secret key
+  - file: true_positives/payment/flutterwave.env
+    line: 2
+    detector_id: flutterwave_secret_key
+    expected_fire: true
+    matched_text_starts: FLWSECK_TEST-
+    notes: Flutterwave test secret
+  - file: true_positives/payment/flutterwave.env
+    line: 3
+    detector_id: flutterwave_public_key
+    expected_fire: true
+    matched_text_starts: FLWPUBK-
+    notes: Flutterwave public key
+  - file: true_positives/payment/paystack.env
+    line: 2
+    detector_id: paystack_secret_key
+    expected_fire: true
+    matched_text_starts: sk_live_
+    notes: Paystack secret key (alphanumeric body)
+  - file: true_positives/payment/paystack.env
+    line: 3
+    detector_id: paystack_public_key
+    expected_fire: true
+    matched_text_starts: pk_live_
+    notes: Paystack public key (alphanumeric body)
+  - file: true_positives/payment/checkout_com.env
+    line: 1
+    detector_id: checkout_com_secret_key
+    expected_fire: true
+    matched_text_starts: sk_
+    notes: Checkout.com UUID-shape secret key
+  - file: true_positives/payment/checkout_com.env
+    line: 2
+    detector_id: checkout_com_secret_key
+    expected_fire: true
+    matched_text_starts: sk_test_
+    notes: Checkout.com test UUID-shape secret key
+  - file: true_positives/payment/gocardless.env
+    line: 1
+    detector_id: gocardless_access_token
+    expected_fire: true
+    matched_text_starts: live_
+    notes: GoCardless access token with context
+  - file: true_positives/payment/midtrans.env
+    line: 1
+    detector_id: midtrans_server_key
+    expected_fire: true
+    matched_text_starts: Mid-server-
+    notes: Midtrans server key
+  - file: true_positives/payment/midtrans.env
+    line: 2
+    detector_id: midtrans_server_key
+    expected_fire: true
+    matched_text_starts: SB-Mid-server-
+    notes: Midtrans sandbox server key
+  - file: true_positives/payment/midtrans.env
+    line: 3
+    detector_id: midtrans_server_key
+    expected_fire: true
+    matched_text_starts: Mid-client-
+    notes: Midtrans client key
+  - file: true_positives/payment/mercadopago.env
+    line: 1
+    detector_id: mercadopago_access_token
+    expected_fire: true
+    matched_text_starts: APP_USR-
+    notes: Mercado Pago production access token
+  - file: true_positives/payment/mercadopago.env
+    line: 2
+    detector_id: mercadopago_access_token
+    expected_fire: true
+    matched_text_starts: TEST-
+    notes: Mercado Pago test access token
+  - file: true_positives/payment/mercadopago_pk.env
+    line: 2
+    detector_id: mercadopago_public_key
+    expected_fire: true
+    matched_text_starts: APP_USR-
+    notes: Mercado Pago public key
+  - file: true_positives/payment/bitfinex.env
+    line: 2
+    detector_id: bitfinex_api_key
+    expected_fire: true
+    matched_text_starts: V7dDoo
+    notes: Bitfinex API key with context
+  - file: true_positives/payment/kucoin.env
+    line: 2
+    detector_id: kucoin_api_secret
+    expected_fire: true
+    matched_text_starts: 8fd77904
+    notes: KuCoin API secret UUID with context
+  - file: true_positives/payment/dwolla.env
+    line: 1
+    detector_id: dwolla_app_secret
+    expected_fire: true
+    matched_text_starts: bMFKuK
+    notes: Dwolla 50-char app secret with context
+  - file: true_positives/payment/plaid_secret.env
+    line: 2
+    detector_id: plaid_client_secret
+    expected_fire: true
+    matched_text_starts: 02c651
+    notes: Plaid 30-hex client secret with context
+  - file: true_positives/payment/coinbase_cdp.env
+    line: 1
+    detector_id: coinbase_cdp_key_name
+    expected_fire: true
+    matched_text_starts: organizations/
+    notes: Coinbase CDP API key name
+  - file: true_positives/payment/kraken.env
+    line: 2
+    detector_id: kraken_api_key
+    expected_fire: true
+    matched_text_starts: mct8C3
+    notes: Kraken 56-char API key
+  - file: true_positives/payment/kraken.env
+    line: 3
+    detector_id: kraken_private_key
+    expected_fire: true
+    matched_text_starts: 55IWC7
+    notes: Kraken 88-char private key
+  - file: true_positives/communication/slack_bot.env
+    line: 1
+    detector_id: slack_bot_token
+    expected_fire: true
+    matched_text_starts: xoxb-
+    notes: Slack bot token canonical
+  - file: true_positives/communication/slack_workflow.yml
+    line: 2
+    detector_id: slack_bot_token
+    expected_fire: true
+    matched_text_starts: xoxb-
+    notes: Slack bot token in workflow
+  - file: true_positives/communication/slack_app.py
+    line: 1
+    detector_id: slack_bot_token
+    expected_fire: true
+    matched_text_starts: xoxb-
+    notes: Slack bot token in Python
+  - file: true_positives/communication/slack_user.env
+    line: 1
+    detector_id: slack_user_token
+    expected_fire: true
+    matched_text_starts: xoxp-
+    notes: Slack user token
+  - file: true_positives/communication/slack_socket.env
+    line: 1
+    detector_id: slack_app_token
+    expected_fire: true
+    matched_text_starts: xapp-
+    notes: Slack app-level token
+  - file: true_positives/communication/slack_webhook.env
+    line: 1
+    detector_id: slack_webhook
+    expected_fire: true
+    matched_text_starts: "https://hooks.slack"
+    notes: Slack incoming webhook URL
+  - file: true_positives/communication/slack_misc.env
+    line: 1
+    detector_id: slack_legacy_token
+    expected_fire: true
+    matched_text_starts: xoxs-
+    notes: Slack legacy token
+  - file: true_positives/communication/slack_misc.env
+    line: 2
+    detector_id: slack_oauth_access_token
+    expected_fire: true
+    matched_text_starts: xoxa-
+    notes: Slack OAuth access token
+  - file: true_positives/communication/slack_misc.env
+    line: 3
+    detector_id: slack_config_token
+    expected_fire: true
+    matched_text_starts: xoxe.
+    notes: Slack config token
+  - file: true_positives/communication/slack_misc.env
+    line: 4
+    detector_id: slack_config_refresh_token
+    expected_fire: true
+    matched_text_starts: xoxe-
+    notes: Slack config refresh token
+  - file: true_positives/communication/twilio.env
+    line: 2
+    detector_id: twilio_account_sid
+    expected_fire: true
+    matched_text_starts: AC
+    notes: Twilio account SID AC+32hex
+  - file: true_positives/communication/twilio.env
+    line: 3
+    detector_id: twilio_api_key
+    expected_fire: true
+    matched_text_starts: SK
+    notes: Twilio API key SID
+  - file: true_positives/communication/twilio.env
+    line: 4
+    detector_id: twilio_auth_token
+    expected_fire: true
+    matched_text_starts: 5c2ff1
+    notes: Twilio auth token with twilio context
+  - file: true_positives/communication/twilio_client.py
+    line: 2
+    detector_id: twilio_account_sid
+    expected_fire: true
+    matched_text_starts: AC
+    notes: Twilio SID in Python
+  - file: true_positives/communication/twilio_client.py
+    line: 3
+    detector_id: twilio_auth_token
+    expected_fire: true
+    matched_text_starts: 0101b6
+    notes: Twilio auth token in Python
+  - file: true_positives/communication/discord.env
+    line: 1
+    detector_id: discord_bot_token
+    expected_fire: true
+    matched_text_starts: M
+    notes: Discord bot token M-prefix
+  - file: true_positives/communication/discord_n.env
+    line: 1
+    detector_id: discord_bot_token
+    expected_fire: true
+    matched_text_starts: N
+    notes: Discord bot token N-prefix
+  - file: true_positives/communication/discord_webhook.env
+    line: 1
+    detector_id: discord_webhook
+    expected_fire: true
+    matched_text_starts: "https://discord.com"
+    notes: Discord webhook URL
+  - file: true_positives/communication/telegram.env
+    line: 1
+    detector_id: telegram_bot_token
+    expected_fire: true
+    matched_text_starts: "1234567890:"
+    notes: Telegram bot token
+  - file: true_positives/communication/teams_webhook.env
+    line: 1
+    detector_id: teams_webhook
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: Microsoft Teams incoming webhook
+  - file: true_positives/communication/gchat_webhook.env
+    line: 1
+    detector_id: google_chat_webhook
+    expected_fire: true
+    matched_text_starts: "https://chat.googleapis"
+    notes: Google Chat webhook URL
+  - file: true_positives/communication/facebook.env
+    line: 1
+    detector_id: facebook_access_token
+    expected_fire: true
+    matched_text_starts: EAA
+    notes: Facebook access token
+  - file: true_positives/communication/instagram.env
+    line: 1
+    detector_id: instagram_access_token
+    expected_fire: true
+    matched_text_starts: IGQV
+    notes: Instagram access token
+  - file: true_positives/communication/twitter.env
+    line: 2
+    detector_id: twitter_bearer_token
+    expected_fire: true
+    matched_text_starts: AAAAAAAAAAAAAAAAAAA
+    notes: Twitter bearer token with context
+  - file: true_positives/communication/pubnub.env
+    line: 1
+    detector_id: pubnub_subscribe_key
+    expected_fire: true
+    matched_text_starts: sub-c-
+    notes: PubNub subscribe key
+  - file: true_positives/communication/pubnub.env
+    line: 2
+    detector_id: pubnub_publish_key
+    expected_fire: true
+    matched_text_starts: pub-c-
+    notes: PubNub publish key
+  - file: true_positives/communication/pubnub.env
+    line: 3
+    detector_id: pubnub_secret_key
+    expected_fire: true
+    matched_text_starts: sec-c-
+    notes: PubNub secret key
+  - file: true_positives/communication/line.env
+    line: 1
+    detector_id: line_channel_access_token
+    expected_fire: true
+    matched_text_starts: 26hsb5
+    notes: LINE channel access token
+  - file: true_positives/communication/ably.env
+    line: 1
+    detector_id: ably_api_key
+    expected_fire: true
+    matched_text_starts: BvPMNd
+    notes: Ably API key with context
+  - file: true_positives/communication/braze.env
+    line: 1
+    detector_id: braze_api_key
+    expected_fire: true
+    matched_text_starts: 8c726cd7
+    notes: Braze UUID key with context
+  - file: true_positives/communication/airship.env
+    line: 1
+    detector_id: airship_app_key
+    expected_fire: true
+    matched_text_starts: 0vJ0Ei
+    notes: Airship app key
+  - file: true_positives/communication/airship.env
+    line: 2
+    detector_id: airship_app_secret
+    expected_fire: true
+    matched_text_starts: Ya_EsS
+    notes: Airship app secret
+  - file: true_positives/communication/messagebird.env
+    line: 1
+    detector_id: messagebird_access_key
+    expected_fire: true
+    matched_text_starts: BFvnZA
+    notes: MessageBird access key
+  - file: true_positives/communication/plivo.env
+    line: 1
+    detector_id: plivo_auth_token
+    expected_fire: true
+    matched_text_starts: mhXtfP
+    notes: Plivo auth token
+  - file: true_positives/communication/pusher.env
+    line: 1
+    detector_id: pusher_app_secret
+    expected_fire: true
+    matched_text_starts: fr7iau
+    notes: Pusher app secret
+  - file: true_positives/communication/pushbullet.env
+    line: 1
+    detector_id: pushbullet_api_token
+    expected_fire: true
+    matched_text_starts: o.
+    notes: Pushbullet o. token
+  - file: true_positives/communication/segment.env
+    line: 1
+    detector_id: segment_write_key
+    expected_fire: true
+    matched_text_starts: RFaYkY
+    notes: Segment write key
+  - file: true_positives/communication/sendbird.env
+    line: 1
+    detector_id: sendbird_api_token
+    expected_fire: true
+    matched_text_starts: a1c735
+    notes: Sendbird API token
+  - file: true_positives/communication/brevo.env
+    line: 1
+    detector_id: sendinblue_brevo_api_key
+    expected_fire: true
+    matched_text_starts: xkeysib-
+    notes: Sendinblue/Brevo v2 API key
+  - file: true_positives/communication/nylas.env
+    line: 1
+    detector_id: nylas_api_key
+    expected_fire: true
+    matched_text_starts: nyk_v0_
+    notes: Nylas v3 API key
+  - file: true_positives/communication/hunter_io.env
+    line: 1
+    detector_id: hunter_api_key
+    expected_fire: true
+    matched_text_starts: d16a94
+    notes: Hunter.io 40-hex API key
+  - file: true_positives/communication/rabbitmq.env
+    line: 1
+    detector_id: rabbitmq_management_api
+    expected_fire: true
+    matched_text_starts: RABBITMQ_PASSWORD
+    notes: RabbitMQ management password
+  - file: true_positives/database/postgres.env
+    line: 1
+    detector_id: postgresql_connection_string
+    expected_fire: true
+    matched_text_starts: "postgresql://"
+    notes: PostgreSQL DSN
+  - file: true_positives/database/postgres_django.py
+    line: 2
+    detector_id: postgresql_connection_string
+    expected_fire: true
+    matched_text_starts: "postgres://"
+    notes: Postgres DSN in Django settings
+  - file: true_positives/database/mysql.env
+    line: 1
+    detector_id: mysql_connection_string
+    expected_fire: true
+    matched_text_starts: "mysql://"
+    notes: MySQL connection string
+  - file: true_positives/database/mongo.env
+    line: 1
+    detector_id: mongodb_connection_string
+    expected_fire: true
+    matched_text_starts: "mongodb+srv://"
+    notes: MongoDB Atlas SRV connection
+  - file: true_positives/database/mongo_node.js
+    line: 1
+    detector_id: mongodb_connection_string
+    expected_fire: true
+    matched_text_starts: "mongodb://"
+    notes: MongoDB connection in JS
+  - file: true_positives/database/redis.env
+    line: 1
+    detector_id: redis_connection_string
+    expected_fire: true
+    matched_text_starts: "redis://"
+    notes: Redis URL with credentials
+  - file: true_positives/database/db_password.env
+    line: 1
+    detector_id: database_password
+    expected_fire: true
+    matched_text_starts: DB_PASSWORD
+    notes: Generic DB_PASSWORD
+  - file: true_positives/database/db_password.env
+    line: 2
+    detector_id: database_password
+    expected_fire: true
+    matched_text_starts: MYSQL_PASSWORD
+    notes: MYSQL_PASSWORD
+  - file: true_positives/database/db_password.env
+    line: 3
+    detector_id: database_password
+    expected_fire: true
+    matched_text_starts: POSTGRES_PASSWORD
+    notes: POSTGRES_PASSWORD
+  - file: true_positives/database/jdbc.properties
+    line: 1
+    detector_id: jdbc_connection_string
+    expected_fire: true
+    matched_text_starts: "jdbc:mysql"
+    notes: JDBC connection string with password
+  - file: true_positives/database/cockroachdb.env
+    line: 1
+    detector_id: cockroachdb_connection_string
+    expected_fire: true
+    matched_text_starts: "cockroachdb://"
+    notes: CockroachDB connection string
+  - file: true_positives/database/clickhouse.env
+    line: 1
+    detector_id: clickhouse_connection_string
+    expected_fire: true
+    matched_text_starts: "clickhouse://"
+    notes: ClickHouse connection string
+  - file: true_positives/database/cassandra.env
+    line: 1
+    detector_id: cassandra_password
+    expected_fire: true
+    matched_text_starts: CASSANDRA_PASSWORD
+    notes: Cassandra password
+  - file: true_positives/database/elastic.env
+    line: 1
+    detector_id: elasticsearch_password
+    expected_fire: true
+    matched_text_starts: ELASTICSEARCH_PASSWORD
+    notes: Elasticsearch password
+  - file: true_positives/database/elastic.env
+    line: 2
+    detector_id: elasticsearch_password
+    expected_fire: true
+    matched_text_starts: ES_PASS
+    notes: ES_PASS alias
+  - file: true_positives/database/supabase.env
+    line: 2
+    detector_id: supabase_anon_key
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Supabase anon JWT with context
+  - file: true_positives/database/supabase.env
+    line: 3
+    detector_id: supabase_service_key
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Supabase service role JWT
+  - file: true_positives/database/fauna.env
+    line: 1
+    detector_id: fauna_secret
+    expected_fire: true
+    matched_text_starts: fn
+    notes: Fauna secret with context
+  - file: true_positives/database/neon.env
+    line: 1
+    detector_id: neon_connection_string
+    expected_fire: true
+    matched_text_starts: "postgresql://"
+    notes: Neon DB connection string
+  - file: true_positives/database/snowflake.env
+    line: 1
+    detector_id: snowflake_account_password
+    expected_fire: true
+    matched_text_starts: SNOWFLAKE_PASSWORD
+    notes: Snowflake password
+  - file: true_positives/database/snowflake_cs.env
+    line: 1
+    detector_id: snowflake_connection_string
+    expected_fire: true
+    matched_text_starts: "snowflake://"
+    notes: Snowflake connection string
+  - file: true_positives/database/mssql.env
+    line: 1
+    detector_id: mssql_connection_string_uri
+    expected_fire: true
+    matched_text_starts: "sqlserver://"
+    notes: SQL Server URI
+  - file: true_positives/database/mssql_traditional.env
+    line: 1
+    detector_id: mssql_connection_string_traditional
+    expected_fire: true
+    matched_text_starts: Server=
+    notes: SQL Server traditional connection string
+  - file: true_positives/database/mssql_sa.env
+    line: 1
+    detector_id: mssql_sa_password
+    expected_fire: true
+    matched_text_starts: SA_PASSWORD
+    notes: SQL Server SA password
+  - file: true_positives/database/ftp.env
+    line: 1
+    detector_id: ftp_credentials
+    expected_fire: true
+    matched_text_starts: "ftp://"
+    notes: FTP credentials
+  - file: true_positives/database/ldap.env
+    line: 1
+    detector_id: ldap_bind_credentials
+    expected_fire: true
+    matched_text_starts: "ldap://"
+    notes: LDAP bind credentials
+  - file: true_positives/database/databricks.env
+    line: 1
+    detector_id: databricks_connection_string
+    expected_fire: true
+    matched_text_starts: DATABRICKS_TOKEN
+    notes: Databricks token assignment
+  - file: true_positives/database/aiven_password.env
+    line: 1
+    detector_id: aiven_service_password
+    expected_fire: true
+    matched_text_starts: AIVEN_PASSWORD
+    notes: Aiven service password
+  - file: true_positives/database/aiven_uri.env
+    line: 1
+    detector_id: aiven_service_uri
+    expected_fire: true
+    matched_text_starts: "postgres://"
+    notes: Aiven service URI
+  - file: true_positives/database/kafka.env
+    line: 1
+    detector_id: kafka_connection_credentials
+    expected_fire: true
+    matched_text_starts: "kafka://"
+    notes: Kafka SASL connection
+  - file: true_positives/database/rabbitmq_uri.env
+    line: 1
+    detector_id: rabbitmq_connection_uri
+    expected_fire: true
+    matched_text_starts: "amqps://"
+    notes: RabbitMQ AMQPS URI
+  - file: true_positives/database/memcached.env
+    line: 1
+    detector_id: memcached_credentials
+    expected_fire: true
+    matched_text_starts: "memcached://"
+    notes: Memcached SASL credentials
+  - file: true_positives/database/neo4j_uri.env
+    line: 1
+    detector_id: neo4j_connection_uri
+    expected_fire: true
+    matched_text_starts: "neo4j://"
+    notes: Neo4j URI with credentials
+  - file: true_positives/database/neo4j_password.env
+    line: 1
+    detector_id: neo4j_password
+    expected_fire: true
+    matched_text_starts: NEO4J_PASSWORD
+    notes: Neo4j standalone password
+  - file: true_positives/database/arangodb.env
+    line: 1
+    detector_id: arangodb_jwt
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: ArangoDB JWT
+  - file: true_positives/database/couchdb.env
+    line: 1
+    detector_id: couchdb_credentials
+    expected_fire: true
+    matched_text_starts: "http://admin:"
+    notes: CouchDB credentials
+  - file: true_positives/database/planetscale.env
+    line: 1
+    detector_id: planetscale_service_token
+    expected_fire: true
+    matched_text_starts: pscale_tkn_
+    notes: PlanetScale service token
+  - file: true_positives/database/planetscale.env
+    line: 2
+    detector_id: planetscale_password
+    expected_fire: true
+    matched_text_starts: pscale_pw_
+    notes: PlanetScale DB password
+  - file: true_positives/database/planetscale.env
+    line: 3
+    detector_id: planetscale_oauth_token
+    expected_fire: true
+    matched_text_starts: pscale_oauth_
+    notes: PlanetScale OAuth token
+  - file: true_positives/database/redis_password.env
+    line: 1
+    detector_id: redis_password_standalone
+    expected_fire: true
+    matched_text_starts: REDIS_PASSWORD
+    notes: Redis password (standalone)
+  - file: true_positives/database/redshift.env
+    line: 1
+    detector_id: aws_redshift_jdbc_connection
+    expected_fire: true
+    matched_text_starts: "jdbc:redshift"
+    notes: AWS Redshift JDBC connection
+  - file: true_positives/database/hasura.env
+    line: 1
+    detector_id: hasura_graphql_jwt
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Hasura JWT secret with context
+  - file: true_positives/database/couchbase.env
+    line: 1
+    detector_id: couchbase_connection_string
+    expected_fire: true
+    matched_text_starts: "couchbase://"
+    notes: Couchbase connection string
+  - file: true_positives/database/oracle_db.env
+    line: 1
+    detector_id: oracle_db_connection_string
+    expected_fire: true
+    matched_text_starts: "jdbc:oracle"
+    notes: Oracle DB JDBC connection
+  - file: true_positives/database/timescaledb.env
+    line: 1
+    detector_id: timescaledb_connection_string
+    expected_fire: true
+    matched_text_starts: "postgres://"
+    notes: TimescaleDB connection
+  - file: true_positives/email/sendgrid.env
+    line: 1
+    detector_id: sendgrid_api_key
+    expected_fire: true
+    matched_text_starts: SG.
+    notes: "SendGrid API key SG.{}.{}"
+  - file: true_positives/email/sendgrid_node.js
+    line: 2
+    detector_id: sendgrid_api_key
+    expected_fire: true
+    matched_text_starts: SG.
+    notes: SendGrid key in Node
+  - file: true_positives/email/sendgrid_workflow.yml
+    line: 2
+    detector_id: sendgrid_api_key
+    expected_fire: true
+    matched_text_starts: SG.
+    notes: SendGrid in workflow env
+  - file: true_positives/email/mailgun.env
+    line: 1
+    detector_id: mailgun_api_key
+    expected_fire: true
+    matched_text_starts: key-
+    notes: Mailgun key- API key
+  - file: true_positives/email/mailgun_node.js
+    line: 1
+    detector_id: mailgun_api_key
+    expected_fire: true
+    matched_text_starts: key-
+    notes: Mailgun key in JS
+  - file: true_positives/email/mailgun_private.env
+    line: 1
+    detector_id: mailgun_private_key
+    expected_fire: true
+    matched_text_starts: 08531c
+    notes: Mailgun private key v2
+  - file: true_positives/email/postmark.env
+    line: 1
+    detector_id: postmark_server_token
+    expected_fire: true
+    matched_text_starts: 44aa834c
+    notes: Postmark server token with context
+  - file: true_positives/email/mailchimp.env
+    line: 1
+    detector_id: mailchimp_api_key
+    expected_fire: true
+    matched_text_starts: cdaab461
+    notes: Mailchimp 32hex-usN key
+  - file: true_positives/email/mailchimp_client.py
+    line: 1
+    detector_id: mailchimp_api_key
+    expected_fire: true
+    matched_text_starts: 9a771fb0
+    notes: Mailchimp in Python
+  - file: true_positives/email/smtp_nodemailer.js
+    line: 4
+    detector_id: smtp_password
+    expected_fire: true
+    matched_text_starts: "pass:"
+    notes: SMTP password in nodemailer createTransport
+  - file: true_positives/email/resend.env
+    line: 1
+    detector_id: resend_api_key
+    expected_fire: true
+    matched_text_starts: re_
+    notes: Resend API key with context
+  - file: true_positives/email/brevo_sendinblue.env
+    line: 1
+    detector_id: brevo_api_key
+    expected_fire: true
+    matched_text_starts: xkeysib-
+    notes: Brevo API key
+  - file: true_positives/email/customerio.env
+    line: 1
+    detector_id: customerio_api_key
+    expected_fire: true
+    matched_text_starts: b5105c
+    notes: Customer.io key
+  - file: true_positives/email/klaviyo.env
+    line: 1
+    detector_id: klaviyo_api_key
+    expected_fire: true
+    matched_text_starts: pk_
+    notes: Klaviyo private key
+  - file: true_positives/email/loops.env
+    line: 1
+    detector_id: loops_api_key
+    expected_fire: true
+    matched_text_starts: 4f64dc
+    notes: Loops API key
+  - file: true_positives/email/sparkpost.env
+    line: 1
+    detector_id: sparkpost_api_key
+    expected_fire: true
+    matched_text_starts: 733520
+    notes: SparkPost API key
+  - file: true_positives/email/mailerlite.env
+    line: 1
+    detector_id: mailerlite_api_token
+    expected_fire: true
+    matched_text_starts: 3f5eed
+    notes: MailerLite API token
+  - file: true_positives/email/mandrill.env
+    line: 1
+    detector_id: mandrill_api_key
+    expected_fire: true
+    matched_text_starts: eicXkn
+    notes: Mandrill API key
+  - file: true_positives/email/convertkit.env
+    line: 1
+    detector_id: convertkit_api_secret
+    expected_fire: true
+    matched_text_starts: Zn51kG
+    notes: ConvertKit API secret
+  - file: true_positives/email/getresponse.env
+    line: 1
+    detector_id: getresponse_api_key
+    expected_fire: true
+    matched_text_starts: 283350
+    notes: GetResponse API key
+  - file: true_positives/email/aws_ses.env
+    line: 2
+    detector_id: aws_ses_smtp_password
+    expected_fire: true
+    matched_text_starts: WlAopl
+    notes: AWS SES SMTP password
+  - file: true_positives/monitoring/pagerduty.env
+    line: 1
+    detector_id: pagerduty_api_key
+    expected_fire: true
+    matched_text_starts: u+
+    notes: PagerDuty u+ API key
+  - file: true_positives/monitoring/sumologic.env
+    line: 1
+    detector_id: sumo_logic_access_id
+    expected_fire: true
+    matched_text_starts: su
+    notes: Sumo Logic access ID
+  - file: true_positives/monitoring/datadog.env
+    line: 2
+    detector_id: datadog_api_key
+    expected_fire: true
+    matched_text_starts: 195074
+    notes: Datadog API key 32hex
+  - file: true_positives/monitoring/datadog.env
+    line: 3
+    detector_id: datadog_app_key
+    expected_fire: true
+    matched_text_starts: 0d47dd
+    notes: Datadog application key 40hex
+  - file: true_positives/monitoring/bugsnag.env
+    line: 1
+    detector_id: bugsnag_api_key
+    expected_fire: true
+    matched_text_starts: 0791df
+    notes: Bugsnag API key
+  - file: true_positives/monitoring/rollbar.env
+    line: 1
+    detector_id: rollbar_access_token
+    expected_fire: true
+    matched_text_starts: 323bd9
+    notes: Rollbar access token
+  - file: true_positives/monitoring/splunk.env
+    line: 1
+    detector_id: splunk_observability_token
+    expected_fire: true
+    matched_text_starts: X31PmY
+    notes: Splunk Observability token
+  - file: true_positives/monitoring/opsgenie.env
+    line: 1
+    detector_id: opsgenie_api_key
+    expected_fire: true
+    matched_text_starts: c817f004
+    notes: Opsgenie API integration UUID
+  - file: true_positives/monitoring/statuspage.env
+    line: 1
+    detector_id: statuspage_api_key
+    expected_fire: true
+    matched_text_starts: Y1zxrr
+    notes: Statuspage API key
+  - file: true_positives/monitoring/newrelic.env
+    line: 1
+    detector_id: newrelic_api_key
+    expected_fire: true
+    matched_text_starts: NRAK-
+    notes: New Relic NRAK- API key
+  - file: true_positives/monitoring/newrelic_insights.env
+    line: 1
+    detector_id: newrelic_insights_insert_key
+    expected_fire: true
+    matched_text_starts: NRII-
+    notes: NR Insights insert key
+  - file: true_positives/monitoring/newrelic_insights.env
+    line: 2
+    detector_id: newrelic_insights_query_key
+    expected_fire: true
+    matched_text_starts: NRIQ-
+    notes: NR Insights query key
+  - file: true_positives/monitoring/sentry.env
+    line: 1
+    detector_id: sentry_dsn
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: Sentry DSN
+  - file: true_positives/monitoring/sentry_org.env
+    line: 1
+    detector_id: sentry_org_token
+    expected_fire: true
+    matched_text_starts: sntrys_
+    notes: Sentry org auth token
+  - file: true_positives/monitoring/sentry_user.env
+    line: 1
+    detector_id: sentry_user_token
+    expected_fire: true
+    matched_text_starts: sntryu_
+    notes: Sentry user token
+  - file: true_positives/saas/shopify.env
+    line: 1
+    detector_id: shopify_access_token
+    expected_fire: true
+    matched_text_starts: shpat_
+    notes: Shopify access token
+  - file: true_positives/saas/shopify.env
+    line: 2
+    detector_id: shopify_custom_app_token
+    expected_fire: true
+    matched_text_starts: shpca_
+    notes: Shopify custom app token
+  - file: true_positives/saas/shopify.env
+    line: 3
+    detector_id: shopify_shared_secret
+    expected_fire: true
+    matched_text_starts: shpss_
+    notes: Shopify shared secret
+  - file: true_positives/saas/shopify.env
+    line: 4
+    detector_id: shopify_private_app_password
+    expected_fire: true
+    matched_text_starts: shppa_
+    notes: Shopify private app password
+  - file: true_positives/saas/mapbox.env
+    line: 1
+    detector_id: mapbox_secret_token
+    expected_fire: true
+    matched_text_starts: sk.eyJ
+    notes: Mapbox secret token sk. JWT
+  - file: true_positives/saas/mapbox.env
+    line: 2
+    detector_id: mapbox_public_token
+    expected_fire: true
+    matched_text_starts: pk.eyJ
+    notes: Mapbox public token pk. JWT
+  - file: true_positives/saas/sonarqube.env
+    line: 1
+    detector_id: sonarqube_user_token
+    expected_fire: true
+    matched_text_starts: squ_
+    notes: SonarQube user token
+  - file: true_positives/saas/sonarqube.env
+    line: 2
+    detector_id: sonarqube_project_token
+    expected_fire: true
+    matched_text_starts: sqp_
+    notes: SonarQube project token
+  - file: true_positives/saas/sonarqube.env
+    line: 3
+    detector_id: sonarqube_global_token
+    expected_fire: true
+    matched_text_starts: sqa_
+    notes: SonarQube global token
+  - file: true_positives/saas/notion.env
+    line: 1
+    detector_id: notion_api_token
+    expected_fire: true
+    matched_text_starts: ntn_
+    notes: Notion API token
+  - file: true_positives/saas/notion.env
+    line: 2
+    detector_id: notion_legacy_token
+    expected_fire: true
+    matched_text_starts: secret_
+    notes: Notion legacy secret_ token
+  - file: true_positives/saas/linear.env
+    line: 1
+    detector_id: linear_api_key
+    expected_fire: true
+    matched_text_starts: lin_api_
+    notes: Linear API key
+  - file: true_positives/saas/figma.env
+    line: 1
+    detector_id: figma_personal_access_token
+    expected_fire: true
+    matched_text_starts: figd_
+    notes: Figma PAT
+  - file: true_positives/saas/airtable.env
+    line: 1
+    detector_id: airtable_personal_access_token
+    expected_fire: true
+    matched_text_starts: pat
+    notes: Airtable PAT
+  - file: true_positives/saas/asana.env
+    line: 1
+    detector_id: asana_personal_access_token
+    expected_fire: true
+    matched_text_starts: 1234
+    notes: Asana PAT
+  - file: true_positives/saas/intercom.env
+    line: 1
+    detector_id: intercom_access_token
+    expected_fire: true
+    matched_text_starts: dG9rO
+    notes: Intercom access token
+  - file: true_positives/saas/postman.env
+    line: 1
+    detector_id: postman_api_key
+    expected_fire: true
+    matched_text_starts: PMAK-
+    notes: Postman API key
+  - file: true_positives/saas/prefect.env
+    line: 1
+    detector_id: prefect_api_key
+    expected_fire: true
+    matched_text_starts: pnu_
+    notes: Prefect pnu_ API key
+  - file: true_positives/saas/pulumi.env
+    line: 1
+    detector_id: pulumi_access_token
+    expected_fire: true
+    matched_text_starts: pul-
+    notes: Pulumi access token
+  - file: true_positives/saas/dynatrace.env
+    line: 1
+    detector_id: dynatrace_api_token
+    expected_fire: true
+    matched_text_starts: dt0c01.
+    notes: Dynatrace API token
+  - file: true_positives/saas/databricks.env
+    line: 1
+    detector_id: databricks_api_token
+    expected_fire: true
+    matched_text_starts: dapi
+    notes: Databricks API token
+  - file: true_positives/saas/salesforce.env
+    line: 1
+    detector_id: salesforce_access_token
+    expected_fire: true
+    matched_text_starts: 00D
+    notes: Salesforce access token
+  - file: true_positives/saas/dropbox.env
+    line: 1
+    detector_id: dropbox_access_token
+    expected_fire: true
+    matched_text_starts: sl.
+    notes: Dropbox access token
+  - file: true_positives/saas/typeform.env
+    line: 1
+    detector_id: typeform_api_token
+    expected_fire: true
+    matched_text_starts: tfp_
+    notes: Typeform API token
+  - file: true_positives/saas/shippo.env
+    line: 1
+    detector_id: shippo_api_token
+    expected_fire: true
+    matched_text_starts: shippo_
+    notes: Shippo API token
+  - file: true_positives/saas/easypost.env
+    line: 1
+    detector_id: easypost_production_key
+    expected_fire: true
+    matched_text_starts: EZAK
+    notes: EasyPost production key
+  - file: true_positives/saas/easypost.env
+    line: 2
+    detector_id: easypost_test_key
+    expected_fire: true
+    matched_text_starts: ak_
+    notes: EasyPost test key
+  - file: true_positives/saas/deepl.env
+    line: 1
+    detector_id: deepl_auth_key
+    expected_fire: true
+    matched_text_starts: 3b4717c9
+    notes: "DeepL UUID:fx auth key"
+  - file: true_positives/saas/tailscale.env
+    line: 1
+    detector_id: tailscale_api_key
+    expected_fire: true
+    matched_text_starts: tskey-api-
+    notes: Tailscale API key
+  - file: true_positives/saas/contentful.env
+    line: 1
+    detector_id: contentful_management_token
+    expected_fire: true
+    matched_text_starts: CFPAT-
+    notes: Contentful management token
+  - file: true_positives/saas/1password.env
+    line: 1
+    detector_id: onepassword_service_account_token
+    expected_fire: true
+    matched_text_starts: ops_
+    notes: 1Password service account token
+  - file: true_positives/saas/posthog.env
+    line: 1
+    detector_id: posthog_personal_api_key
+    expected_fire: true
+    matched_text_starts: phx_
+    notes: PostHog personal API key
+  - file: true_positives/saas/posthog.env
+    line: 2
+    detector_id: posthog_api_key
+    expected_fire: true
+    matched_text_starts: phc_
+    notes: PostHog project API key
+  - file: true_positives/saas/hubspot.env
+    line: 1
+    detector_id: hubspot_private_app_token
+    expected_fire: true
+    matched_text_starts: pat-na1-
+    notes: HubSpot private app token
+  - file: true_positives/saas/readme.env
+    line: 1
+    detector_id: readme_api_key
+    expected_fire: true
+    matched_text_starts: rdme_
+    notes: ReadMe API key
+  - file: true_positives/saas/infracost.env
+    line: 1
+    detector_id: infracost_api_key
+    expected_fire: true
+    matched_text_starts: ico-
+    notes: Infracost API key
+  - file: true_positives/saas/duffel.env
+    line: 1
+    detector_id: duffel_api_token
+    expected_fire: true
+    matched_text_starts: duffel_live_
+    notes: Duffel API token
+  - file: true_positives/saas/frameio.env
+    line: 1
+    detector_id: frame_io_token
+    expected_fire: true
+    matched_text_starts: fio-u-
+    notes: Frame.io token
+  - file: true_positives/saas/apify.env
+    line: 1
+    detector_id: apify_api_token
+    expected_fire: true
+    matched_text_starts: apify_api_
+    notes: Apify API token
+  - file: true_positives/saas/mailersend.env
+    line: 1
+    detector_id: mailersend_api_key
+    expected_fire: true
+    matched_text_starts: mlsn.
+    notes: MailerSend API key
+  - file: true_positives/saas/zoho.env
+    line: 1
+    detector_id: zoho_crm_auth_token
+    expected_fire: true
+    matched_text_starts: 1234567890.
+    notes: Zoho CRM legacy auth token
+  - file: true_positives/saas/moltbook.env
+    line: 1
+    detector_id: moltbook_secret_key
+    expected_fire: true
+    matched_text_starts: moltbook_sk_
+    notes: Moltbook secret key
+  - file: true_positives/saas/moltbook.env
+    line: 2
+    detector_id: moltbook_claim_token
+    expected_fire: true
+    matched_text_starts: moltbook_claim_
+    notes: Moltbook claim token
+  - file: true_positives/saas/moltbook.env
+    line: 3
+    detector_id: moltdev_app_key
+    expected_fire: true
+    matched_text_starts: moltdev_
+    notes: Moltdev developer key
+  - file: true_positives/saas/twitch.env
+    line: 2
+    detector_id: twitch_client_secret
+    expected_fire: true
+    matched_text_starts: 4xel46
+    notes: Twitch client secret
+  - file: true_positives/saas/yandex.env
+    line: 1
+    detector_id: yandex_api_token
+    expected_fire: true
+    matched_text_starts: z2D3sT
+    notes: Yandex 83-char token
+  - file: true_positives/saas/beamer.env
+    line: 1
+    detector_id: beamer_api_key
+    expected_fire: true
+    matched_text_starts: MBK2yC
+    notes: Beamer API key
+  - file: true_positives/saas/shodan.env
+    line: 1
+    detector_id: shodan_api_key
+    expected_fire: true
+    matched_text_starts: 73H5xA
+    notes: Shodan API key
+  - file: true_positives/saas/adobe.env
+    line: 1
+    detector_id: adobe_client_secret
+    expected_fire: true
+    matched_text_starts: p8e-
+    notes: Adobe IO client secret
+  - file: true_positives/saas/docusign.env
+    line: 1
+    detector_id: docusign_secret
+    expected_fire: true
+    matched_text_starts: b5ea5632
+    notes: DocuSign integration secret
+  - file: true_positives/saas/eventbrite.env
+    line: 1
+    detector_id: eventbrite_private_token
+    expected_fire: true
+    matched_text_starts: BOQOGK
+    notes: Eventbrite private token
+  - file: true_positives/saas/virustotal.env
+    line: 1
+    detector_id: virustotal_api_key
+    expected_fire: true
+    matched_text_starts: 08e22c
+    notes: VirusTotal API key
+  - file: true_positives/saas/zendesk.env
+    line: 1
+    detector_id: zendesk_api_token
+    expected_fire: true
+    matched_text_starts: IW1I5o
+    notes: Zendesk API token
+  - file: true_positives/saas/webflow.env
+    line: 1
+    detector_id: webflow_site_token
+    expected_fire: true
+    matched_text_starts: ba68ff
+    notes: Webflow site token
+  - file: true_positives/saas/yelp.env
+    line: 1
+    detector_id: yelp_fusion_api_key
+    expected_fire: true
+    matched_text_starts: O2BB-G
+    notes: Yelp Fusion API key
+  - file: true_positives/saas/linkedin.env
+    line: 1
+    detector_id: linkedin_client_secret
+    expected_fire: true
+    matched_text_starts: yzkrpt
+    notes: LinkedIn OAuth secret
+  - file: true_positives/saas/freshdesk.env
+    line: 1
+    detector_id: freshdesk_api_key
+    expected_fire: true
+    matched_text_starts: 4svCsu
+    notes: Freshdesk API key
+  - file: true_positives/saas/algolia.env
+    line: 1
+    detector_id: algolia_api_key
+    expected_fire: true
+    matched_text_starts: b62d64
+    notes: Algolia API key
+  - file: true_positives/saas/fullstory.env
+    line: 1
+    detector_id: fullstory_api_key
+    expected_fire: true
+    matched_text_starts: "FSCY4:"
+    notes: FullStory API key
+  - file: true_positives/saas/jfrog_reference.env
+    line: 2
+    detector_id: jfrog_artifactory_reference_token
+    expected_fire: true
+    matched_text_starts: cmVm
+    notes: JFrog reference token with jfrog context
+  - file: true_positives/saas/langfuse.env
+    line: 1
+    detector_id: langfuse_api_key
+    expected_fire: true
+    matched_text_starts: sk-lf-
+    notes: LangFuse sk-lf- key
+  - file: true_positives/saas/langfuse.env
+    line: 2
+    detector_id: langfuse_api_key
+    expected_fire: true
+    matched_text_starts: pk-lf-
+    notes: LangFuse pk-lf- key
+  - file: true_positives/saas/onepassword_connect.env
+    line: 2
+    detector_id: onepassword_connect_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: 1Password Connect JWT
+  - file: true_positives/saas/v0.env
+    line: 1
+    detector_id: v0_api_key
+    expected_fire: true
+    matched_text_starts: "v1:"
+    notes: Vercel v0 API key
+  - file: true_positives/auth/jwt.env
+    line: 1
+    detector_id: jwt_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Generic JWT
+  - file: true_positives/auth/auth0.env
+    line: 1
+    detector_id: auth0_management_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Auth0 management JWT
+  - file: true_positives/auth/okta.env
+    line: 2
+    detector_id: okta_api_token
+    expected_fire: true
+    matched_text_starts: 00
+    notes: Okta API token
+  - file: true_positives/auth/firebase.env
+    line: 1
+    detector_id: firebase_custom_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Firebase custom JWT
+  - file: true_positives/auth/bearer.http
+    line: 3
+    detector_id: bearer_token
+    expected_fire: true
+    matched_text_starts: "Bearer "
+    notes: HTTP Authorization Bearer
+  - file: true_positives/auth/oauth_refresh.env
+    line: 1
+    detector_id: oauth_refresh_token
+    expected_fire: true
+    matched_text_starts: OAUTH_REFRESH_TOKEN
+    notes: OAuth refresh token
+  - file: true_positives/auth/clerk.env
+    line: 1
+    detector_id: clerk_secret_key
+    expected_fire: true
+    matched_text_starts: sk_live_
+    notes: Clerk secret key
+  - file: true_positives/auth/clerk.env
+    line: 2
+    detector_id: clerk_publishable_key
+    expected_fire: true
+    matched_text_starts: pk_live_
+    notes: Clerk publishable key
+  - file: true_positives/auth/workos.env
+    line: 2
+    detector_id: workos_api_key
+    expected_fire: true
+    matched_text_starts: sk_live_
+    notes: WorkOS API key with context
+  - file: true_positives/auth/stytch.env
+    line: 1
+    detector_id: stytch_secret
+    expected_fire: true
+    matched_text_starts: secret-live-
+    notes: Stytch secret
+  - file: true_positives/auth/stytch.env
+    line: 2
+    detector_id: stytch_project_id
+    expected_fire: true
+    matched_text_starts: project-live-
+    notes: Stytch project ID
+  - file: true_positives/auth/grafana.env
+    line: 1
+    detector_id: grafana_api_key
+    expected_fire: true
+    matched_text_starts: glsa_
+    notes: Grafana service account API key
+  - file: true_positives/auth/grafana.env
+    line: 2
+    detector_id: grafana_cloud_token
+    expected_fire: true
+    matched_text_starts: glc_
+    notes: Grafana Cloud API token
+  - file: true_positives/auth/cognito.env
+    line: 1
+    detector_id: cognito_identity_pool_id
+    expected_fire: true
+    matched_text_starts: "us-east-1:"
+    notes: AWS Cognito identity pool ID
+  - file: true_positives/crypto/rsa_private.pem
+    line: 1
+    detector_id: rsa_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN RSA
+    notes: RSA private key PEM
+  - file: true_positives/crypto/ec_private.pem
+    line: 1
+    detector_id: ec_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN EC
+    notes: EC private key PEM
+  - file: true_positives/crypto/pkcs8_private.pem
+    line: 1
+    detector_id: pkcs8_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN PRIVATE
+    notes: "PKCS#8 private key"
+  - file: true_positives/crypto/openssh_id_rsa
+    line: 1
+    detector_id: openssh_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN OPENSSH
+    notes: OpenSSH private key
+  - file: true_positives/crypto/dsa_private.pem
+    line: 1
+    detector_id: dsa_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN DSA
+    notes: DSA private key
+  - file: true_positives/crypto/pgp_private.asc
+    line: 1
+    detector_id: pgp_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN PGP
+    notes: PGP private key block
+  - file: true_positives/crypto/encrypted_private.pem
+    line: 1
+    detector_id: encrypted_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN ENCRYPTED
+    notes: Encrypted private key
+  - file: true_positives/crypto/putty_key.ppk
+    line: 1
+    detector_id: putty_private_key
+    expected_fire: true
+    matched_text_starts: PuTTY-
+    notes: PuTTY private key file
+  - file: true_positives/crypto/server.key
+    line: 2
+    detector_id: ssl_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN PRIVATE
+    notes: SSL/TLS private key with SSL context
+  - file: true_positives/crypto/age_key.txt
+    line: 2
+    detector_id: age_secret_key
+    expected_fire: true
+    matched_text_starts: AGE-SECRET-KEY-1
+    notes: Age secret key
+  - file: true_positives/crypto/sops_age.yaml
+    line: 2
+    detector_id: sops_age_key
+    expected_fire: true
+    matched_text_starts: AGE-SECRET-KEY-1
+    notes: SOPS-context Age key
+  - file: true_positives/crypto/jwt_signing.env
+    line: 1
+    detector_id: jwt_signing_key
+    expected_fire: true
+    matched_text_starts: JWT_SECRET
+    notes: JWT signing key (HMAC secret)
+  - file: true_positives/crypto/encryption_key.env
+    line: 1
+    detector_id: encryption_key
+    expected_fire: true
+    matched_text_starts: ENCRYPTION_KEY
+    notes: AES master encryption key
+  - file: true_positives/crypto/cert.pfx.b64
+    line: 2
+    detector_id: pkcs12_content
+    expected_fire: true
+    matched_text_starts: MII
+    notes: "PKCS#12 base64 content with pfx context"
+  - file: true_positives/crypto/etherscan.env
+    line: 1
+    detector_id: etherscan_api_token
+    expected_fire: true
+    matched_text_starts: DB64JI
+    notes: Etherscan API token
+  - file: true_positives/crypto/blockcypher.env
+    line: 1
+    detector_id: blockcypher_token
+    expected_fire: true
+    matched_text_starts: 5998e0
+    notes: BlockCypher API token
+  - file: true_positives/code_analysis/sourcegraph.env
+    line: 1
+    detector_id: sourcegraph_access_token
+    expected_fire: true
+    matched_text_starts: sgp_
+    notes: Sourcegraph access token
+  - file: true_positives/code_analysis/sourcegraph.env
+    line: 2
+    detector_id: sourcegraph_access_token
+    expected_fire: true
+    matched_text_starts: sgp_local_
+    notes: Sourcegraph local token
+  - file: true_positives/code_analysis/snyk.env
+    line: 1
+    detector_id: snyk_api_token
+    expected_fire: true
+    matched_text_starts: dadfc2e6
+    notes: Snyk UUID API token
+  - file: true_positives/code_analysis/codacy.env
+    line: 1
+    detector_id: codacy_api_token
+    expected_fire: true
+    matched_text_starts: hoCe3z
+    notes: Codacy API token
+  - file: true_positives/code_analysis/codeclimate.env
+    line: 1
+    detector_id: codeclimate_api_token
+    expected_fire: true
+    matched_text_starts: 5f02ca
+    notes: Code Climate API token
+  - file: true_positives/code_analysis/coveralls.env
+    line: 1
+    detector_id: coveralls_repo_token
+    expected_fire: true
+    matched_text_starts: kzN3Wf
+    notes: Coveralls repo token
+  - file: true_positives/collaboration/atlassian.env
+    line: 1
+    detector_id: atlassian_api_token
+    expected_fire: true
+    matched_text_starts: ATATT3
+    notes: Atlassian API token
+  - file: true_positives/collaboration/bitbucket.env
+    line: 1
+    detector_id: bitbucket_app_password
+    expected_fire: true
+    matched_text_starts: ATBB
+    notes: Bitbucket app password
+  - file: true_positives/collaboration/mattermost.env
+    line: 1
+    detector_id: mattermost_personal_access_token
+    expected_fire: true
+    matched_text_starts: abqk55
+    notes: Mattermost PAT
+  - file: true_positives/collaboration/webex.env
+    line: 1
+    detector_id: webex_access_token
+    expected_fire: true
+    matched_text_starts: Dlr93P
+    notes: Webex access token
+  - file: true_positives/collaboration/trello.env
+    line: 1
+    detector_id: trello_api_key
+    expected_fire: true
+    matched_text_starts: 3cb9b4
+    notes: Trello API key
+  - file: true_positives/collaboration/trello.env
+    line: 2
+    detector_id: trello_api_token
+    expected_fire: true
+    matched_text_starts: Nvl05k
+    notes: Trello API token
+  - file: true_positives/cdn/cloudflare.env
+    line: 1
+    detector_id: cloudflare_origin_ca_key
+    expected_fire: true
+    matched_text_starts: v1.0-
+    notes: Cloudflare Origin CA key
+  - file: true_positives/cdn/fastly.env
+    line: 1
+    detector_id: fastly_api_token
+    expected_fire: true
+    matched_text_starts: 4nzYJH
+    notes: Fastly API token
+  - file: true_positives/cdn/bunnynet.env
+    line: 1
+    detector_id: bunnynet_api_key
+    expected_fire: true
+    matched_text_starts: 3ec4e607
+    notes: Bunny.net API key
+  - file: true_positives/analytics/maxmind.env
+    line: 1
+    detector_id: maxmind_license_key_v2
+    expected_fire: true
+    matched_text_starts: Gkzyx2
+    notes: MaxMind v2 license key
+  - file: true_positives/analytics/maxmind_v1.env
+    line: 2
+    detector_id: maxmind_license_key_v1
+    expected_fire: true
+    matched_text_starts: al9rdc
+    notes: MaxMind v1 license key
+  - file: true_positives/analytics/mixpanel.env
+    line: 1
+    detector_id: mixpanel_service_account_secret
+    expected_fire: true
+    matched_text_starts: bfc579
+    notes: Mixpanel service account secret
+  - file: true_positives/analytics/amplitude.env
+    line: 1
+    detector_id: amplitude_api_key
+    expected_fire: true
+    matched_text_starts: 38ee2d
+    notes: Amplitude API key
+  - file: true_positives/secret_management/bitwarden.env
+    line: 1
+    detector_id: bitwarden_org_api_key
+    expected_fire: true
+    matched_text_starts: organization.
+    notes: Bitwarden organization API key
+  - file: true_positives/secret_management/infisical.env
+    line: 1
+    detector_id: infisical_service_token
+    expected_fire: true
+    matched_text_starts: st.
+    notes: Infisical service token
+  - file: true_positives/secret_management/infisical.env
+    line: 2
+    detector_id: infisical_api_key
+    expected_fire: true
+    matched_text_starts: ak.
+    notes: Infisical API key
+  - file: true_positives/secret_management/doppler.env
+    line: 1
+    detector_id: doppler_service_token
+    expected_fire: true
+    matched_text_starts: dp.st.
+    notes: Doppler service token
+  - file: true_positives/secret_management/doppler.env
+    line: 2
+    detector_id: doppler_personal_token
+    expected_fire: true
+    matched_text_starts: dp.pt.
+    notes: Doppler personal token
+  - file: true_positives/secret_management/doppler.env
+    line: 3
+    detector_id: doppler_cli_token
+    expected_fire: true
+    matched_text_starts: dp.ct.
+    notes: Doppler CLI token
+  - file: true_positives/secret_management/doppler.env
+    line: 4
+    detector_id: doppler_audit_token
+    expected_fire: true
+    matched_text_starts: dp.at.
+    notes: Doppler audit token
+  - file: true_positives/secret_management/vault_legacy.env
+    line: 2
+    detector_id: vault_legacy_token
+    expected_fire: true
+    matched_text_starts: s.
+    notes: Vault legacy s. token
+  - file: true_positives/feature_flags/launchdarkly.env
+    line: 1
+    detector_id: launchdarkly_access_token
+    expected_fire: true
+    matched_text_starts: api-
+    notes: LaunchDarkly access token
+  - file: true_positives/feature_flags/flagsmith.env
+    line: 1
+    detector_id: flagsmith_environment_key
+    expected_fire: true
+    matched_text_starts: ser.
+    notes: Flagsmith server-side key
+  - file: true_positives/feature_flags/flagsmith.env
+    line: 2
+    detector_id: flagsmith_environment_key
+    expected_fire: true
+    matched_text_starts: env-
+    notes: Flagsmith env- prefix
+  - file: true_positives/feature_flags/unleash.env
+    line: 1
+    detector_id: unleash_api_token
+    expected_fire: true
+    matched_text_starts: "default:"
+    notes: Unleash API token
+  - file: true_positives/feature_flags/growthbook.env
+    line: 1
+    detector_id: growthbook_api_key
+    expected_fire: true
+    matched_text_starts: secret-
+    notes: GrowthBook API key
+  - file: true_positives/feature_flags/statsig.env
+    line: 1
+    detector_id: statsig_server_secret
+    expected_fire: true
+    matched_text_starts: secret-
+    notes: Statsig server secret
+  - file: true_positives/data_engineering/fivetran.env
+    line: 1
+    detector_id: fivetran_api_key
+    expected_fire: true
+    matched_text_starts: ft_
+    notes: Fivetran API key
+  - file: true_positives/data_engineering/confluent.env
+    line: 1
+    detector_id: confluent_cloud_api_key
+    expected_fire: true
+    matched_text_starts: LN0Eyr
+    notes: Confluent Cloud API key 16-char
+  - file: true_positives/data_engineering/confluent.env
+    line: 2
+    detector_id: confluent_cloud_api_secret
+    expected_fire: true
+    matched_text_starts: ftX0wT
+    notes: Confluent Cloud API secret 64-char
+  - file: true_positives/video_media/mux.env
+    line: 1
+    detector_id: mux_token_secret
+    expected_fire: true
+    matched_text_starts: OpCZW1
+    notes: Mux Video token secret
+  - file: true_positives/video_media/imagekit.env
+    line: 1
+    detector_id: imagekit_private_key
+    expected_fire: true
+    matched_text_starts: private_
+    notes: ImageKit private API key
+  - file: true_positives/project_management/clickup.env
+    line: 1
+    detector_id: clickup_personal_token
+    expected_fire: true
+    matched_text_starts: pk_
+    notes: ClickUp personal token
+  - file: true_positives/project_management/calendly.env
+    line: 1
+    detector_id: calendly_personal_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Calendly PAT JWT
+  - file: true_positives/project_management/front.env
+    line: 1
+    detector_id: front_api_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Front API JWT token
+  - file: true_positives/project_management/railway.env
+    line: 1
+    detector_id: railway_project_token
+    expected_fire: true
+    matched_text_starts: 82230549
+    notes: Railway project token UUID
+  - file: true_positives/project_management/jumpcloud.env
+    line: 1
+    detector_id: jumpcloud_api_key
+    expected_fire: true
+    matched_text_starts: F01PBE
+    notes: JumpCloud API key
+  - file: true_positives/blockchain/quicknode.env
+    line: 1
+    detector_id: quicknode_endpoint
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: QuickNode endpoint with API key
+  - file: true_positives/blockchain/coingecko.env
+    line: 1
+    detector_id: coingecko_api_key
+    expected_fire: true
+    matched_text_starts: CG-
+    notes: CoinGecko API key
+  - file: true_positives/blockchain/alchemy.env
+    line: 1
+    detector_id: alchemy_api_key
+    expected_fire: true
+    matched_text_starts: alcht_
+    notes: Alchemy API key
+  - file: true_positives/cms/sanity.env
+    line: 1
+    detector_id: sanity_api_token
+    expected_fire: true
+    matched_text_starts: sk
+    notes: Sanity CMS API token
+  - file: true_positives/crm/close.env
+    line: 1
+    detector_id: close_api_key
+    expected_fire: true
+    matched_text_starts: api_
+    notes: Close.com API key
+  - file: true_positives/low_code/retool.env
+    line: 1
+    detector_id: retool_api_token
+    expected_fire: true
+    matched_text_starts: retool_
+    notes: Retool API token
+  - file: true_positives/low_code/n8n.env
+    line: 1
+    detector_id: n8n_api_key
+    expected_fire: true
+    matched_text_starts: n8n_api_
+    notes: n8n API key
+  - file: true_positives/low_code/zapier.env
+    line: 1
+    detector_id: zapier_webhook
+    expected_fire: true
+    matched_text_starts: "https://hooks.zapier"
+    notes: Zapier catch webhook
+  - file: true_positives/low_code/make.env
+    line: 1
+    detector_id: make_webhook
+    expected_fire: true
+    matched_text_starts: "https://hook.us2.make.com"
+    notes: Make/Integromat webhook
+  - file: true_positives/low_code/pipedream.env
+    line: 1
+    detector_id: pipedream_workflow_url
+    expected_fire: true
+    matched_text_starts: "https://eo"
+    notes: Pipedream workflow URL
+  - file: true_positives/low_code/supabase_service_role.env
+    line: 2
+    detector_id: supabase_service_role_key
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Supabase service role JWT (low_code detector)
+  - file: true_positives/cryptocurrency/wallet_seed_12.md
+    line: 2
+    detector_id: bip39_mnemonic_12_word
+    expected_fire: true
+    matched_text_starts: donate easily
+    notes: BIP39 12-word mnemonic
+  - file: true_positives/cryptocurrency/wallet_seed_15.md
+    line: 2
+    detector_id: bip39_mnemonic_15_word
+    expected_fire: true
+    matched_text_starts: donate easily
+    notes: BIP39 15-word mnemonic
+  - file: true_positives/cryptocurrency/wallet_seed_18.md
+    line: 2
+    detector_id: bip39_mnemonic_18_word
+    expected_fire: true
+    matched_text_starts: donate easily
+    notes: BIP39 18-word mnemonic
+  - file: true_positives/cryptocurrency/wallet_seed_21.md
+    line: 2
+    detector_id: bip39_mnemonic_21_word
+    expected_fire: true
+    matched_text_starts: donate easily
+    notes: BIP39 21-word mnemonic
+  - file: true_positives/cryptocurrency/wallet_seed_24.md
+    line: 2
+    detector_id: bip39_mnemonic_24_word
+    expected_fire: true
+    matched_text_starts: donate easily
+    notes: BIP39 24-word mnemonic
+  - file: true_positives/cryptocurrency/wallet_seed_csv.md
+    line: 2
+    detector_id: bip39_mnemonic_comma_separated
+    expected_fire: true
+    matched_text_starts: donate
+    notes: BIP39 comma-separated mnemonic
+  - file: true_positives/cryptocurrency/ethereum_wallet.md
+    line: 2
+    detector_id: bip39_mnemonic_24_word
+    expected_fire: true
+    matched_text_starts: donate easily
+    notes: BIP39 24-word (Ethereum context)
+  - file: true_positives/cryptocurrency/solana_wallet.md
+    line: 2
+    detector_id: bip39_mnemonic_12_word
+    expected_fire: true
+    matched_text_starts: donate easily
+    notes: BIP39 12-word (Solana context)
+  - file: true_positives/generic/hex_128bit.env
+    line: 1
+    detector_id: generic_hex_secret_128bit
+    expected_fire: true
+    matched_text_starts: APP_SECRET
+    notes: Generic 32-hex secret (128-bit)
+  - file: true_positives/generic/hex_160bit.env
+    line: 1
+    detector_id: generic_hex_secret_160bit
+    expected_fire: true
+    matched_text_starts: HMAC_SECRET
+    notes: Generic 40-hex secret (160-bit)
+  - file: true_positives/generic/hex_256bit.env
+    line: 1
+    detector_id: generic_hex_secret_256bit
+    expected_fire: true
+    matched_text_starts: SIGNING_KEY
+    notes: Generic 64-hex secret (256-bit)
+  - file: true_positives/generic/hex_512bit.env
+    line: 1
+    detector_id: generic_hex_secret_512bit
+    expected_fire: true
+    matched_text_starts: MASTER_KEY
+    notes: Generic 128-hex secret (512-bit)
+  - file: true_positives/generic/generic_secret.env
+    line: 1
+    detector_id: generic_secret
+    expected_fire: true
+    matched_text_starts: WEBHOOK_SECRET
+    notes: Generic high-entropy secret with keyword context
+  - file: true_negatives/placeholders.md
+    line: 6
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: YOUR_OPENAI_API_KEY_HERE
+    notes: OpenAI placeholder string
+  - file: true_negatives/placeholders.md
+    line: 7
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: your-anthropic-api-key
+    notes: Anthropic placeholder
+  - file: true_negatives/placeholders.md
+    line: 8
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: AKIAIOSFODNN7EXAMPLE
+    notes: AWS official EXAMPLE key
+  - file: true_negatives/placeholders.md
+    line: 9
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: wJalrXUtnFEMI
+    notes: AWS official EXAMPLE secret
+  - file: true_negatives/placeholders.md
+    line: 10
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: ghp_xxxxxxxx
+    notes: GitHub xxxxxxxx placeholder
+  - file: true_negatives/placeholders.md
+    line: 11
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: sk_test_TYoo
+    notes: Stripe documented TYoo example
+  - file: true_negatives/placeholders.md
+    line: 12
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: "postgresql://user:password"
+    notes: "Connection string with literal \"user:password\""
+  - file: true_negatives/placeholders.md
+    line: 13
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: changeme
+    notes: changeme keyword
+  - file: true_negatives/placeholders.md
+    line: 14
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: replaceme
+    notes: replaceme keyword
+  - file: true_negatives/placeholders.md
+    line: 15
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: "<insert-token-here>"
+    notes: Template angle-bracket placeholder
+  - file: true_negatives/placeholders.md
+    line: 16
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: "${OPENAI_KEY}"
+    notes: Shell variable expansion
+  - file: true_negatives/examples_in_docs.md
+    line: 6
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: sk_test_TYoo
+    notes: Stripe documented example test key
+  - file: true_negatives/examples_in_docs.md
+    line: 13
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: AKIAIOSFODNN7EXAMPLE
+    notes: AWS documented EXAMPLE key
+  - file: true_negatives/examples_in_docs.md
+    line: 14
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: wJalrXUtnFEMI
+    notes: AWS documented EXAMPLE secret
+  - file: true_negatives/uuids_in_db_migrations.sql
+    line: 7
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: 150d35c7
+    notes: "UUID in SQL INSERT row, not a Snyk/Heroku/etc. token"
+  - file: true_negatives/uuids_in_db_migrations.sql
+    line: 8
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: 2449efee
+    notes: UUID in SQL INSERT row
+  - file: true_negatives/git_shas.py
+    line: 3
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: 8dd457f5
+    notes: Git commit SHA in source file
+  - file: true_negatives/semver_versions.txt
+    line: 1
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: 0.1.0
+    notes: "Semver versions, must not trigger any token detector"
+  - file: true_negatives/oauth_client_ids.md
+    line: 6
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: 123456789012-
+    notes: Google OAuth client ID (public)
+  - file: true_negatives/oauth_client_ids.md
+    line: 7
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: Iv1.
+    notes: GitHub OAuth client ID (public)
+  - file: true_negatives/base64_innocuous.txt
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: iVBORw0KGgo
+    notes: "PNG image data, not a secret"
+  - file: true_negatives/test_fixtures/fixture_test.go
+    line: 7
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: ghp_
+    notes: "GitHub-shape string inside *_test.go (known FP filter)"
+  - file: true_negatives/test_fixtures/test_secrets.py
+    line: 3
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: AKIA
+    notes: "AWS-shape inside *_test.py (test fixture filter)"
+  - file: true_negatives/code_identifiers.py
+    line: 3
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: cognito_refresh_token
+    notes: snake_case variable name (placeholder filter)
+  - file: true_negatives/well_known_uuids.py
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: 6ba7b810-
+    notes: RFC 4122 DNS namespace UUID (public constant)
+  - file: true_negatives/aws_arns.tf
+    line: 3
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: AmazonBedrock
+    notes: AWS resource name with region (looksLikeCloudResourceID)
+  - file: true_negatives/aws_arns.tf
+    line: 13
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: "arn:aws"
+    notes: "AWS ARN (cloud resource ID, not a secret)"
+  - file: true_negatives/hashes_no_context.txt
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: fb5a81
+    notes: "MD5 file hash, no secret keyword nearby"
+  - file: true_negatives/hashes_no_context.txt
+    line: 6
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: 07eed8
+    notes: "SHA256 hash, looksLikeHash filter"
+  - file: true_negatives/server_cert.crt
+    line: 1
+    detector_id: public_certificate
+    expected_fire: false
+    matched_text_starts: -----BEGIN CERTIFICATE-----
+    notes: "Public certificate, validator always returns false"
+  - file: true_negatives/weak_strings.env
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: password
+    notes: "Literal \"password\" word"
+  - file: true_negatives/weak_strings.env
+    line: 7
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: aaaa
+    notes: Repeated character pattern
+  - file: true_negatives/weak_strings.env
+    line: 8
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: abab
+    notes: Repeated substring pattern
+  - file: true_negatives/shell_substitutions.sh
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: $OPENAI_KEY
+    notes: "Shell variable reference, not an actual key"
+  - file: true_negatives/shell_substitutions.sh
+    line: 4
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: $(cat
+    notes: Command substitution
+  - file: true_negatives/license_keys.txt
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: JETBRAINS_LICENSE
+    notes: JetBrains license (no detector should fire)
+  - file: true_negatives/solana_constants.py
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: TokenkegQ
+    notes: Solana TokenProgram public constant
+  - file: edge_cases/multiline_pem.pem
+    line: 1
+    detector_id: rsa_private_key
+    expected_fire: true
+    matched_text_starts: -----BEGIN
+    notes: Multi-line RSA PEM edge case
+  - file: edge_cases/secret_in_comment.py
+    line: 2
+    detector_id: openai_api_key
+    expected_fire: true
+    matched_text_starts: sk-
+    notes: "OpenAI key inside Python comment, should still fire"
+  - file: edge_cases/secret_in_jsdoc.js
+    line: 2
+    detector_id: github_pat_classic
+    expected_fire: true
+    matched_text_starts: ghp_
+    notes: GitHub PAT inside JSDoc comment
+  - file: edge_cases/secret_split_across_lines.py
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: sk-XYZ
+    notes: "Python implicit string concatenation across lines, no single line contains full key"
+  - file: edge_cases/jwt_in_jwt.env
+    line: 2
+    detector_id: jwt_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Outer JWT containing JWT-like payload
+  - file: edge_cases/connection_string_embedded.py
+    line: 1
+    detector_id: postgresql_connection_string
+    expected_fire: true
+    matched_text_starts: "postgresql://"
+    notes: Connection string with embedded credentials
+  - file: edge_cases/secret_in_base64_blob.txt
+    line: 2
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: RERfQV
+    notes: Base64-wrapped secret; outer string is innocuous base64
+  - file: edge_cases/jwt_repetitive.txt
+    line: 1
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: eyJ
+    notes: JWT-shaped but all-same-char (validator should reject)
+  - file: edge_cases/duplicate_on_line.env
+    line: 1
+    detector_id: stripe_live_secret
+    expected_fire: true
+    matched_text_starts: sk_live_
+    notes: Same Stripe key appears twice on one line; engine should dedupe
+  - file: edge_cases/secret_in_query_string.txt
+    line: 2
+    detector_id: slack_bot_token
+    expected_fire: true
+    matched_text_starts: xoxb-
+    notes: Slack bot token embedded in URL query string
+  - file: edge_cases/secret_in_escaped_json.js
+    line: 2
+    detector_id: openai_api_key
+    expected_fire: true
+    matched_text_starts: sk-
+    notes: OpenAI key in escaped JSON inside JS template literal
+  - file: edge_cases/ansible_vault.yml
+    line: 1
+    detector_id: null
+    expected_fire: false
+    matched_text_starts: $ANSIBLE_VAULT
+    notes: Ansible vault encrypted blob; raw bytes are not credentials
+  - file: edge_cases/hex32_multi_detector.env
+    line: 3
+    detector_id: datadog_api_key
+    expected_fire: true
+    matched_text_starts: 3501bc
+    notes: Hex32 with Datadog context wins specificity battle
+  - file: true_positives/ci_cd/vercel_access.env
+    line: 2
+    detector_id: vercel_access_token
+    expected_fire: true
+    matched_text_starts: EbTSch
+    notes: Vercel low-specificity access token with vercel context
+  - file: true_positives/ci_cd/github_fine_grained_full.env
+    line: 2
+    detector_id: github_fine_grained_pat
+    expected_fire: true
+    matched_text_starts: github_pat_
+    notes: GitHub fine-grained PAT 93-char variant
+  - file: true_positives/ci_cd/github_app_user.env
+    line: 2
+    detector_id: github_app_user_token
+    expected_fire: true
+    matched_text_starts: ghu_
+    notes: GitHub App user-to-server token (separate detector)
+  - file: true_positives/ai_ml/qdrant.env
+    line: 1
+    detector_id: qdrant_api_key
+    expected_fire: true
+    matched_text_starts: eyJ0eXAiOiJKV1Q
+    notes: Qdrant Cloud JWT API key
+  - file: true_positives/cryptocurrency/ethereum_seed.md
+    line: 3
+    detector_id: ethereum_mnemonic_phrase
+    expected_fire: true
+    matched_text_starts: donate
+    notes: Ethereum BIP39 mnemonic with ethereum keyword
+  - file: true_positives/cryptocurrency/solana_seed.md
+    line: 3
+    detector_id: solana_mnemonic_phrase
+    expected_fire: true
+    matched_text_starts: donate
+    notes: Solana BIP39 mnemonic with solana keyword
+  - file: true_positives/database/generic_uri.env
+    line: 1
+    detector_id: generic_uri_with_credentials
+    expected_fire: true
+    matched_text_starts: "ssh://"
+    notes: "Generic protocol://user:pass URI"
+  - file: true_positives/cloud/oracle_tenancy.env
+    line: 1
+    detector_id: oracle_cloud_api_key
+    expected_fire: true
+    matched_text_starts: ocid1.
+    notes: Oracle Cloud OCID tenancy identifier
+  - file: true_positives/database/snowflake_pk_path.env
+    line: 2
+    detector_id: snowflake_private_key_path
+    expected_fire: true
+    matched_text_starts: SNOWFLAKE_PRIVATE_KEY_PATH
+    notes: Snowflake private key file path
+  - file: true_positives/saas/langfuse_split.env
+    line: 1
+    detector_id: langfuse_secret_key
+    expected_fire: true
+    matched_text_starts: sk-lf-
+    notes: LangFuse secret key variant
+  - file: true_positives/saas/langfuse_split.env
+    line: 2
+    detector_id: langfuse_public_key
+    expected_fire: true
+    matched_text_starts: pk-lf-
+    notes: LangFuse public key variant
+  - file: true_positives/saas/frameio_v2.env
+    line: 1
+    detector_id: frameio_api_token
+    expected_fire: true
+    matched_text_starts: fio-u-
+    notes: Frame.io API token v2
+  - file: true_positives/saas/flyio_access.env
+    line: 1
+    detector_id: flyio_access_token
+    expected_fire: true
+    matched_text_starts: fo1_
+    notes: Fly.io access token variant
+  - file: true_positives/payment/wepay.env
+    line: 1
+    detector_id: wepay_access_token
+    expected_fire: true
+    matched_text_starts: w9xh6f
+    notes: WePay access token with context
+  - file: true_positives/saas/wandb.env
+    line: 2
+    detector_id: null
+    expected_fire: true
+    matched_text_starts: w3nddo
+    notes: "wandb API key (uncovered, no detector in registry?)"
+  - file: true_positives/ci_cd/sourcegraph_cody_key.env
+    line: 1
+    detector_id: sourcegraph_cody_key
+    expected_fire: true
+    matched_text_starts: slk_
+    notes: Sourcegraph Cody Gateway slk_ + 64 hex
+  - file: true_positives/ci_cd/dockerhub_oat.env
+    line: 1
+    detector_id: dockerhub_oat
+    expected_fire: true
+    matched_text_starts: dckr_oat_
+    notes: Docker Hub organization access token
+  - file: true_positives/ci_cd/planetscale_token.env
+    line: 1
+    detector_id: planetscale_token
+    expected_fire: true
+    matched_text_starts: pscale_tkn_
+    notes: PlanetScale service token v2
+  - file: true_positives/ci_cd/planetscale_db_password.env
+    line: 1
+    detector_id: planetscale_db_password
+    expected_fire: true
+    matched_text_starts: pscale_pw_
+    notes: PlanetScale DB password
+  - file: true_positives/ci_cd/supabase_sbp_token.env
+    line: 1
+    detector_id: supabase_sbp_token
+    expected_fire: true
+    matched_text_starts: sbp_
+    notes: Supabase personal access token
+  - file: true_positives/ai_ml/nvapi_key.env
+    line: 1
+    detector_id: nvapi_key
+    expected_fire: true
+    matched_text_starts: nvapi-
+    notes: NVIDIA NVAPI key
+  - file: true_positives/crm/helpscout_api_token.env
+    line: 2
+    detector_id: helpscout_api_token
+    expected_fire: true
+    matched_text_starts: fxdyv3
+    notes: Help Scout API token
+  - file: true_positives/crm/pipedrive_api_token.env
+    line: 2
+    detector_id: pipedrive_api_token
+    expected_fire: true
+    matched_text_starts: EJduLo
+    notes: Pipedrive API token
+  - file: true_positives/communication/telnyx_api_key.env
+    line: 2
+    detector_id: telnyx_api_key
+    expected_fire: true
+    matched_text_starts: KEYVxYX6
+    notes: Telnyx KEY + 55 char token
+  - file: true_positives/communication/signalwire_api_token.env
+    line: 2
+    detector_id: signalwire_api_token
+    expected_fire: true
+    matched_text_starts: CuzGGv
+    notes: SignalWire 50-char token
+  - file: true_positives/communication/sendbird_org_api_token.env
+    line: 2
+    detector_id: sendbird_org_api_token
+    expected_fire: true
+    matched_text_starts: 492086
+    notes: Sendbird org API token 24-hex
+  - file: true_positives/monitoring/honeycomb_api_key.env
+    line: 2
+    detector_id: honeycomb_api_key
+    expected_fire: true
+    matched_text_starts: dc6f77
+    notes: Honeycomb 32-hex API key
+  - file: true_positives/ai_ml/wandb_api_key.env
+    line: 2
+    detector_id: wandb_api_key
+    expected_fire: true
+    matched_text_starts: 47s5tv
+    notes: wandb 40-hex API key
+  - file: true_positives/email/mailjet_basic_auth.env
+    line: 2
+    detector_id: mailjet_basic_auth
+    expected_fire: true
+    matched_text_starts: KTEYNh
+    notes: Mailjet 87+= base64 token
+  - file: true_positives/ci_cd/stitchdata_api_token.env
+    line: 2
+    detector_id: stitchdata_api_token
+    expected_fire: true
+    matched_text_starts: hyhdc5
+    notes: Stitch Data 35-char token
+  - file: true_positives/ci_cd/optimizely_api_token.env
+    line: 2
+    detector_id: optimizely_api_token
+    expected_fire: true
+    matched_text_starts: lO2agW
+    notes: Optimizely 54-char token
+  - file: true_positives/auth/onelogin_oauth_secret.env
+    line: 2
+    detector_id: onelogin_oauth_secret
+    expected_fire: true
+    matched_text_starts: 65ws3o
+    notes: OneLogin OAuth secret 64-char
+  - file: true_positives/video_media/pinata_api_key.env
+    line: 2
+    detector_id: pinata_api_key
+    expected_fire: true
+    matched_text_starts: isv195
+    notes: Pinata 64-char API key
+  - file: true_positives/cloud/aws_secret_access_key_context.env
+    line: 2
+    detector_id: aws_secret_access_key_context
+    expected_fire: true
+    matched_text_starts: KomDWr
+    notes: AWS context-based secret
+  - file: true_positives/saas/formio.env
+    line: 1
+    detector_id: formio_jwt_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Form.io JWT token
+  - file: true_positives/video_media/web3storage.env
+    line: 1
+    detector_id: web3storage_api_token
+    expected_fire: true
+    matched_text_starts: eyJ
+    notes: Web3.Storage JWT API token
+  - file: true_positives/payment/braintree_private.env
+    line: 2
+    detector_id: braintree_private_key
+    expected_fire: true
+    matched_text_starts: 0zb8pn
+    notes: Braintree private key with braintree context

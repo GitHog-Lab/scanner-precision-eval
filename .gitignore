@@ -1,0 +1,6 @@
+# Planted fixture files contain realistic-shape (but fake) credentials
+# that trigger GitHub's secret scanning push protection on push.
+# They're stored locally only; regenerate with populate.sh.
+true_positives/
+edge_cases/
+ghost_commits/
