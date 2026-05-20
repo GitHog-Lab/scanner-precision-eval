@@ -6,15 +6,17 @@
 > Last updated: May 2026 (after the Wave 1-5 detector push + AI + live-verify
 > layers landed on `jenish-main`).
 
-## Headline numbers (proven, reproducible)
+## Headline numbers (proven, reproducible — May 2026, post Wave 5 plants)
 
 | Metric | GitHog | Gitleaks | TruffleHog |
 |---|---:|---:|---:|
-| Precision | **98.34%** | 94.25% | 96.36% |
-| Recall | **94.66%** | 72.95% | 28.29% |
-| F1 | **96.46%** | 82.25% | 43.74% |
-| Speed (files/sec) | **1,991** | 381 | 77 |
-| Detector count | 699 | ~150 | 870 |
+| Precision | **99.03%** | 96.84% | 95.73% |
+| Recall | **96.44%** | 80.29% | 46.96% |
+| F1 | **97.72%** | 87.79% | 63.01% |
+| Speed (files/sec) | **724** | 386 | 59 |
+| Detector count | 727 | ~150 | 870 |
+
+GitHog leads all 4 metrics. F1 advantage: +9.93pp vs Gitleaks, +34.71pp vs TruffleHog.
 
 Reproduce: `python3 eval_compare.py` in this repo.
 

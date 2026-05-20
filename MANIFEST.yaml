@@ -773,336 +773,6 @@ plants:
     expected_fire: true
     matched_text_starts: "password:"
     notes: K8s plaintext password in stringData
-  - file: true_positives/cloud/aws_keys.env
-    line: 3
-    detector_id: aws_access_key_id
-    expected_fire: true
-    matched_text_starts: AKIA
-    notes: AWS Access Key ID canonical env
-  - file: true_positives/cloud/aws_keys.env
-    line: 4
-    detector_id: aws_secret_access_key
-    expected_fire: true
-    matched_text_starts: LkBuEO
-    notes: AWS Secret Access Key paired with AKIA
-  - file: true_positives/cloud/aws_temporary.env
-    line: 1
-    detector_id: aws_access_key_id
-    expected_fire: true
-    matched_text_starts: ASIA
-    notes: AWS temporary STS access key id
-  - file: true_positives/cloud/aws_temporary.env
-    line: 2
-    detector_id: aws_secret_access_key
-    expected_fire: true
-    matched_text_starts: qxIVN7
-    notes: AWS secret access key paired with ASIA
-  - file: true_positives/cloud/aws_credentials
-    line: 2
-    detector_id: aws_access_key_id
-    expected_fire: true
-    matched_text_starts: AKIA
-    notes: AWS credentials file ~/.aws/credentials
-  - file: true_positives/cloud/aws_credentials
-    line: 3
-    detector_id: aws_secret_access_key
-    expected_fire: true
-    matched_text_starts: AgHP02
-    notes: AWS secret in credentials file
-  - file: true_positives/cloud/terraform.tfvars
-    line: 2
-    detector_id: aws_access_key_id
-    expected_fire: true
-    matched_text_starts: AKIA
-    notes: AWS access key in terraform.tfvars
-  - file: true_positives/cloud/terraform.tfvars
-    line: 3
-    detector_id: aws_secret_access_key
-    expected_fire: true
-    matched_text_starts: IiMIIj
-    notes: AWS secret in terraform.tfvars
-  - file: true_positives/cloud/aws_python_client.py
-    line: 5
-    detector_id: aws_access_key_id
-    expected_fire: true
-    matched_text_starts: AKIA
-    notes: AWS AKIA in Python client
-  - file: true_positives/cloud/aws_python_client.py
-    line: 6
-    detector_id: aws_secret_access_key
-    expected_fire: true
-    matched_text_starts: SSzRGc
-    notes: AWS secret in Python client
-  - file: true_positives/cloud/github_workflow_aws.yml
-    line: 9
-    detector_id: aws_access_key_id
-    expected_fire: true
-    matched_text_starts: AKIA
-    notes: AWS AKIA literal in GitHub workflow (anti-pattern)
-  - file: true_positives/cloud/github_workflow_aws.yml
-    line: 10
-    detector_id: aws_secret_access_key
-    expected_fire: true
-    matched_text_starts: v6R7dG
-    notes: AWS secret literal in GitHub workflow
-  - file: true_positives/cloud/aws_session.env
-    line: 1
-    detector_id: aws_session_token
-    expected_fire: true
-    matched_text_starts: FwoGZX
-    notes: AWS session token FwoGZX prefix
-  - file: true_positives/cloud/google_maps.env
-    line: 1
-    detector_id: google_api_key
-    expected_fire: true
-    matched_text_starts: AIza
-    notes: Google Maps AIza key
-  - file: true_positives/cloud/google_maps.env
-    line: 2
-    detector_id: google_api_key
-    expected_fire: true
-    matched_text_starts: AIza
-    notes: Google API key generic env var
-  - file: true_positives/cloud/firebase_config.js
-    line: 2
-    detector_id: google_api_key
-    expected_fire: true
-    matched_text_starts: AIza
-    notes: Firebase config AIza key in JS
-  - file: true_positives/cloud/google_oauth.env
-    line: 1
-    detector_id: google_oauth_client_secret
-    expected_fire: true
-    matched_text_starts: GOCSPX-
-    notes: Google OAuth client secret
-  - file: true_positives/cloud/oauth_config.json
-    line: 4
-    detector_id: google_oauth_client_secret
-    expected_fire: true
-    matched_text_starts: GOCSPX-
-    notes: Google OAuth client secret in JSON
-  - file: true_positives/cloud/digitalocean.env
-    line: 1
-    detector_id: digitalocean_pat
-    expected_fire: true
-    matched_text_starts: dop_v1_
-    notes: DigitalOcean PAT
-  - file: true_positives/cloud/do_provisioning.tf
-    line: 2
-    detector_id: digitalocean_pat
-    expected_fire: true
-    matched_text_starts: dop_v1_
-    notes: DigitalOcean PAT in Terraform
-  - file: true_positives/cloud/do_client.py
-    line: 1
-    detector_id: digitalocean_pat
-    expected_fire: true
-    matched_text_starts: dop_v1_
-    notes: DigitalOcean PAT in Python
-  - file: true_positives/cloud/do_oauth.env
-    line: 1
-    detector_id: digitalocean_oauth
-    expected_fire: true
-    matched_text_starts: doo_v1_
-    notes: DigitalOcean OAuth token
-  - file: true_positives/cloud/do_refresh.env
-    line: 1
-    detector_id: digitalocean_refresh
-    expected_fire: true
-    matched_text_starts: dor_v1_
-    notes: DigitalOcean refresh token
-  - file: true_positives/cloud/heroku.env
-    line: 1
-    detector_id: heroku_api_key_legacy
-    expected_fire: true
-    matched_text_starts: HRKU-
-    notes: Heroku HRKU- legacy API key
-  - file: true_positives/cloud/alibaba.env
-    line: 1
-    detector_id: alibaba_access_key_id
-    expected_fire: true
-    matched_text_starts: LTAI
-    notes: Alibaba LTAI access key id
-  - file: true_positives/cloud/aliyun.tf
-    line: 2
-    detector_id: alibaba_access_key_id
-    expected_fire: true
-    matched_text_starts: LTAI
-    notes: Alibaba access key in Terraform
-  - file: true_positives/cloud/scaleway.env
-    line: 1
-    detector_id: scaleway_access_key
-    expected_fire: true
-    matched_text_starts: SCW
-    notes: Scaleway access key
-  - file: true_positives/cloud/tencent.env
-    line: 1
-    detector_id: tencent_secret_id
-    expected_fire: true
-    matched_text_starts: AKID
-    notes: Tencent AKID secret ID
-  - file: true_positives/cloud/tencent_client.py
-    line: 1
-    detector_id: tencent_secret_id
-    expected_fire: true
-    matched_text_starts: AKID
-    notes: Tencent AKID in Python
-  - file: true_positives/cloud/backblaze.env
-    line: 1
-    detector_id: backblaze_application_key
-    expected_fire: true
-    matched_text_starts: K001
-    notes: Backblaze B2 application key
-  - file: true_positives/cloud/b2_client.py
-    line: 2
-    detector_id: backblaze_application_key
-    expected_fire: true
-    matched_text_starts: K002
-    notes: Backblaze key in Python
-  - file: true_positives/cloud/cloudinary.env
-    line: 1
-    detector_id: cloudinary_url
-    expected_fire: true
-    matched_text_starts: "cloudinary://"
-    notes: Cloudinary connection URL
-  - file: true_positives/cloud/cloudinary.js
-    line: 1
-    detector_id: cloudinary_url
-    expected_fire: true
-    matched_text_starts: "cloudinary://"
-    notes: Cloudinary URL in JS
-  - file: true_positives/cloud/ngrok.env
-    line: 1
-    detector_id: ngrok_api_key
-    expected_fire: true
-    matched_text_starts: ngrok_
-    notes: ngrok auth token
-  - file: true_positives/cloud/vultr.env
-    line: 1
-    detector_id: vultr_api_key
-    expected_fire: true
-    matched_text_starts: KK5ZKD
-    notes: Vultr 36-char uppercase key
-  - file: true_positives/cloud/vultr_provision.sh
-    line: 3
-    detector_id: vultr_api_key
-    expected_fire: true
-    matched_text_starts: 2F8RBZ
-    notes: Vultr key in shell script
-  - file: true_positives/cloud/linode.env
-    line: 1
-    detector_id: linode_pat
-    expected_fire: true
-    matched_text_starts: 6568bc
-    notes: Linode PAT with linode context
-  - file: true_positives/cloud/linode.tf
-    line: 2
-    detector_id: linode_pat
-    expected_fire: true
-    matched_text_starts: 318f47
-    notes: Linode PAT in Terraform
-  - file: true_positives/cloud/scaleway_api.env
-    line: 1
-    detector_id: scaleway_api_token
-    expected_fire: true
-    matched_text_starts: 5414d7b4
-    notes: Scaleway UUID token
-  - file: true_positives/cloud/scaleway_api.env
-    line: 2
-    detector_id: scaleway_api_token
-    expected_fire: true
-    matched_text_starts: 98b0e9e0
-    notes: Scaleway SCW_SECRET_KEY UUID
-  - file: true_positives/cloud/gcp_service_account.json
-    line: 5
-    detector_id: gcp_service_account
-    expected_fire: true
-    matched_text_starts: "\\\"private_key\\\""
-    notes: GCP service account JSON with private_key
-  - file: true_positives/cloud/azure_cosmosdb.env
-    line: 2
-    detector_id: azure_cosmosdb_master_key
-    expected_fire: true
-    matched_text_starts: 27kWSxWU
-    notes: Azure Cosmos DB master key
-  - file: true_positives/cloud/azure_storage.env
-    line: 2
-    detector_id: azure_storage_account_key
-    expected_fire: true
-    matched_text_starts: 1vQ0xC0i
-    notes: Azure storage account key env var
-  - file: true_positives/cloud/azure_sas.env
-    line: 1
-    detector_id: azure_sas_token
-    expected_fire: true
-    matched_text_starts: sig=
-    notes: Azure SAS signature token
-  - file: true_positives/cloud/azure_servicebus.env
-    line: 1
-    detector_id: azure_service_bus_connection_string
-    expected_fire: true
-    matched_text_starts: "Endpoint=sb://"
-    notes: Azure Service Bus connection string
-  - file: true_positives/cloud/azure_eventhub.env
-    line: 1
-    detector_id: azure_event_hub_connection_string
-    expected_fire: true
-    matched_text_starts: "Endpoint=sb://"
-    notes: Azure Event Hub connection string
-  - file: true_positives/cloud/azure_sql.env
-    line: 1
-    detector_id: azure_sql_connection_string
-    expected_fire: true
-    matched_text_starts: "Server=tcp:"
-    notes: Azure SQL connection string
-  - file: true_positives/cloud/heroku_netrc
-    line: 3
-    detector_id: heroku_api_key
-    expected_fire: true
-    matched_text_starts: 6c2d0027
-    notes: Heroku API key UUID in .netrc
-  - file: true_positives/cloud/azure_cosmosdb_cs.env
-    line: 1
-    detector_id: azure_cosmosdb_connection_string
-    expected_fire: true
-    matched_text_starts: AccountEndpoint=
-    notes: Azure Cosmos DB connection string with AccountKey
-  - file: true_positives/cloud/firebase_db.env
-    line: 1
-    detector_id: firebase_database_url
-    expected_fire: true
-    matched_text_starts: "https://"
-    notes: Firebase Realtime DB URL
-  - file: true_positives/cloud/oci.env
-    line: 1
-    detector_id: oci_api_key
-    expected_fire: true
-    matched_text_starts: ocid1.
-    notes: OCI ocid1 identifier
-  - file: true_positives/cloud/rancher.env
-    line: 1
-    detector_id: rancher_api_token
-    expected_fire: true
-    matched_text_starts: token-
-    notes: "Rancher token-XXXXX:54 chars"
-  - file: true_positives/cloud/portainer.env
-    line: 1
-    detector_id: portainer_api_token
-    expected_fire: true
-    matched_text_starts: ptr_
-    notes: Portainer API token
-  - file: true_positives/cloud/k8s_secret.yaml
-    line: 8
-    detector_id: kubernetes_secret
-    expected_fire: true
-    matched_text_starts: k5cT6F
-    notes: K8s Secret data field base64
-  - file: true_positives/cloud/k8s_secret_stringdata.yaml
-    line: 7
-    detector_id: kubernetes_secret_plaintext
-    expected_fire: true
-    matched_text_starts: "password:"
-    notes: K8s plaintext password in stringData
   - file: true_positives/ci_cd/github_pat.env
     line: 2
     detector_id: github_pat_classic
@@ -3947,3 +3617,2357 @@ plants:
     expected_fire: true
     matched_text_starts: 0zb8pn
     notes: Braintree private key with braintree context
+
+# Wave 5 plants (auto-generated)
+  - file: true_positives/ai_ml/salad_cloud__w5.env
+    line: 2
+    detector_id: saladcloud_api_key
+    expected_fire: true
+    matched_text_starts: salad_cl
+    notes: Wave 5: SaladCloud API Key
+  - file: true_positives/ai_ml/salad_cloud__w5.env
+    line: 3
+    detector_id: saladcloud_api_key
+    expected_fire: true
+    matched_text_starts: salad_cl
+    notes: Wave 5: SaladCloud API Key (alt fixture)
+  - file: true_positives/ai_ml/sigopt_w5.env
+    line: 2
+    detector_id: sigopt_api_token
+    expected_fire: true
+    matched_text_starts: 3XETGBNF
+    notes: Wave 5: SigOpt API Token
+  - file: true_positives/ai_ml/sigopt_w5.env
+    line: 3
+    detector_id: sigopt_api_token
+    expected_fire: true
+    matched_text_starts: DLG5FD5P
+    notes: Wave 5: SigOpt API Token (alt fixture)
+  - file: true_positives/ai_ml/faceplusplus_w5.env
+    line: 2
+    detector_id: faceplusplus_api_key
+    expected_fire: true
+    matched_text_starts: 5symPfVY
+    notes: Wave 5: Face++ API Key
+  - file: true_positives/ai_ml/faceplusplus_w5.env
+    line: 3
+    detector_id: faceplusplus_api_key
+    expected_fire: true
+    matched_text_starts: lGOpncda
+    notes: Wave 5: Face++ API Key (alt fixture)
+  - file: true_positives/ai_ml/sk_pr__w5.env
+    line: 2
+    detector_id: photoroom_api_key
+    expected_fire: true
+    matched_text_starts: sandbox_
+    notes: Wave 5: Photoroom API Key
+  - file: true_positives/ai_ml/sk_pr__w5.env
+    line: 3
+    detector_id: photoroom_api_key
+    expected_fire: true
+    matched_text_starts: sk_pr_bn
+    notes: Wave 5: Photoroom API Key (alt fixture)
+  - file: true_positives/ai_ml/detectlanguage_w5.env
+    line: 2
+    detector_id: detectlanguage_api_key
+    expected_fire: true
+    matched_text_starts: ohj8km2e
+    notes: Wave 5: Detect Language API Key
+  - file: true_positives/ai_ml/detectlanguage_w5.env
+    line: 3
+    detector_id: detectlanguage_api_key
+    expected_fire: true
+    matched_text_starts: nxs2c8zd
+    notes: Wave 5: Detect Language API Key (alt fixture)
+  - file: true_positives/ai_ml/languagelayer_w5.env
+    line: 2
+    detector_id: languagelayer_api_key
+    expected_fire: true
+    matched_text_starts: 9lcii4m5
+    notes: Wave 5: LanguageLayer API Key
+  - file: true_positives/ai_ml/languagelayer_w5.env
+    line: 3
+    detector_id: languagelayer_api_key
+    expected_fire: true
+    matched_text_starts: fsqlpr91
+    notes: Wave 5: LanguageLayer API Key (alt fixture)
+  - file: true_positives/ai_ml/meaningcloud_w5.env
+    line: 2
+    detector_id: meaningcloud_api_key
+    expected_fire: true
+    matched_text_starts: ox3rxkjj
+    notes: Wave 5: MeaningCloud API Key
+  - file: true_positives/ai_ml/meaningcloud_w5.env
+    line: 3
+    detector_id: meaningcloud_api_key
+    expected_fire: true
+    matched_text_starts: ehsknba9
+    notes: Wave 5: MeaningCloud API Key (alt fixture)
+  - file: true_positives/ai_ml/paralleldots_w5.env
+    line: 2
+    detector_id: paralleldots_api_key
+    expected_fire: true
+    matched_text_starts: ZobROHCQ
+    notes: Wave 5: ParallelDots API Key
+  - file: true_positives/ai_ml/paralleldots_w5.env
+    line: 3
+    detector_id: paralleldots_api_key
+    expected_fire: true
+    matched_text_starts: D1VJgaO5
+    notes: Wave 5: ParallelDots API Key (alt fixture)
+  - file: true_positives/ai_ml/aletheiaapi_w5.env
+    line: 2
+    detector_id: aletheia_api_key
+    expected_fire: true
+    matched_text_starts: XE6Q8AE7
+    notes: Wave 5: Aletheia API Key
+  - file: true_positives/ai_ml/aletheiaapi_w5.env
+    line: 3
+    detector_id: aletheia_api_key
+    expected_fire: true
+    matched_text_starts: Z7LQ4LTD
+    notes: Wave 5: Aletheia API Key (alt fixture)
+  - file: true_positives/ai_ml/audd_w5.env
+    line: 2
+    detector_id: audd_api_token
+    expected_fire: true
+    matched_text_starts: 64u1m8kn
+    notes: Wave 5: AudD API Token
+  - file: true_positives/ai_ml/audd_w5.env
+    line: 3
+    detector_id: audd_api_token
+    expected_fire: true
+    matched_text_starts: iuv1v0a8
+    notes: Wave 5: AudD API Token (alt fixture)
+  - file: true_positives/monitoring/checklyhq_w5.env
+    line: 2
+    detector_id: checklyhq_api_key
+    expected_fire: true
+    matched_text_starts: w37wk1ad
+    notes: Wave 5: ChecklyHQ API Key
+  - file: true_positives/monitoring/checklyhq_w5.env
+    line: 3
+    detector_id: checklyhq_api_key
+    expected_fire: true
+    matched_text_starts: v1ie830e
+    notes: Wave 5: ChecklyHQ API Key (alt fixture)
+  - file: true_positives/code_analysis/detectify_w5.env
+    line: 2
+    detector_id: detectify_api_key
+    expected_fire: true
+    matched_text_starts: dbms1ofp
+    notes: Wave 5: Detectify API Key
+  - file: true_positives/code_analysis/detectify_w5.env
+    line: 3
+    detector_id: detectify_api_key
+    expected_fire: true
+    matched_text_starts: z8ik9xfj
+    notes: Wave 5: Detectify API Key (alt fixture)
+  - file: true_positives/monitoring/browserstack_w5.env
+    line: 2
+    detector_id: browserstack_access_key
+    expected_fire: true
+    matched_text_starts: a4lbwxvr
+    notes: Wave 5: BrowserStack Access Key
+  - file: true_positives/monitoring/browserstack_w5.env
+    line: 3
+    detector_id: browserstack_access_key
+    expected_fire: true
+    matched_text_starts: 1pveub8j
+    notes: Wave 5: BrowserStack Access Key (alt fixture)
+  - file: true_positives/ci_cd/scrutinizer_w5.env
+    line: 2
+    detector_id: scrutinizer_access_token
+    expected_fire: true
+    matched_text_starts: pkf6oqup
+    notes: Wave 5: Scrutinizer CI Access Token
+  - file: true_positives/ci_cd/scrutinizer_w5.env
+    line: 3
+    detector_id: scrutinizer_access_token
+    expected_fire: true
+    matched_text_starts: m7gekkwp
+    notes: Wave 5: Scrutinizer CI Access Token (alt fixture)
+  - file: true_positives/monitoring/semaphore_w5.env
+    line: 2
+    detector_id: semaphore_sms_api_key
+    expected_fire: true
+    matched_text_starts: 75tfa05i
+    notes: Wave 5: Semaphore SMS API Key
+  - file: true_positives/monitoring/semaphore_w5.env
+    line: 3
+    detector_id: semaphore_sms_api_key
+    expected_fire: true
+    matched_text_starts: vlatygt5
+    notes: Wave 5: Semaphore SMS API Key (alt fixture)
+  - file: true_positives/code_analysis/codequiry_w5.env
+    line: 2
+    detector_id: codequiry_api_key
+    expected_fire: true
+    matched_text_starts: vgUGzxCe
+    notes: Wave 5: Codequiry API Key
+  - file: true_positives/code_analysis/codequiry_w5.env
+    line: 3
+    detector_id: codequiry_api_key
+    expected_fire: true
+    matched_text_starts: cXo3bj55
+    notes: Wave 5: Codequiry API Key (alt fixture)
+  - file: true_positives/code_analysis/endr_w5.env
+    line: 2
+    detector_id: endorlabs_api_key
+    expected_fire: true
+    matched_text_starts: endr+mab
+    notes: Wave 5: Endor Labs API Key
+  - file: true_positives/code_analysis/endr_w5.env
+    line: 3
+    detector_id: endorlabs_api_key
+    expected_fire: true
+    matched_text_starts: endr+g41
+    notes: Wave 5: Endor Labs API Key (alt fixture)
+  - file: true_positives/monitoring/jupiterone_w5.env
+    line: 2
+    detector_id: jupiterone_api_key
+    expected_fire: true
+    matched_text_starts: g93WfQ7D
+    notes: Wave 5: JupiterOne API Key
+  - file: true_positives/monitoring/jupiterone_w5.env
+    line: 3
+    detector_id: jupiterone_api_key
+    expected_fire: true
+    matched_text_starts: 3wT0YGPR
+    notes: Wave 5: JupiterOne API Key (alt fixture)
+  - file: true_positives/monitoring/securitytrails_w5.env
+    line: 2
+    detector_id: securitytrails_api_key
+    expected_fire: true
+    matched_text_starts: ocdbETGz
+    notes: Wave 5: SecurityTrails API Key
+  - file: true_positives/monitoring/securitytrails_w5.env
+    line: 3
+    detector_id: securitytrails_api_key
+    expected_fire: true
+    matched_text_starts: 98t57XNz
+    notes: Wave 5: SecurityTrails API Key (alt fixture)
+  - file: true_positives/monitoring/abuseipdb_w5.env
+    line: 2
+    detector_id: abuseipdb_api_key
+    expected_fire: true
+    matched_text_starts: alwyc9e9
+    notes: Wave 5: AbuseIPDB API Key
+  - file: true_positives/monitoring/abuseipdb_w5.env
+    line: 3
+    detector_id: abuseipdb_api_key
+    expected_fire: true
+    matched_text_starts: 47o1b0fr
+    notes: Wave 5: AbuseIPDB API Key (alt fixture)
+  - file: true_positives/monitoring/alienvault_w5.env
+    line: 2
+    detector_id: alienvault_otx_api_key
+    expected_fire: true
+    matched_text_starts: slpdt5oe
+    notes: Wave 5: AlienVault OTX API Key
+  - file: true_positives/monitoring/alienvault_w5.env
+    line: 3
+    detector_id: alienvault_otx_api_key
+    expected_fire: true
+    matched_text_starts: kmh4onz0
+    notes: Wave 5: AlienVault OTX API Key (alt fixture)
+  - file: true_positives/monitoring/censys_w5.env
+    line: 2
+    detector_id: censys_api_secret
+    expected_fire: true
+    matched_text_starts: FjQLudph
+    notes: Wave 5: Censys API Secret
+  - file: true_positives/monitoring/censys_w5.env
+    line: 3
+    detector_id: censys_api_secret
+    expected_fire: true
+    matched_text_starts: A2O4vUcT
+    notes: Wave 5: Censys API Secret (alt fixture)
+  - file: true_positives/monitoring/urlscan_w5.env
+    line: 2
+    detector_id: urlscan_api_key
+    expected_fire: true
+    matched_text_starts: 4du4tkog
+    notes: Wave 5: urlscan.io API Key
+  - file: true_positives/monitoring/urlscan_w5.env
+    line: 3
+    detector_id: urlscan_api_key
+    expected_fire: true
+    matched_text_starts: dq2d7jkb
+    notes: Wave 5: urlscan.io API Key (alt fixture)
+  - file: true_positives/monitoring/wiz_w5.env
+    line: 2
+    detector_id: wiz_api_secret
+    expected_fire: true
+    matched_text_starts: Hne7ZocB
+    notes: Wave 5: Wiz API Secret
+  - file: true_positives/monitoring/wiz_w5.env
+    line: 3
+    detector_id: wiz_api_secret
+    expected_fire: true
+    matched_text_starts: dUIejcSo
+    notes: Wave 5: Wiz API Secret (alt fixture)
+  - file: true_positives/code_analysis/loadmill_w5.env
+    line: 2
+    detector_id: loadmill_api_key
+    expected_fire: true
+    matched_text_starts: q8PtfgRd
+    notes: Wave 5: Loadmill API Key
+  - file: true_positives/code_analysis/loadmill_w5.env
+    line: 3
+    detector_id: loadmill_api_key
+    expected_fire: true
+    matched_text_starts: YUaCqMFk
+    notes: Wave 5: Loadmill API Key (alt fixture)
+  - file: true_positives/low_code/budibase_w5.env
+    line: 2
+    detector_id: budibase_api_key
+    expected_fire: true
+    matched_text_starts: ef09aeed
+    notes: Wave 5: Budibase API Key
+  - file: true_positives/low_code/budibase_w5.env
+    line: 3
+    detector_id: budibase_api_key
+    expected_fire: true
+    matched_text_starts: 7b202527
+    notes: Wave 5: Budibase API Key (alt fixture)
+  - file: true_positives/monitoring/metabase_w5.env
+    line: 2
+    detector_id: metabase_session_token
+    expected_fire: true
+    matched_text_starts: "Ps9-R6WE"
+    notes: Wave 5: Metabase Session Token
+  - file: true_positives/monitoring/metabase_w5.env
+    line: 3
+    detector_id: metabase_session_token
+    expected_fire: true
+    matched_text_starts: uhoobdLw
+    notes: Wave 5: Metabase Session Token (alt fixture)
+  - file: true_positives/monitoring/tableau_w5.env
+    line: 2
+    detector_id: tableau_pat_secret
+    expected_fire: true
+    matched_text_starts: GpkB2jwT
+    notes: Wave 5: Tableau Personal Access Token Secret
+  - file: true_positives/monitoring/tableau_w5.env
+    line: 3
+    detector_id: tableau_pat_secret
+    expected_fire: true
+    matched_text_starts: oiVHHvhl
+    notes: Wave 5: Tableau Personal Access Token Secret (alt fixture)
+  - file: true_positives/saas/diffbot_w5.env
+    line: 2
+    detector_id: diffbot_api_token
+    expected_fire: true
+    matched_text_starts: 1ia45qyg
+    notes: Wave 5: Diffbot API Token
+  - file: true_positives/saas/diffbot_w5.env
+    line: 3
+    detector_id: diffbot_api_token
+    expected_fire: true
+    matched_text_starts: b9ng9pwc
+    notes: Wave 5: Diffbot API Token (alt fixture)
+  - file: true_positives/saas/zenrows_w5.env
+    line: 2
+    detector_id: zenrows_api_key
+    expected_fire: true
+    matched_text_starts: f9c82b13
+    notes: Wave 5: ZenRows API Key
+  - file: true_positives/saas/zenrows_w5.env
+    line: 3
+    detector_id: zenrows_api_key
+    expected_fire: true
+    matched_text_starts: 301e121c
+    notes: Wave 5: ZenRows API Key (alt fixture)
+  - file: true_positives/saas/zenscrape_w5.env
+    line: 2
+    detector_id: zenscrape_api_key
+    expected_fire: true
+    matched_text_starts: fddb4d38
+    notes: Wave 5: Zenscrape API Key
+  - file: true_positives/saas/zenscrape_w5.env
+    line: 3
+    detector_id: zenscrape_api_key
+    expected_fire: true
+    matched_text_starts: bfe69633
+    notes: Wave 5: Zenscrape API Key (alt fixture)
+  - file: true_positives/blockchain/infura_w5.env
+    line: 2
+    detector_id: infura_project_id
+    expected_fire: true
+    matched_text_starts: aefeahqz
+    notes: Wave 5: Infura Project ID/API Key
+  - file: true_positives/blockchain/infura_w5.env
+    line: 3
+    detector_id: infura_project_id
+    expected_fire: true
+    matched_text_starts: mhz5ve6p
+    notes: Wave 5: Infura Project ID/API Key (alt fixture)
+  - file: true_positives/blockchain/blocknative_w5.env
+    line: 2
+    detector_id: blocknative_api_key
+    expected_fire: true
+    matched_text_starts: 4d1739c4
+    notes: Wave 5: Blocknative API Key
+  - file: true_positives/blockchain/blocknative_w5.env
+    line: 3
+    detector_id: blocknative_api_key
+    expected_fire: true
+    matched_text_starts: 857f9877
+    notes: Wave 5: Blocknative API Key (alt fixture)
+  - file: true_positives/blockchain/moralis_w5.env
+    line: 2
+    detector_id: moralis_api_key
+    expected_fire: true
+    matched_text_starts: m6Q0mJpN
+    notes: Wave 5: Moralis API Key
+  - file: true_positives/blockchain/moralis_w5.env
+    line: 3
+    detector_id: moralis_api_key
+    expected_fire: true
+    matched_text_starts: pdPwgb1g
+    notes: Wave 5: Moralis API Key (alt fixture)
+  - file: true_positives/blockchain/ethplorer_w5.env
+    line: 2
+    detector_id: ethplorer_api_key
+    expected_fire: true
+    matched_text_starts: vgUGzxCe
+    notes: Wave 5: Ethplorer API Key
+  - file: true_positives/blockchain/ethplorer_w5.env
+    line: 3
+    detector_id: ethplorer_api_key
+    expected_fire: true
+    matched_text_starts: cXo3bj55
+    notes: Wave 5: Ethplorer API Key (alt fixture)
+  - file: true_positives/blockchain/tatum_w5.env
+    line: 2
+    detector_id: tatum_api_key
+    expected_fire: true
+    matched_text_starts: hvp8sy7n
+    notes: Wave 5: Tatum API Key
+  - file: true_positives/blockchain/tatum_w5.env
+    line: 3
+    detector_id: tatum_api_key
+    expected_fire: true
+    matched_text_starts: 67egfd1l
+    notes: Wave 5: Tatum API Key (alt fixture)
+  - file: true_positives/blockchain/bitmex_w5.env
+    line: 2
+    detector_id: bitmex_api_key
+    expected_fire: true
+    matched_text_starts: "5YP3-Cdz"
+    notes: Wave 5: BitMEX API Key
+  - file: true_positives/blockchain/bitmex_w5.env
+    line: 3
+    detector_id: bitmex_api_key
+    expected_fire: true
+    matched_text_starts: "8AFMlGZ-"
+    notes: Wave 5: BitMEX API Key (alt fixture)
+  - file: true_positives/blockchain/luno_w5.env
+    line: 2
+    detector_id: luno_api_key
+    expected_fire: true
+    matched_text_starts: sRS_HrOv
+    notes: Wave 5: Luno API Key
+  - file: true_positives/blockchain/luno_w5.env
+    line: 3
+    detector_id: luno_api_key
+    expected_fire: true
+    matched_text_starts: gXBlywlC
+    notes: Wave 5: Luno API Key (alt fixture)
+  - file: true_positives/blockchain/poloniex_w5.env
+    line: 2
+    detector_id: poloniex_api_key
+    expected_fire: true
+    matched_text_starts: 3XETGBNF
+    notes: Wave 5: Poloniex API Key
+  - file: true_positives/blockchain/poloniex_w5.env
+    line: 3
+    detector_id: poloniex_api_key
+    expected_fire: true
+    matched_text_starts: DLG5FD5P
+    notes: Wave 5: Poloniex API Key (alt fixture)
+  - file: true_positives/blockchain/cexio_w5.env
+    line: 2
+    detector_id: cexio_api_key
+    expected_fire: true
+    matched_text_starts: m6e1T3BP
+    notes: Wave 5: CEX.IO API Key
+  - file: true_positives/blockchain/cexio_w5.env
+    line: 3
+    detector_id: cexio_api_key
+    expected_fire: true
+    matched_text_starts: 6WEbWo0p
+    notes: Wave 5: CEX.IO API Key (alt fixture)
+  - file: true_positives/blockchain/bscscan_w5.env
+    line: 2
+    detector_id: bscscan_api_key
+    expected_fire: true
+    matched_text_starts: BNZNB5K5
+    notes: Wave 5: BscScan API Key
+  - file: true_positives/blockchain/bscscan_w5.env
+    line: 3
+    detector_id: bscscan_api_key
+    expected_fire: true
+    matched_text_starts: GCRYR3LT
+    notes: Wave 5: BscScan API Key (alt fixture)
+  - file: true_positives/saas/hellosign_w5.env
+    line: 2
+    detector_id: hellosign_api_key
+    expected_fire: true
+    matched_text_starts: u3nN7zPn
+    notes: Wave 5: HelloSign / Dropbox Sign API Key
+  - file: true_positives/saas/hellosign_w5.env
+    line: 3
+    detector_id: hellosign_api_key
+    expected_fire: true
+    matched_text_starts: fKpcgBbU
+    notes: Wave 5: HelloSign / Dropbox Sign API Key (alt fixture)
+  - file: true_positives/saas/yousign_w5.env
+    line: 2
+    detector_id: yousign_api_key
+    expected_fire: true
+    matched_text_starts: ts7xrywy
+    notes: Wave 5: Yousign API Key
+  - file: true_positives/saas/yousign_w5.env
+    line: 3
+    detector_id: yousign_api_key
+    expected_fire: true
+    matched_text_starts: 3kkbycr4
+    notes: Wave 5: Yousign API Key (alt fixture)
+  - file: true_positives/saas/signaturit_w5.env
+    line: 2
+    detector_id: signaturit_api_key
+    expected_fire: true
+    matched_text_starts: BL55qNeY
+    notes: Wave 5: Signaturit API Key
+  - file: true_positives/saas/signaturit_w5.env
+    line: 3
+    detector_id: signaturit_api_key
+    expected_fire: true
+    matched_text_starts: nRgiroaQ
+    notes: Wave 5: Signaturit API Key (alt fixture)
+  - file: true_positives/saas/juro_w5.env
+    line: 2
+    detector_id: juro_api_key
+    expected_fire: true
+    matched_text_starts: yUSM2Rxz
+    notes: Wave 5: Juro API Key
+  - file: true_positives/saas/juro_w5.env
+    line: 3
+    detector_id: juro_api_key
+    expected_fire: true
+    matched_text_starts: gP33vJdJ
+    notes: Wave 5: Juro API Key (alt fixture)
+  - file: true_positives/saas/pandadoc_w5.env
+    line: 2
+    detector_id: pandadoc_api_key
+    expected_fire: true
+    matched_text_starts: VOTUb6FA
+    notes: Wave 5: PandaDoc API Key
+  - file: true_positives/saas/pandadoc_w5.env
+    line: 3
+    detector_id: pandadoc_api_key
+    expected_fire: true
+    matched_text_starts: yVfDySgg
+    notes: Wave 5: PandaDoc API Key (alt fixture)
+  - file: true_positives/saas/docparser_w5.env
+    line: 2
+    detector_id: docparser_api_key
+    expected_fire: true
+    matched_text_starts: 5e2b3035
+    notes: Wave 5: Docparser API Key
+  - file: true_positives/saas/docparser_w5.env
+    line: 3
+    detector_id: docparser_api_key
+    expected_fire: true
+    matched_text_starts: e11ef4f7
+    notes: Wave 5: Docparser API Key (alt fixture)
+  - file: true_positives/saas/documo_w5.env
+    line: 2
+    detector_id: documo_api_key
+    expected_fire: true
+    matched_text_starts: eycBbBPT
+    notes: Wave 5: Documo API Key
+  - file: true_positives/saas/documo_w5.env
+    line: 3
+    detector_id: documo_api_key
+    expected_fire: true
+    matched_text_starts: eyL1QpeD
+    notes: Wave 5: Documo API Key (alt fixture)
+  - file: true_positives/crm/peopledatalabs_w5.env
+    line: 2
+    detector_id: peopledatalabs_api_key
+    expected_fire: true
+    matched_text_starts: ayfa66cx
+    notes: Wave 5: People Data Labs API Key
+  - file: true_positives/crm/peopledatalabs_w5.env
+    line: 3
+    detector_id: peopledatalabs_api_key
+    expected_fire: true
+    matched_text_starts: dedzoyve
+    notes: Wave 5: People Data Labs API Key (alt fixture)
+  - file: true_positives/payment/ak_live__w5.env
+    line: 2
+    detector_id: pagarme_api_key
+    expected_fire: true
+    matched_text_starts: ak_live_
+    notes: Wave 5: Pagar.me API Key
+  - file: true_positives/payment/ak_live__w5.env
+    line: 3
+    detector_id: pagarme_api_key
+    expected_fire: true
+    matched_text_starts: ak_live_
+    notes: Wave 5: Pagar.me API Key (alt fixture)
+  - file: true_positives/crm/alegra_w5.env
+    line: 2
+    detector_id: alegra_api_key
+    expected_fire: true
+    matched_text_starts: rxeb3csa
+    notes: Wave 5: Alegra API Key
+  - file: true_positives/crm/alegra_w5.env
+    line: 3
+    detector_id: alegra_api_key
+    expected_fire: true
+    matched_text_starts: 56rm9fc4
+    notes: Wave 5: Alegra API Key (alt fixture)
+  - file: true_positives/crm/loyverse_w5.env
+    line: 2
+    detector_id: loyverse_access_token
+    expected_fire: true
+    matched_text_starts: "iwc-wfmg"
+    notes: Wave 5: Loyverse Access Token
+  - file: true_positives/crm/loyverse_w5.env
+    line: 3
+    detector_id: loyverse_access_token
+    expected_fire: true
+    matched_text_starts: 2te90g51
+    notes: Wave 5: Loyverse Access Token (alt fixture)
+  - file: true_positives/crm/taxjar_w5.env
+    line: 2
+    detector_id: taxjar_api_token
+    expected_fire: true
+    matched_text_starts: b9zhv9d4
+    notes: Wave 5: TaxJar API Token
+  - file: true_positives/crm/taxjar_w5.env
+    line: 3
+    detector_id: taxjar_api_token
+    expected_fire: true
+    matched_text_starts: s5434nkq
+    notes: Wave 5: TaxJar API Token (alt fixture)
+  - file: true_positives/crm/freshbooks_w5.env
+    line: 2
+    detector_id: freshbooks_api_key
+    expected_fire: true
+    matched_text_starts: hrw4xqjn
+    notes: Wave 5: FreshBooks API Key
+  - file: true_positives/crm/freshbooks_w5.env
+    line: 3
+    detector_id: freshbooks_api_key
+    expected_fire: true
+    matched_text_starts: o4mjxnkz
+    notes: Wave 5: FreshBooks API Key (alt fixture)
+  - file: true_positives/crm/billomat_w5.env
+    line: 2
+    detector_id: billomat_api_key
+    expected_fire: true
+    matched_text_starts: 24ad7b0b
+    notes: Wave 5: Billomat API Key
+  - file: true_positives/crm/billomat_w5.env
+    line: 3
+    detector_id: billomat_api_key
+    expected_fire: true
+    matched_text_starts: 9ee112c1
+    notes: Wave 5: Billomat API Key (alt fixture)
+  - file: true_positives/crm/flowflu_w5.env
+    line: 2
+    detector_id: flowlu_api_key
+    expected_fire: true
+    matched_text_starts: 2NWd4846
+    notes: Wave 5: FlowLu API Key
+  - file: true_positives/crm/flowflu_w5.env
+    line: 3
+    detector_id: flowlu_api_key
+    expected_fire: true
+    matched_text_starts: q2OzAny7
+    notes: Wave 5: FlowLu API Key (alt fixture)
+  - file: true_positives/analytics/chartmogul_w5.env
+    line: 2
+    detector_id: chartmogul_api_key
+    expected_fire: true
+    matched_text_starts: hrw4xqjn
+    notes: Wave 5: ChartMogul API Key
+  - file: true_positives/analytics/chartmogul_w5.env
+    line: 3
+    detector_id: chartmogul_api_key
+    expected_fire: true
+    matched_text_starts: o4mjxnkz
+    notes: Wave 5: ChartMogul API Key (alt fixture)
+  - file: true_positives/analytics/baremetrics_w5.env
+    line: 2
+    detector_id: baremetrics_api_key
+    expected_fire: true
+    matched_text_starts: sk_x7lK6
+    notes: Wave 5: Baremetrics API Key
+  - file: true_positives/analytics/baremetrics_w5.env
+    line: 3
+    detector_id: baremetrics_api_key
+    expected_fire: true
+    matched_text_starts: sk_RdhmE
+    notes: Wave 5: Baremetrics API Key (alt fixture)
+  - file: true_positives/crm/youneedabudget_w5.env
+    line: 2
+    detector_id: youneedabudget_access_token
+    expected_fire: true
+    matched_text_starts: da544722
+    notes: Wave 5: YNAB Access Token
+  - file: true_positives/crm/youneedabudget_w5.env
+    line: 3
+    detector_id: youneedabudget_access_token
+    expected_fire: true
+    matched_text_starts: 8656457a
+    notes: Wave 5: YNAB Access Token (alt fixture)
+  - file: true_positives/crm/lunchmoney_w5.env
+    line: 2
+    detector_id: lunchmoney_api_key
+    expected_fire: true
+    matched_text_starts: ab52b4e9
+    notes: Wave 5: Lunch Money API Key
+  - file: true_positives/crm/lunchmoney_w5.env
+    line: 3
+    detector_id: lunchmoney_api_key
+    expected_fire: true
+    matched_text_starts: 6612b509
+    notes: Wave 5: Lunch Money API Key (alt fixture)
+  - file: true_positives/project_management/mite_w5.env
+    line: 2
+    detector_id: mite_api_key
+    expected_fire: true
+    matched_text_starts: uz6ajuya
+    notes: Wave 5: Mite API Key
+  - file: true_positives/project_management/mite_w5.env
+    line: 3
+    detector_id: mite_api_key
+    expected_fire: true
+    matched_text_starts: u64ig4r6
+    notes: Wave 5: Mite API Key (alt fixture)
+  - file: true_positives/project_management/paymoapp_w5.env
+    line: 2
+    detector_id: paymoapp_api_key
+    expected_fire: true
+    matched_text_starts: EDOwCOwl
+    notes: Wave 5: Paymo API Key
+  - file: true_positives/project_management/paymoapp_w5.env
+    line: 3
+    detector_id: paymoapp_api_key
+    expected_fire: true
+    matched_text_starts: 8JUNYF4S
+    notes: Wave 5: Paymo API Key (alt fixture)
+  - file: true_positives/project_management/paydirtapp_w5.env
+    line: 2
+    detector_id: paydirt_api_key
+    expected_fire: true
+    matched_text_starts: wlwxvw0j
+    notes: Wave 5: Paydirt API Key
+  - file: true_positives/project_management/paydirtapp_w5.env
+    line: 3
+    detector_id: paydirt_api_key
+    expected_fire: true
+    matched_text_starts: s1o4xzik
+    notes: Wave 5: Paydirt API Key (alt fixture)
+  - file: true_positives/project_management/harvest_w5.env
+    line: 2
+    detector_id: harvest_access_token
+    expected_fire: true
+    matched_text_starts: BCZ9afMh
+    notes: Wave 5: Harvest Access Token
+  - file: true_positives/project_management/harvest_w5.env
+    line: 3
+    detector_id: harvest_access_token
+    expected_fire: true
+    matched_text_starts: qn5iEkkR
+    notes: Wave 5: Harvest Access Token (alt fixture)
+  - file: true_positives/project_management/toggl_w5.env
+    line: 2
+    detector_id: toggl_api_token
+    expected_fire: true
+    matched_text_starts: b81aqlku
+    notes: Wave 5: Toggl Track API Token
+  - file: true_positives/project_management/toggl_w5.env
+    line: 3
+    detector_id: toggl_api_token
+    expected_fire: true
+    matched_text_starts: e1nvd6Ab
+    notes: Wave 5: Toggl Track API Token (alt fixture)
+  - file: true_positives/project_management/clockify_w5.env
+    line: 2
+    detector_id: clockify_api_key
+    expected_fire: true
+    matched_text_starts: h4iZ9eKz
+    notes: Wave 5: Clockify API Key
+  - file: true_positives/project_management/clockify_w5.env
+    line: 3
+    detector_id: clockify_api_key
+    expected_fire: true
+    matched_text_starts: ISS325P3
+    notes: Wave 5: Clockify API Key (alt fixture)
+  - file: true_positives/project_management/everhour_w5.env
+    line: 2
+    detector_id: everhour_api_key
+    expected_fire: true
+    matched_text_starts: "bee2-66b"
+    notes: Wave 5: Everhour API Key
+  - file: true_positives/project_management/everhour_w5.env
+    line: 3
+    detector_id: everhour_api_key
+    expected_fire: true
+    matched_text_starts: "eb9d-1bb"
+    notes: Wave 5: Everhour API Key (alt fixture)
+  - file: true_positives/project_management/timecamp_w5.env
+    line: 2
+    detector_id: timecamp_api_token
+    expected_fire: true
+    matched_text_starts: fhny16ae
+    notes: Wave 5: TimeCamp API Token
+  - file: true_positives/project_management/timecamp_w5.env
+    line: 3
+    detector_id: timecamp_api_token
+    expected_fire: true
+    matched_text_starts: vsx1ufno
+    notes: Wave 5: TimeCamp API Token (alt fixture)
+  - file: true_positives/project_management/tmetric_w5.env
+    line: 2
+    detector_id: tmetric_api_token
+    expected_fire: true
+    matched_text_starts: P748Q3DS
+    notes: Wave 5: TMetric API Token
+  - file: true_positives/project_management/tmetric_w5.env
+    line: 3
+    detector_id: tmetric_api_token
+    expected_fire: true
+    matched_text_starts: KA6Q0E5B
+    notes: Wave 5: TMetric API Token (alt fixture)
+  - file: true_positives/project_management/worksnaps_w5.env
+    line: 2
+    detector_id: worksnaps_api_key
+    expected_fire: true
+    matched_text_starts: FIJMfltE
+    notes: Wave 5: Worksnaps API Key
+  - file: true_positives/project_management/worksnaps_w5.env
+    line: 3
+    detector_id: worksnaps_api_key
+    expected_fire: true
+    matched_text_starts: B6gCRfHM
+    notes: Wave 5: Worksnaps API Key (alt fixture)
+  - file: true_positives/project_management/beebole_w5.env
+    line: 2
+    detector_id: beebole_api_key
+    expected_fire: true
+    matched_text_starts: r6k5vp4r
+    notes: Wave 5: Beebole API Key
+  - file: true_positives/project_management/beebole_w5.env
+    line: 3
+    detector_id: beebole_api_key
+    expected_fire: true
+    matched_text_starts: t3uqmx4d
+    notes: Wave 5: Beebole API Key (alt fixture)
+  - file: true_positives/monitoring/easyinsight_w5.env
+    line: 2
+    detector_id: easyinsight_api_key
+    expected_fire: true
+    matched_text_starts: 5wc2zuyf
+    notes: Wave 5: Easy Insight API Key
+  - file: true_positives/monitoring/easyinsight_w5.env
+    line: 3
+    detector_id: easyinsight_api_key
+    expected_fire: true
+    matched_text_starts: 9l0s4w9b
+    notes: Wave 5: Easy Insight API Key (alt fixture)
+  - file: true_positives/project_management/float_w5.env
+    line: 2
+    detector_id: float_api_key
+    expected_fire: true
+    matched_text_starts: 11ffcadc
+    notes: Wave 5: Float API Key
+  - file: true_positives/project_management/float_w5.env
+    line: 3
+    detector_id: float_api_key
+    expected_fire: true
+    matched_text_starts: c98a477f
+    notes: Wave 5: Float API Key (alt fixture)
+  - file: true_positives/project_management/mavenlink_w5.env
+    line: 2
+    detector_id: mavenlink_api_token
+    expected_fire: true
+    matched_text_starts: wgwrca61
+    notes: Wave 5: Mavenlink/Kantata API Token
+  - file: true_positives/project_management/mavenlink_w5.env
+    line: 3
+    detector_id: mavenlink_api_token
+    expected_fire: true
+    matched_text_starts: l44rzri3
+    notes: Wave 5: Mavenlink/Kantata API Token (alt fixture)
+  - file: true_positives/project_management/myintervals_w5.env
+    line: 2
+    detector_id: myintervals_api_key
+    expected_fire: true
+    matched_text_starts: o7xb7ym7
+    notes: Wave 5: MyIntervals API Key
+  - file: true_positives/project_management/myintervals_w5.env
+    line: 3
+    detector_id: myintervals_api_key
+    expected_fire: true
+    matched_text_starts: aua73fsy
+    notes: Wave 5: MyIntervals API Key (alt fixture)
+  - file: true_positives/project_management/monday_w5.env
+    line: 2
+    detector_id: monday_api_token
+    expected_fire: true
+    matched_text_starts: eyJfht9c
+    notes: Wave 5: Monday.com API Token
+  - file: true_positives/project_management/monday_w5.env
+    line: 3
+    detector_id: monday_api_token
+    expected_fire: true
+    matched_text_starts: eyJmrcDh
+    notes: Wave 5: Monday.com API Token (alt fixture)
+  - file: true_positives/collaboration/miro_w5.env
+    line: 2
+    detector_id: miro_access_token
+    expected_fire: true
+    matched_text_starts: A8wWq8VR
+    notes: Wave 5: Miro Access Token
+  - file: true_positives/collaboration/miro_w5.env
+    line: 3
+    detector_id: miro_access_token
+    expected_fire: true
+    matched_text_starts: 0KNcrHVX
+    notes: Wave 5: Miro Access Token (alt fixture)
+  - file: true_positives/project_management/fibery_w5.env
+    line: 2
+    detector_id: fibery_api_token
+    expected_fire: true
+    matched_text_starts: 739ace4f
+    notes: Wave 5: Fibery API Token
+  - file: true_positives/project_management/fibery_w5.env
+    line: 3
+    detector_id: fibery_api_token
+    expected_fire: true
+    matched_text_starts: a6832499
+    notes: Wave 5: Fibery API Token (alt fixture)
+  - file: true_positives/project_management/shortcut_w5.env
+    line: 2
+    detector_id: shortcut_api_token
+    expected_fire: true
+    matched_text_starts: 305eab2b
+    notes: Wave 5: Shortcut API Token
+  - file: true_positives/project_management/shortcut_w5.env
+    line: 3
+    detector_id: shortcut_api_token
+    expected_fire: true
+    matched_text_starts: bb9ce892
+    notes: Wave 5: Shortcut API Token (alt fixture)
+  - file: true_positives/collaboration/coda_w5.env
+    line: 2
+    detector_id: coda_api_token
+    expected_fire: true
+    matched_text_starts: 9s7hlsp4
+    notes: Wave 5: Coda API Token
+  - file: true_positives/collaboration/coda_w5.env
+    line: 3
+    detector_id: coda_api_token
+    expected_fire: true
+    matched_text_starts: b7n7559u
+    notes: Wave 5: Coda API Token (alt fixture)
+  - file: true_positives/saas/ip2location_w5.env
+    line: 2
+    detector_id: ip2location_api_key
+    expected_fire: true
+    matched_text_starts: 7M9VGCAD
+    notes: Wave 5: IP2Location API Key
+  - file: true_positives/saas/ip2location_w5.env
+    line: 3
+    detector_id: ip2location_api_key
+    expected_fire: true
+    matched_text_starts: HK3HD0AB
+    notes: Wave 5: IP2Location API Key (alt fixture)
+  - file: true_positives/saas/ipapi_w5.env
+    line: 2
+    detector_id: ipapi_access_key
+    expected_fire: true
+    matched_text_starts: qyb4icgr
+    notes: Wave 5: ipapi.co Access Key
+  - file: true_positives/saas/ipapi_w5.env
+    line: 3
+    detector_id: ipapi_access_key
+    expected_fire: true
+    matched_text_starts: d0khdd0l
+    notes: Wave 5: ipapi.co Access Key (alt fixture)
+  - file: true_positives/saas/ipgeolocation_w5.env
+    line: 2
+    detector_id: ipgeolocation_api_key
+    expected_fire: true
+    matched_text_starts: 207kdr3m
+    notes: Wave 5: ipgeolocation.io API Key
+  - file: true_positives/saas/ipgeolocation_w5.env
+    line: 3
+    detector_id: ipgeolocation_api_key
+    expected_fire: true
+    matched_text_starts: 8b2oyysr
+    notes: Wave 5: ipgeolocation.io API Key (alt fixture)
+  - file: true_positives/saas/ipinfo_w5.env
+    line: 2
+    detector_id: ipinfo_access_token
+    expected_fire: true
+    matched_text_starts: 9fcb7a03
+    notes: Wave 5: IPinfo Access Token
+  - file: true_positives/saas/ipinfo_w5.env
+    line: 3
+    detector_id: ipinfo_access_token
+    expected_fire: true
+    matched_text_starts: 57c4c692
+    notes: Wave 5: IPinfo Access Token (alt fixture)
+  - file: true_positives/saas/ipinfodb_w5.env
+    line: 2
+    detector_id: ipinfodb_api_key
+    expected_fire: true
+    matched_text_starts: qyb4icgr
+    notes: Wave 5: IPInfoDB API Key
+  - file: true_positives/saas/ipinfodb_w5.env
+    line: 3
+    detector_id: ipinfodb_api_key
+    expected_fire: true
+    matched_text_starts: d0khdd0l
+    notes: Wave 5: IPInfoDB API Key (alt fixture)
+  - file: true_positives/saas/ipquality_w5.env
+    line: 2
+    detector_id: ipqualityscore_api_key
+    expected_fire: true
+    matched_text_starts: PgJHKx8F
+    notes: Wave 5: IPQualityScore API Key
+  - file: true_positives/saas/ipquality_w5.env
+    line: 3
+    detector_id: ipqualityscore_api_key
+    expected_fire: true
+    matched_text_starts: p3iuXzpP
+    notes: Wave 5: IPQualityScore API Key (alt fixture)
+  - file: true_positives/saas/ipstack_w5.env
+    line: 2
+    detector_id: ipstack_access_key
+    expected_fire: true
+    matched_text_starts: aee9c28D
+    notes: Wave 5: ipstack Access Key
+  - file: true_positives/saas/ipstack_w5.env
+    line: 3
+    detector_id: ipstack_access_key
+    expected_fire: true
+    matched_text_starts: 28C06f4C
+    notes: Wave 5: ipstack Access Key (alt fixture)
+  - file: true_positives/saas/geoapify_w5.env
+    line: 2
+    detector_id: geoapify_api_key
+    expected_fire: true
+    matched_text_starts: 4z9kzren
+    notes: Wave 5: Geoapify API Key
+  - file: true_positives/saas/geoapify_w5.env
+    line: 3
+    detector_id: geoapify_api_key
+    expected_fire: true
+    matched_text_starts: iss325p3
+    notes: Wave 5: Geoapify API Key (alt fixture)
+  - file: true_positives/saas/geocodify_w5.env
+    line: 2
+    detector_id: geocodify_api_key
+    expected_fire: true
+    matched_text_starts: 3x0ywoqx
+    notes: Wave 5: Geocodify API Key
+  - file: true_positives/saas/geocodify_w5.env
+    line: 3
+    detector_id: geocodify_api_key
+    expected_fire: true
+    matched_text_starts: ru0lkg6h
+    notes: Wave 5: Geocodify API Key (alt fixture)
+  - file: true_positives/saas/geocod_w5.env
+    line: 2
+    detector_id: geocodio_api_key
+    expected_fire: true
+    matched_text_starts: 06bto7dn
+    notes: Wave 5: Geocodio API Key
+  - file: true_positives/saas/geocod_w5.env
+    line: 3
+    detector_id: geocodio_api_key
+    expected_fire: true
+    matched_text_starts: 0v5zwwv1
+    notes: Wave 5: Geocodio API Key (alt fixture)
+  - file: true_positives/saas/ipifi_w5.env
+    line: 2
+    detector_id: geoipify_api_key
+    expected_fire: true
+    matched_text_starts: qRfPPx73
+    notes: Wave 5: GeoIPify API Key
+  - file: true_positives/saas/ipifi_w5.env
+    line: 3
+    detector_id: geoipify_api_key
+    expected_fire: true
+    matched_text_starts: G38bN_S7
+    notes: Wave 5: GeoIPify API Key (alt fixture)
+  - file: true_positives/saas/positionstack_w5.env
+    line: 2
+    detector_id: positionstack_access_key
+    expected_fire: true
+    matched_text_starts: uwQe1SNl
+    notes: Wave 5: positionstack Access Key
+  - file: true_positives/saas/positionstack_w5.env
+    line: 3
+    detector_id: positionstack_access_key
+    expected_fire: true
+    matched_text_starts: W2hdNBBU
+    notes: Wave 5: positionstack Access Key (alt fixture)
+  - file: true_positives/saas/locationiq_w5.env
+    line: 2
+    detector_id: locationiq_api_key
+    expected_fire: true
+    matched_text_starts: pk.FcqC3
+    notes: Wave 5: LocationIQ API Key
+  - file: true_positives/saas/locationiq_w5.env
+    line: 3
+    detector_id: locationiq_api_key
+    expected_fire: true
+    matched_text_starts: pk.yKPNE
+    notes: Wave 5: LocationIQ API Key (alt fixture)
+  - file: true_positives/saas/mapquest_w5.env
+    line: 2
+    detector_id: mapquest_api_key
+    expected_fire: true
+    matched_text_starts: mNxTTz4D
+    notes: Wave 5: MapQuest API Key
+  - file: true_positives/saas/mapquest_w5.env
+    line: 3
+    detector_id: mapquest_api_key
+    expected_fire: true
+    matched_text_starts: wkTuXhda
+    notes: Wave 5: MapQuest API Key (alt fixture)
+  - file: true_positives/saas/opencagedata_w5.env
+    line: 2
+    detector_id: opencage_api_key
+    expected_fire: true
+    matched_text_starts: 3t23z9w8
+    notes: Wave 5: OpenCage Geocoding API Key
+  - file: true_positives/saas/opencagedata_w5.env
+    line: 3
+    detector_id: opencage_api_key
+    expected_fire: true
+    matched_text_starts: bn55hbnd
+    notes: Wave 5: OpenCage Geocoding API Key (alt fixture)
+  - file: true_positives/saas/hereapi_w5.env
+    line: 2
+    detector_id: here_api_key
+    expected_fire: true
+    matched_text_starts: ByGkO7qk
+    notes: Wave 5: HERE API Key
+  - file: true_positives/saas/hereapi_w5.env
+    line: 3
+    detector_id: here_api_key
+    expected_fire: true
+    matched_text_starts: Yl7HEFDQ
+    notes: Wave 5: HERE API Key (alt fixture)
+  - file: true_positives/saas/graphhopper_w5.env
+    line: 2
+    detector_id: graphhopper_api_key
+    expected_fire: true
+    matched_text_starts: p4spfrb7
+    notes: Wave 5: GraphHopper API Key
+  - file: true_positives/saas/graphhopper_w5.env
+    line: 3
+    detector_id: graphhopper_api_key
+    expected_fire: true
+    matched_text_starts: 2hfk2czz
+    notes: Wave 5: GraphHopper API Key (alt fixture)
+  - file: true_positives/crm/apollo_w5.env
+    line: 2
+    detector_id: apollo_api_key
+    expected_fire: true
+    matched_text_starts: cBbBPTmF
+    notes: Wave 5: Apollo.io API Key
+  - file: true_positives/crm/apollo_w5.env
+    line: 3
+    detector_id: apollo_api_key
+    expected_fire: true
+    matched_text_starts: L1QpeDen
+    notes: Wave 5: Apollo.io API Key (alt fixture)
+  - file: true_positives/crm/clearbit_w5.env
+    line: 2
+    detector_id: clearbit_api_key
+    expected_fire: true
+    matched_text_starts: mcc3qf9j
+    notes: Wave 5: Clearbit API Key
+  - file: true_positives/crm/clearbit_w5.env
+    line: 3
+    detector_id: clearbit_api_key
+    expected_fire: true
+    matched_text_starts: tchbmc47
+    notes: Wave 5: Clearbit API Key (alt fixture)
+  - file: true_positives/crm/copper_w5.env
+    line: 2
+    detector_id: copper_api_token
+    expected_fire: true
+    matched_text_starts: fb33wwi6
+    notes: Wave 5: Copper CRM API Token
+  - file: true_positives/crm/copper_w5.env
+    line: 3
+    detector_id: copper_api_token
+    expected_fire: true
+    matched_text_starts: t2o9r70n
+    notes: Wave 5: Copper CRM API Token (alt fixture)
+  - file: true_positives/crm/streak_w5.env
+    line: 2
+    detector_id: streak_api_key
+    expected_fire: true
+    matched_text_starts: 98226c32
+    notes: Wave 5: Streak API Key
+  - file: true_positives/crm/streak_w5.env
+    line: 3
+    detector_id: streak_api_key
+    expected_fire: true
+    matched_text_starts: 95d5171d
+    notes: Wave 5: Streak API Key (alt fixture)
+  - file: true_positives/crm/companyhub_w5.env
+    line: 2
+    detector_id: companyhub_api_key
+    expected_fire: true
+    matched_text_starts: hrw4xqjn
+    notes: Wave 5: CompanyHub API Key
+  - file: true_positives/crm/companyhub_w5.env
+    line: 3
+    detector_id: companyhub_api_key
+    expected_fire: true
+    matched_text_starts: o4mjxnkz
+    notes: Wave 5: CompanyHub API Key (alt fixture)
+  - file: true_positives/crm/karmacrm_w5.env
+    line: 2
+    detector_id: karmacrm_api_token
+    expected_fire: true
+    matched_text_starts: 9qyo62nu
+    notes: Wave 5: KarmaCRM API Token
+  - file: true_positives/crm/karmacrm_w5.env
+    line: 3
+    detector_id: karmacrm_api_token
+    expected_fire: true
+    matched_text_starts: qyng99tm
+    notes: Wave 5: KarmaCRM API Token (alt fixture)
+  - file: true_positives/crm/salesblink_w5.env
+    line: 2
+    detector_id: salesblink_api_key
+    expected_fire: true
+    matched_text_starts: "key-aFjv"
+    notes: Wave 5: SalesBlink API Key
+  - file: true_positives/crm/salesblink_w5.env
+    line: 3
+    detector_id: salesblink_api_key
+    expected_fire: true
+    matched_text_starts: "key-wwbV"
+    notes: Wave 5: SalesBlink API Key (alt fixture)
+  - file: true_positives/crm/salesflare_w5.env
+    line: 2
+    detector_id: salesflare_api_key
+    expected_fire: true
+    matched_text_starts: KGMtfK2l
+    notes: Wave 5: Salesflare API Key
+  - file: true_positives/crm/salesflare_w5.env
+    line: 3
+    detector_id: salesflare_api_key
+    expected_fire: true
+    matched_text_starts: I6i0BkX5
+    notes: Wave 5: Salesflare API Key (alt fixture)
+  - file: true_positives/crm/salesmate_w5.env
+    line: 2
+    detector_id: salesmate_api_key
+    expected_fire: true
+    matched_text_starts: c9954c6f
+    notes: Wave 5: Salesmate API Key
+  - file: true_positives/crm/salesmate_w5.env
+    line: 3
+    detector_id: salesmate_api_key
+    expected_fire: true
+    matched_text_starts: fa077a8d
+    notes: Wave 5: Salesmate API Key (alt fixture)
+  - file: true_positives/crm/salescookie_w5.env
+    line: 2
+    detector_id: salescookie_api_key
+    expected_fire: true
+    matched_text_starts: v8Q3tafF
+    notes: Wave 5: Sales Cookie API Key
+  - file: true_positives/crm/salescookie_w5.env
+    line: 3
+    detector_id: salescookie_api_key
+    expected_fire: true
+    matched_text_starts: GlBiWmEc
+    notes: Wave 5: Sales Cookie API Key (alt fixture)
+  - file: true_positives/crm/overloop_w5.env
+    line: 2
+    detector_id: overloop_api_key
+    expected_fire: true
+    matched_text_starts: Aqi9c0aO
+    notes: Wave 5: Overloop API Key
+  - file: true_positives/crm/overloop_w5.env
+    line: 3
+    detector_id: overloop_api_key
+    expected_fire: true
+    matched_text_starts: KiVMhVR2
+    notes: Wave 5: Overloop API Key (alt fixture)
+  - file: true_positives/crm/prospectcrm_w5.env
+    line: 2
+    detector_id: prospectcrm_api_key
+    expected_fire: true
+    matched_text_starts: "lh3-h1oo"
+    notes: Wave 5: Prospect CRM API Key
+  - file: true_positives/crm/prospectcrm_w5.env
+    line: 3
+    detector_id: prospectcrm_api_key
+    expected_fire: true
+    matched_text_starts: jnm87oq1
+    notes: Wave 5: Prospect CRM API Key (alt fixture)
+  - file: true_positives/crm/nimble_w5.env
+    line: 2
+    detector_id: nimble_api_key
+    expected_fire: true
+    matched_text_starts: BUaqx36C
+    notes: Wave 5: Nimble API Key
+  - file: true_positives/crm/nimble_w5.env
+    line: 3
+    detector_id: nimble_api_key
+    expected_fire: true
+    matched_text_starts: mxSM8Rc0
+    notes: Wave 5: Nimble API Key (alt fixture)
+  - file: true_positives/crm/insightly_w5.env
+    line: 2
+    detector_id: insightly_api_key
+    expected_fire: true
+    matched_text_starts: grzri8y4
+    notes: Wave 5: Insightly API Key
+  - file: true_positives/crm/insightly_w5.env
+    line: 3
+    detector_id: insightly_api_key
+    expected_fire: true
+    matched_text_starts: cpi9lyak
+    notes: Wave 5: Insightly API Key (alt fixture)
+  - file: true_positives/crm/rocketreach_w5.env
+    line: 2
+    detector_id: rocketreach_api_key
+    expected_fire: true
+    matched_text_starts: "4t35xy-d"
+    notes: Wave 5: RocketReach API Key
+  - file: true_positives/crm/rocketreach_w5.env
+    line: 3
+    detector_id: rocketreach_api_key
+    expected_fire: true
+    matched_text_starts: 84v1jy7g
+    notes: Wave 5: RocketReach API Key (alt fixture)
+  - file: true_positives/crm/nethunt_w5.env
+    line: 2
+    detector_id: nethunt_api_key
+    expected_fire: true
+    matched_text_starts: "qgbx-96b"
+    notes: Wave 5: NetHunt CRM API Key
+  - file: true_positives/crm/nethunt_w5.env
+    line: 3
+    detector_id: nethunt_api_key
+    expected_fire: true
+    matched_text_starts: 7hfvfbrq
+    notes: Wave 5: NetHunt CRM API Key (alt fixture)
+  - file: true_positives/crm/leadfeeder_w5.env
+    line: 2
+    detector_id: leadfeeder_api_token
+    expected_fire: true
+    matched_text_starts: Z8e9MAPU
+    notes: Wave 5: Leadfeeder API Token
+  - file: true_positives/crm/leadfeeder_w5.env
+    line: 3
+    detector_id: leadfeeder_api_token
+    expected_fire: true
+    matched_text_starts: RMJPwzuD
+    notes: Wave 5: Leadfeeder API Token (alt fixture)
+  - file: true_positives/crm/appcues_w5.env
+    line: 2
+    detector_id: appcues_api_key
+    expected_fire: true
+    matched_text_starts: 5fexstf3
+    notes: Wave 5: Appcues API Key
+  - file: true_positives/crm/appcues_w5.env
+    line: 3
+    detector_id: appcues_api_key
+    expected_fire: true
+    matched_text_starts: "h5i90k5-"
+    notes: Wave 5: Appcues API Key (alt fixture)
+  - file: true_positives/crm/appfollow_w5.env
+    line: 2
+    detector_id: appfollow_api_token
+    expected_fire: true
+    matched_text_starts: eyJ0eXAi
+    notes: Wave 5: AppFollow API Token
+  - file: true_positives/crm/appfollow_w5.env
+    line: 3
+    detector_id: appfollow_api_token
+    expected_fire: true
+    matched_text_starts: eyJ0eXAi
+    notes: Wave 5: AppFollow API Token (alt fixture)
+  - file: true_positives/crm/gumroad_w5.env
+    line: 2
+    detector_id: gumroad_access_token
+    expected_fire: true
+    matched_text_starts: vtitST7j
+    notes: Wave 5: Gumroad Access Token
+  - file: true_positives/crm/gumroad_w5.env
+    line: 3
+    detector_id: gumroad_access_token
+    expected_fire: true
+    matched_text_starts: wC5DE4jj
+    notes: Wave 5: Gumroad Access Token (alt fixture)
+  - file: true_positives/crm/revampcrm_w5.env
+    line: 2
+    detector_id: revampcrm_api_key
+    expected_fire: true
+    matched_text_starts: uqU2QOQ5
+    notes: Wave 5: RevampCRM API Key
+  - file: true_positives/crm/revampcrm_w5.env
+    line: 3
+    detector_id: revampcrm_api_key
+    expected_fire: true
+    matched_text_starts: Yf9c6vKS
+    notes: Wave 5: RevampCRM API Key (alt fixture)
+  - file: true_positives/crm/kylas_w5.env
+    line: 2
+    detector_id: kylas_api_key
+    expected_fire: true
+    matched_text_starts: ru1xamrb
+    notes: Wave 5: Kylas API Key
+  - file: true_positives/crm/kylas_w5.env
+    line: 3
+    detector_id: kylas_api_key
+    expected_fire: true
+    matched_text_starts: d2aitjfc
+    notes: Wave 5: Kylas API Key (alt fixture)
+  - file: true_positives/saas/jotform_w5.env
+    line: 2
+    detector_id: jotform_api_key
+    expected_fire: true
+    matched_text_starts: r1311bgg
+    notes: Wave 5: JotForm API Key
+  - file: true_positives/saas/jotform_w5.env
+    line: 3
+    detector_id: jotform_api_key
+    expected_fire: true
+    matched_text_starts: 1rAcfd5f
+    notes: Wave 5: JotForm API Key (alt fixture)
+  - file: true_positives/saas/qualaroo_w5.env
+    line: 2
+    detector_id: qualaroo_api_key
+    expected_fire: true
+    matched_text_starts: a64Ub7nE
+    notes: Wave 5: Qualaroo API Key
+  - file: true_positives/saas/qualaroo_w5.env
+    line: 3
+    detector_id: qualaroo_api_key
+    expected_fire: true
+    matched_text_starts: cF3k3NWf
+    notes: Wave 5: Qualaroo API Key (alt fixture)
+  - file: true_positives/saas/delighted_w5.env
+    line: 2
+    detector_id: delighted_api_key
+    expected_fire: true
+    matched_text_starts: UiP8okDi
+    notes: Wave 5: Delighted API Key
+  - file: true_positives/saas/delighted_w5.env
+    line: 3
+    detector_id: delighted_api_key
+    expected_fire: true
+    matched_text_starts: arc4wz6t
+    notes: Wave 5: Delighted API Key (alt fixture)
+  - file: true_positives/saas/survicate_w5.env
+    line: 2
+    detector_id: survicate_api_key
+    expected_fire: true
+    matched_text_starts: ckfbfh4b
+    notes: Wave 5: Survicate API Key
+  - file: true_positives/saas/survicate_w5.env
+    line: 3
+    detector_id: survicate_api_key
+    expected_fire: true
+    matched_text_starts: 6lg416qh
+    notes: Wave 5: Survicate API Key (alt fixture)
+  - file: true_positives/saas/surveyanyplace_w5.env
+    line: 2
+    detector_id: surveyanyplace_api_key
+    expected_fire: true
+    matched_text_starts: QaKpIYzc
+    notes: Wave 5: Survey Anyplace API Key
+  - file: true_positives/saas/surveyanyplace_w5.env
+    line: 3
+    detector_id: surveyanyplace_api_key
+    expected_fire: true
+    matched_text_starts: H968hwWZ
+    notes: Wave 5: Survey Anyplace API Key (alt fixture)
+  - file: true_positives/saas/surveybot_w5.env
+    line: 2
+    detector_id: surveybot_api_key
+    expected_fire: true
+    matched_text_starts: 1oVKhqtB
+    notes: Wave 5: Surveybot API Key
+  - file: true_positives/saas/surveybot_w5.env
+    line: 3
+    detector_id: surveybot_api_key
+    expected_fire: true
+    matched_text_starts: wGRp8uSz
+    notes: Wave 5: Surveybot API Key (alt fixture)
+  - file: true_positives/saas/surveysparrow_w5.env
+    line: 2
+    detector_id: surveysparrow_api_token
+    expected_fire: true
+    matched_text_starts: bkrM2AQG
+    notes: Wave 5: SurveySparrow API Token
+  - file: true_positives/saas/surveysparrow_w5.env
+    line: 3
+    detector_id: surveysparrow_api_token
+    expected_fire: true
+    matched_text_starts: Nrofvqtu
+    notes: Wave 5: SurveySparrow API Token (alt fixture)
+  - file: true_positives/saas/simplesat_w5.env
+    line: 2
+    detector_id: simplesat_api_token
+    expected_fire: true
+    matched_text_starts: ngyih5el
+    notes: Wave 5: Simplesat API Token
+  - file: true_positives/saas/simplesat_w5.env
+    line: 3
+    detector_id: simplesat_api_token
+    expected_fire: true
+    matched_text_starts: b9oc1q5k
+    notes: Wave 5: Simplesat API Token (alt fixture)
+  - file: true_positives/saas/zenkit_w5.env
+    line: 2
+    detector_id: zenkit_api_key
+    expected_fire: true
+    matched_text_starts: 7mnztu89
+    notes: Wave 5: Zenkit API Key
+  - file: true_positives/saas/zenkit_w5.env
+    line: 3
+    detector_id: zenkit_api_key
+    expected_fire: true
+    matched_text_starts: qtp47z1b
+    notes: Wave 5: Zenkit API Key (alt fixture)
+  - file: true_positives/saas/zonka_w5.env
+    line: 2
+    detector_id: zonkafeedback_api_token
+    expected_fire: true
+    matched_text_starts: RoX6Mhjc
+    notes: Wave 5: Zonka Feedback API Token
+  - file: true_positives/saas/zonka_w5.env
+    line: 3
+    detector_id: zonkafeedback_api_token
+    expected_fire: true
+    matched_text_starts: bhudxPGi
+    notes: Wave 5: Zonka Feedback API Token (alt fixture)
+  - file: true_positives/saas/satismeter_w5.env
+    line: 2
+    detector_id: satismeter_project_key
+    expected_fire: true
+    matched_text_starts: PgJHKx8F
+    notes: Wave 5: SatisMeter Project Key
+  - file: true_positives/saas/satismeter_w5.env
+    line: 3
+    detector_id: satismeter_project_key
+    expected_fire: true
+    matched_text_starts: p3iuXzpP
+    notes: Wave 5: SatisMeter Project Key (alt fixture)
+  - file: true_positives/saas/refiner_w5.env
+    line: 2
+    detector_id: refiner_api_key
+    expected_fire: true
+    matched_text_starts: eeb4f539
+    notes: Wave 5: Refiner API Key
+  - file: true_positives/saas/refiner_w5.env
+    line: 3
+    detector_id: refiner_api_key
+    expected_fire: true
+    matched_text_starts: 8b3c759a
+    notes: Wave 5: Refiner API Key (alt fixture)
+  - file: true_positives/saas/customerguru_w5.env
+    line: 2
+    detector_id: customerguru_api_key
+    expected_fire: true
+    matched_text_starts: 7mxD1DTz
+    notes: Wave 5: Customer.guru API Key
+  - file: true_positives/saas/customerguru_w5.env
+    line: 3
+    detector_id: customerguru_api_key
+    expected_fire: true
+    matched_text_starts: jd0QBPFK
+    notes: Wave 5: Customer.guru API Key (alt fixture)
+  - file: true_positives/saas/feedier_w5.env
+    line: 2
+    detector_id: feedier_api_key
+    expected_fire: true
+    matched_text_starts: YUw1qDWc
+    notes: Wave 5: Feedier API Key
+  - file: true_positives/saas/feedier_w5.env
+    line: 3
+    detector_id: feedier_api_key
+    expected_fire: true
+    matched_text_starts: W4LEigCq
+    notes: Wave 5: Feedier API Key (alt fixture)
+  - file: true_positives/saas/nicereply_w5.env
+    line: 2
+    detector_id: nicereply_api_key
+    expected_fire: true
+    matched_text_starts: fddb4d38
+    notes: Wave 5: Nicereply API Key
+  - file: true_positives/saas/nicereply_w5.env
+    line: 3
+    detector_id: nicereply_api_key
+    expected_fire: true
+    matched_text_starts: bfe69633
+    notes: Wave 5: Nicereply API Key (alt fixture)
+  - file: true_positives/saas/qase_w5.env
+    line: 2
+    detector_id: qase_api_token
+    expected_fire: true
+    matched_text_starts: PV1JuCZ2
+    notes: Wave 5: Qase API Token
+  - file: true_positives/saas/qase_w5.env
+    line: 3
+    detector_id: qase_api_token
+    expected_fire: true
+    matched_text_starts: DIqrVJb6
+    notes: Wave 5: Qase API Token (alt fixture)
+  - file: true_positives/saas/userflow_w5.env
+    line: 2
+    detector_id: userflow_api_key
+    expected_fire: true
+    matched_text_starts: fy88025g
+    notes: Wave 5: Userflow API Key
+  - file: true_positives/saas/userflow_w5.env
+    line: 3
+    detector_id: userflow_api_key
+    expected_fire: true
+    matched_text_starts: _tzcyf_s
+    notes: Wave 5: Userflow API Key (alt fixture)
+  - file: true_positives/communication/tines_w5.env
+    line: 2
+    detector_id: tines_webhook
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: Wave 5: Tines Webhook URL
+  - file: true_positives/communication/tines_w5.env
+    line: 3
+    detector_id: tines_webhook
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: Wave 5: Tines Webhook URL (alt fixture)
+  - file: true_positives/communication/zapier_w5.env
+    line: 2
+    detector_id: zapier_webhook
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: Wave 5: Zapier Webhook URL
+  - file: true_positives/communication/zapier_w5.env
+    line: 3
+    detector_id: zapier_webhook
+    expected_fire: true
+    matched_text_starts: "https://"
+    notes: Wave 5: Zapier Webhook URL (alt fixture)
+  - file: true_positives/communication/gitter_w5.env
+    line: 2
+    detector_id: gitter_api_token
+    expected_fire: true
+    matched_text_starts: dcnbnded
+    notes: Wave 5: Gitter API Token
+  - file: true_positives/communication/gitter_w5.env
+    line: 3
+    detector_id: gitter_api_token
+    expected_fire: true
+    matched_text_starts: 7itmxe3r
+    notes: Wave 5: Gitter API Token (alt fixture)
+  - file: true_positives/communication/zulip_w5.env
+    line: 2
+    detector_id: zulip_api_key
+    expected_fire: true
+    matched_text_starts: Ws9kogFj
+    notes: Wave 5: Zulip API Key
+  - file: true_positives/communication/zulip_w5.env
+    line: 3
+    detector_id: zulip_api_key
+    expected_fire: true
+    matched_text_starts: 1hglY2uF
+    notes: Wave 5: Zulip API Key (alt fixture)
+  - file: true_positives/communication/twist_w5.env
+    line: 2
+    detector_id: twist_access_token
+    expected_fire: true
+    matched_text_starts: 05f43a65
+    notes: Wave 5: Twist Access Token
+  - file: true_positives/communication/twist_w5.env
+    line: 3
+    detector_id: twist_access_token
+    expected_fire: true
+    matched_text_starts: 16d03508
+    notes: Wave 5: Twist Access Token (alt fixture)
+  - file: true_positives/communication/typetalk_w5.env
+    line: 2
+    detector_id: typetalk_api_token
+    expected_fire: true
+    matched_text_starts: PiAy9lw2
+    notes: Wave 5: Typetalk API Token
+  - file: true_positives/communication/typetalk_w5.env
+    line: 3
+    detector_id: typetalk_api_token
+    expected_fire: true
+    matched_text_starts: yWnF1pf8
+    notes: Wave 5: Typetalk API Token (alt fixture)
+  - file: true_positives/communication/chatfuel_w5.env
+    line: 2
+    detector_id: chatfuel_api_token
+    expected_fire: true
+    matched_text_starts: 9eWj1KPg
+    notes: Wave 5: Chatfuel API Token
+  - file: true_positives/communication/chatfuel_w5.env
+    line: 3
+    detector_id: chatfuel_api_token
+    expected_fire: true
+    matched_text_starts: CoTPZSTU
+    notes: Wave 5: Chatfuel API Token (alt fixture)
+  - file: true_positives/communication/courier_w5.env
+    line: 2
+    detector_id: courier_api_key
+    expected_fire: true
+    matched_text_starts: pk_8u668
+    notes: Wave 5: Courier API Key
+  - file: true_positives/communication/courier_w5.env
+    line: 3
+    detector_id: courier_api_key
+    expected_fire: true
+    matched_text_starts: pk_rbr8l
+    notes: Wave 5: Courier API Key (alt fixture)
+  - file: true_positives/communication/helpcrunch_w5.env
+    line: 2
+    detector_id: helpcrunch_api_key
+    expected_fire: true
+    matched_text_starts: 3ixQeNfo
+    notes: Wave 5: HelpCrunch API Key
+  - file: true_positives/communication/helpcrunch_w5.env
+    line: 3
+    detector_id: helpcrunch_api_key
+    expected_fire: true
+    matched_text_starts: w+K760bE
+    notes: Wave 5: HelpCrunch API Key (alt fixture)
+  - file: true_positives/communication/livestorm_w5.env
+    line: 2
+    detector_id: livestorm_api_key
+    expected_fire: true
+    matched_text_starts: eyJhbGci
+    notes: Wave 5: Livestorm API Key
+  - file: true_positives/communication/livestorm_w5.env
+    line: 3
+    detector_id: livestorm_api_key
+    expected_fire: true
+    matched_text_starts: eyJhbGci
+    notes: Wave 5: Livestorm API Key (alt fixture)
+  - file: true_positives/communication/liveagent_w5.env
+    line: 2
+    detector_id: liveagent_api_key
+    expected_fire: true
+    matched_text_starts: OJJXBr8O
+    notes: Wave 5: LiveAgent API Key
+  - file: true_positives/communication/liveagent_w5.env
+    line: 3
+    detector_id: liveagent_api_key
+    expected_fire: true
+    matched_text_starts: UznqLzvl
+    notes: Wave 5: LiveAgent API Key (alt fixture)
+  - file: true_positives/saas/linkpreview_w5.env
+    line: 2
+    detector_id: linkpreview_api_key
+    expected_fire: true
+    matched_text_starts: xcKPVxcZ
+    notes: Wave 5: LinkPreview API Key
+  - file: true_positives/saas/linkpreview_w5.env
+    line: 3
+    detector_id: linkpreview_api_key
+    expected_fire: true
+    matched_text_starts: cNkmXZN6
+    notes: Wave 5: LinkPreview API Key (alt fixture)
+  - file: true_positives/email/mailboxlayer_w5.env
+    line: 2
+    detector_id: mailboxlayer_access_key
+    expected_fire: true
+    matched_text_starts: ceynpiwd
+    notes: Wave 5: mailboxlayer Access Key
+  - file: true_positives/email/mailboxlayer_w5.env
+    line: 3
+    detector_id: mailboxlayer_access_key
+    expected_fire: true
+    matched_text_starts: vm83617e
+    notes: Wave 5: mailboxlayer Access Key (alt fixture)
+  - file: true_positives/email/mailsac_w5.env
+    line: 2
+    detector_id: mailsac_api_key
+    expected_fire: true
+    matched_text_starts: k_85QiE7
+    notes: Wave 5: Mailsac API Key
+  - file: true_positives/email/mailsac_w5.env
+    line: 3
+    detector_id: mailsac_api_key
+    expected_fire: true
+    matched_text_starts: k_wX0MS0
+    notes: Wave 5: Mailsac API Key (alt fixture)
+  - file: true_positives/video_media/flickr_w5.env
+    line: 2
+    detector_id: flickr_api_key
+    expected_fire: true
+    matched_text_starts: puoj8sy7
+    notes: Wave 5: Flickr API Key
+  - file: true_positives/video_media/flickr_w5.env
+    line: 3
+    detector_id: flickr_api_key
+    expected_fire: true
+    matched_text_starts: wjxpc4bp
+    notes: Wave 5: Flickr API Key (alt fixture)
+  - file: true_positives/video_media/shutterstock_w5.env
+    line: 2
+    detector_id: shutterstock_api_key
+    expected_fire: true
+    matched_text_starts: xSjQvtgp
+    notes: Wave 5: Shutterstock API Key
+  - file: true_positives/video_media/shutterstock_w5.env
+    line: 3
+    detector_id: shutterstock_api_key
+    expected_fire: true
+    matched_text_starts: XA78C4Of
+    notes: Wave 5: Shutterstock API Key (alt fixture)
+  - file: true_positives/video_media/shutterstock_w5_1.env
+    line: 2
+    detector_id: shutterstock_oauth_token
+    expected_fire: true
+    matched_text_starts: v2/xe1R3
+    notes: Wave 5: Shutterstock OAuth Token
+  - file: true_positives/video_media/shutterstock_w5_1.env
+    line: 3
+    detector_id: shutterstock_oauth_token
+    expected_fire: true
+    matched_text_starts: v2/2ow7U
+    notes: Wave 5: Shutterstock OAuth Token (alt fixture)
+  - file: true_positives/video_media/unsplash_w5.env
+    line: 2
+    detector_id: unsplash_access_key
+    expected_fire: true
+    matched_text_starts: dcG5DhB5
+    notes: Wave 5: Unsplash Access Key
+  - file: true_positives/video_media/unsplash_w5.env
+    line: 3
+    detector_id: unsplash_access_key
+    expected_fire: true
+    matched_text_starts: cts4A9dX
+    notes: Wave 5: Unsplash Access Key (alt fixture)
+  - file: true_positives/video_media/pixabay_w5.env
+    line: 2
+    detector_id: pixabay_api_key
+    expected_fire: true
+    matched_text_starts: jfyjisc8
+    notes: Wave 5: Pixabay API Key
+  - file: true_positives/video_media/pixabay_w5.env
+    line: 3
+    detector_id: pixabay_api_key
+    expected_fire: true
+    matched_text_starts: "4e42-yne"
+    notes: Wave 5: Pixabay API Key (alt fixture)
+  - file: true_positives/crm/uplead_w5.env
+    line: 2
+    detector_id: uplead_api_key
+    expected_fire: true
+    matched_text_starts: otni7rx6
+    notes: Wave 5: UpLead API Key
+  - file: true_positives/crm/uplead_w5.env
+    line: 3
+    detector_id: uplead_api_key
+    expected_fire: true
+    matched_text_starts: viwzob3a
+    notes: Wave 5: UpLead API Key (alt fixture)
+  - file: true_positives/video_media/sirv_w5.env
+    line: 2
+    detector_id: sirv_client_secret
+    expected_fire: true
+    matched_text_starts: mHF2iS88
+    notes: Wave 5: Sirv Client Secret
+  - file: true_positives/video_media/sirv_w5.env
+    line: 3
+    detector_id: sirv_client_secret
+    expected_fire: true
+    matched_text_starts: S0EPVFFO
+    notes: Wave 5: Sirv Client Secret (alt fixture)
+  - file: true_positives/video_media/wistia_w5.env
+    line: 2
+    detector_id: wistia_access_token
+    expected_fire: true
+    matched_text_starts: in4u0z10
+    notes: Wave 5: Wistia Access Token
+  - file: true_positives/video_media/wistia_w5.env
+    line: 3
+    detector_id: wistia_access_token
+    expected_fire: true
+    matched_text_starts: c9x3ocyr
+    notes: Wave 5: Wistia Access Token (alt fixture)
+  - file: true_positives/collaboration/zeplin_w5.env
+    line: 2
+    detector_id: zeplin_access_token
+    expected_fire: true
+    matched_text_starts: x5XpkZg3
+    notes: Wave 5: Zeplin Access Token
+  - file: true_positives/collaboration/zeplin_w5.env
+    line: 3
+    detector_id: zeplin_access_token
+    expected_fire: true
+    matched_text_starts: NBveeh3o
+    notes: Wave 5: Zeplin Access Token (alt fixture)
+  - file: true_positives/saas/rev_w5.env
+    line: 2
+    detector_id: rev_user_api_key
+    expected_fire: true
+    matched_text_starts: na2WPOm1
+    notes: Wave 5: Rev.com User API Key
+  - file: true_positives/saas/rev_w5.env
+    line: 3
+    detector_id: rev_user_api_key
+    expected_fire: true
+    matched_text_starts: 9gB/52a9
+    notes: Wave 5: Rev.com User API Key (alt fixture)
+  - file: true_positives/auth/unify_w5.env
+    line: 2
+    detector_id: unifyid_api_key
+    expected_fire: true
+    matched_text_starts: 4Pw7tbjV
+    notes: Wave 5: UnifyID API Key
+  - file: true_positives/auth/unify_w5.env
+    line: 3
+    detector_id: unifyid_api_key
+    expected_fire: true
+    matched_text_starts: do3PDacL
+    notes: Wave 5: UnifyID API Key (alt fixture)
+  - file: true_positives/secret_management/hashicorp_w5.env
+    line: 2
+    detector_id: hashicorp_vault_secret_id
+    expected_fire: true
+    matched_text_starts: c962bcbd
+    notes: Wave 5: HashiCorp Vault Secret ID
+  - file: true_positives/secret_management/hashicorp_w5.env
+    line: 3
+    detector_id: hashicorp_vault_secret_id
+    expected_fire: true
+    matched_text_starts: d9fdd1c3
+    notes: Wave 5: HashiCorp Vault Secret ID (alt fixture)
+  - file: true_positives/auth/openvpn_w5.env
+    line: 2
+    detector_id: openvpn_client_id
+    expected_fire: true
+    matched_text_starts: w1cxnzz.
+    notes: Wave 5: OpenVPN Cloud Client ID
+  - file: true_positives/auth/openvpn_w5.env
+    line: 3
+    detector_id: openvpn_client_id
+    expected_fire: true
+    matched_text_starts: 1xn61ift
+    notes: Wave 5: OpenVPN Cloud Client ID (alt fixture)
+  - file: true_positives/communication/lark_w5.env
+    line: 2
+    detector_id: larksuite_tenant_token
+    expected_fire: true
+    matched_text_starts: "t-oqhjn9"
+    notes: Wave 5: Lark Suite Tenant Access Token
+  - file: true_positives/communication/lark_w5.env
+    line: 3
+    detector_id: larksuite_tenant_token
+    expected_fire: true
+    matched_text_starts: "t-6pFeQn"
+    notes: Wave 5: Lark Suite Tenant Access Token (alt fixture)
+  - file: true_positives/communication/lark_w5_1.env
+    line: 2
+    detector_id: larksuite_user_token
+    expected_fire: true
+    matched_text_starts: "u-34hcl5"
+    notes: Wave 5: Lark Suite User Access Token
+  - file: true_positives/communication/lark_w5_1.env
+    line: 3
+    detector_id: larksuite_user_token
+    expected_fire: true
+    matched_text_starts: "u-E3qVf4"
+    notes: Wave 5: Lark Suite User Access Token (alt fixture)
+  - file: true_positives/communication/lark_w5_2.env
+    line: 2
+    detector_id: larksuite_app_token
+    expected_fire: true
+    matched_text_starts: "a-2c2umn"
+    notes: Wave 5: Lark Suite App Access Token
+  - file: true_positives/communication/lark_w5_2.env
+    line: 3
+    detector_id: larksuite_app_token
+    expected_fire: true
+    matched_text_starts: "a-CnVq4l"
+    notes: Wave 5: Lark Suite App Access Token (alt fixture)
+  - file: true_positives/communication/cli__w5.env
+    line: 2
+    detector_id: larksuite_app_id
+    expected_fire: true
+    matched_text_starts: cli_x7qe
+    notes: Wave 5: Lark Suite App ID
+  - file: true_positives/communication/cli__w5.env
+    line: 3
+    detector_id: larksuite_app_id
+    expected_fire: true
+    matched_text_starts: cli_pro1
+    notes: Wave 5: Lark Suite App ID (alt fixture)
+  - file: true_positives/auth/ss4t2_w5.env
+    line: 2
+    detector_id: intra42_secret
+    expected_fire: true
+    matched_text_starts: "s-s4t2ud"
+    notes: Wave 5: Intra42 Secret
+  - file: true_positives/auth/ss4t2_w5.env
+    line: 3
+    detector_id: intra42_secret
+    expected_fire: true
+    matched_text_starts: "s-s4t2ud"
+    notes: Wave 5: Intra42 Secret (alt fixture)
+  - file: true_positives/auth/us4t2_w5.env
+    line: 2
+    detector_id: intra42_uid
+    expected_fire: true
+    matched_text_starts: "u-s4t2ud"
+    notes: Wave 5: Intra42 UID
+  - file: true_positives/auth/us4t2_w5.env
+    line: 3
+    detector_id: intra42_uid
+    expected_fire: true
+    matched_text_starts: "u-s4t2ud"
+    notes: Wave 5: Intra42 UID (alt fixture)
+  - file: true_positives/auth/atlasv1_w5.env
+    line: 2
+    detector_id: vagrantcloud_personal_token
+    expected_fire: true
+    matched_text_starts: ctpzstuq
+    notes: Wave 5: Vagrant Cloud Personal Token
+  - file: true_positives/auth/atlasv1_w5.env
+    line: 3
+    detector_id: vagrantcloud_personal_token
+    expected_fire: true
+    matched_text_starts: urh169pl
+    notes: Wave 5: Vagrant Cloud Personal Token (alt fixture)
+  - file: true_positives/cms/graphcms_w5.env
+    line: 2
+    detector_id: graphcms_api_token
+    expected_fire: true
+    matched_text_starts: ey3SGspE
+    notes: Wave 5: GraphCMS/Hygraph API Token
+  - file: true_positives/cms/graphcms_w5.env
+    line: 3
+    detector_id: graphcms_api_token
+    expected_fire: true
+    matched_text_starts: ey1r38jp
+    notes: Wave 5: GraphCMS/Hygraph API Token (alt fixture)
+  - file: true_positives/cms/storyblok_w5.env
+    line: 2
+    detector_id: storyblok_api_token
+    expected_fire: true
+    matched_text_starts: orkgeROD
+    notes: Wave 5: Storyblok API Token
+  - file: true_positives/cms/storyblok_w5.env
+    line: 3
+    detector_id: storyblok_api_token
+    expected_fire: true
+    matched_text_starts: 38AlsPUa
+    notes: Wave 5: Storyblok API Token (alt fixture)
+  - file: true_positives/cms/storyblok_w5_1.env
+    line: 2
+    detector_id: storyblok_personal_access_token
+    expected_fire: true
+    matched_text_starts: fhGxLbwm
+    notes: Wave 5: Storyblok Personal Access Token
+  - file: true_positives/cms/storyblok_w5_1.env
+    line: 3
+    detector_id: storyblok_personal_access_token
+    expected_fire: true
+    matched_text_starts: eFDD4EFG
+    notes: Wave 5: Storyblok Personal Access Token (alt fixture)
+  - file: true_positives/cms/kontent_w5.env
+    line: 2
+    detector_id: kontent_api_key
+    expected_fire: true
+    matched_text_starts: eyoauwWI
+    notes: Wave 5: Kontent.ai API Key
+  - file: true_positives/cms/kontent_w5.env
+    line: 3
+    detector_id: kontent_api_key
+    expected_fire: true
+    matched_text_starts: ey1DfMD_
+    notes: Wave 5: Kontent.ai API Key (alt fixture)
+  - file: true_positives/cms/phrase_w5.env
+    line: 2
+    detector_id: phrase_access_token
+    expected_fire: true
+    matched_text_starts: zplqjc7v
+    notes: Wave 5: Phrase Access Token
+  - file: true_positives/cms/phrase_w5.env
+    line: 3
+    detector_id: phrase_access_token
+    expected_fire: true
+    matched_text_starts: 1n699yda
+    notes: Wave 5: Phrase Access Token (alt fixture)
+  - file: true_positives/cms/lokalise_w5.env
+    line: 2
+    detector_id: lokalise_api_token
+    expected_fire: true
+    matched_text_starts: 3ovfmdmr
+    notes: Wave 5: Lokalise API Token
+  - file: true_positives/cms/lokalise_w5.env
+    line: 3
+    detector_id: lokalise_api_token
+    expected_fire: true
+    matched_text_starts: w0c541kz
+    notes: Wave 5: Lokalise API Token (alt fixture)
+  - file: true_positives/cms/crowdin_w5.env
+    line: 2
+    detector_id: crowdin_api_token
+    expected_fire: true
+    matched_text_starts: I4Rg1Okp
+    notes: Wave 5: Crowdin API Token
+  - file: true_positives/cms/crowdin_w5.env
+    line: 3
+    detector_id: crowdin_api_token
+    expected_fire: true
+    matched_text_starts: ST1hr4SE
+    notes: Wave 5: Crowdin API Token (alt fixture)
+  - file: true_positives/cms/buttercms_w5.env
+    line: 2
+    detector_id: buttercms_api_key
+    expected_fire: true
+    matched_text_starts: mzxot0sh
+    notes: Wave 5: ButterCMS API Key
+  - file: true_positives/cms/buttercms_w5.env
+    line: 3
+    detector_id: buttercms_api_key
+    expected_fire: true
+    matched_text_starts: 60211nm1
+    notes: Wave 5: ButterCMS API Key (alt fixture)
+  - file: true_positives/saas/borgbase_w5.env
+    line: 2
+    detector_id: borgbase_api_key
+    expected_fire: true
+    matched_text_starts: xJEy3M8W
+    notes: Wave 5: BorgBase API Key
+  - file: true_positives/saas/borgbase_w5.env
+    line: 3
+    detector_id: borgbase_api_key
+    expected_fire: true
+    matched_text_starts: WVYF5itL
+    notes: Wave 5: BorgBase API Key (alt fixture)
+  - file: true_positives/saas/shipday_w5.env
+    line: 2
+    detector_id: shipday_api_key
+    expected_fire: true
+    matched_text_starts: s3a18cip
+    notes: Wave 5: Shipday API Key
+  - file: true_positives/saas/shipday_w5.env
+    line: 3
+    detector_id: shipday_api_key
+    expected_fire: true
+    matched_text_starts: owp0fnsk
+    notes: Wave 5: Shipday API Key (alt fixture)
+  - file: true_positives/saas/shltm__w5.env
+    line: 2
+    detector_id: flexport_api_key
+    expected_fire: true
+    matched_text_starts: shltm_sL
+    notes: Wave 5: Flexport API Key
+  - file: true_positives/saas/shltm__w5.env
+    line: 3
+    detector_id: flexport_api_key
+    expected_fire: true
+    matched_text_starts: shltm_OS
+    notes: Wave 5: Flexport API Key (alt fixture)
+  - file: true_positives/saas/onfleet_w5.env
+    line: 2
+    detector_id: onfleet_api_key
+    expected_fire: true
+    matched_text_starts: f0ujcywk
+    notes: Wave 5: Onfleet API Key
+  - file: true_positives/saas/onfleet_w5.env
+    line: 3
+    detector_id: onfleet_api_key
+    expected_fire: true
+    matched_text_starts: 74o763sa
+    notes: Wave 5: Onfleet API Key (alt fixture)
+  - file: true_positives/saas/rentman_w5.env
+    line: 2
+    detector_id: rentman_api_key
+    expected_fire: true
+    matched_text_starts: eyCzd8r1
+    notes: Wave 5: Rentman API Key
+  - file: true_positives/saas/rentman_w5.env
+    line: 3
+    detector_id: rentman_api_key
+    expected_fire: true
+    matched_text_starts: eyFynev1
+    notes: Wave 5: Rentman API Key (alt fixture)
+  - file: true_positives/saas/storecove_w5.env
+    line: 2
+    detector_id: storecove_api_key
+    expected_fire: true
+    matched_text_starts: yZBul0BU
+    notes: Wave 5: Storecove API Key
+  - file: true_positives/saas/storecove_w5.env
+    line: 3
+    detector_id: storecove_api_key
+    expected_fire: true
+    matched_text_starts: dFuueHEm
+    notes: Wave 5: Storecove API Key (alt fixture)
+  - file: true_positives/saas/flb_live__w5.env
+    line: 2
+    detector_id: fleetbase_api_key
+    expected_fire: true
+    matched_text_starts: flb_live
+    notes: Wave 5: Fleetbase API Key
+  - file: true_positives/saas/flb_live__w5.env
+    line: 3
+    detector_id: fleetbase_api_key
+    expected_fire: true
+    matched_text_starts: flb_live
+    notes: Wave 5: Fleetbase API Key (alt fixture)
+  - file: true_positives/saas/thogkey_w5.env
+    line: 2
+    detector_id: trufflehog_enterprise_key
+    expected_fire: true
+    matched_text_starts: "thog-key"
+    notes: Wave 5: TruffleHog Enterprise Key
+  - file: true_positives/saas/thogkey_w5.env
+    line: 3
+    detector_id: trufflehog_enterprise_key
+    expected_fire: true
+    matched_text_starts: "thog-key"
+    notes: Wave 5: TruffleHog Enterprise Key (alt fixture)
+  - file: true_positives/saas/thogsecret_w5.env
+    line: 2
+    detector_id: trufflehog_enterprise_secret
+    expected_fire: true
+    matched_text_starts: "thog-sec"
+    notes: Wave 5: TruffleHog Enterprise Secret
+  - file: true_positives/saas/thogsecret_w5.env
+    line: 3
+    detector_id: trufflehog_enterprise_secret
+    expected_fire: true
+    matched_text_starts: "thog-sec"
+    notes: Wave 5: TruffleHog Enterprise Secret (alt fixture)
+  - file: true_positives/project_management/hive_w5.env
+    line: 2
+    detector_id: hive_api_key
+    expected_fire: true
+    matched_text_starts: nig1681f
+    notes: Wave 5: Hive API Key
+  - file: true_positives/project_management/hive_w5.env
+    line: 3
+    detector_id: hive_api_key
+    expected_fire: true
+    matched_text_starts: 73h5pj8d
+    notes: Wave 5: Hive API Key (alt fixture)
+  - file: true_positives/saas/disqus_w5.env
+    line: 2
+    detector_id: disqus_api_key
+    expected_fire: true
+    matched_text_starts: 2NWd4846
+    notes: Wave 5: Disqus API Key
+  - file: true_positives/saas/disqus_w5.env
+    line: 3
+    detector_id: disqus_api_key
+    expected_fire: true
+    matched_text_starts: q2OzAny7
+    notes: Wave 5: Disqus API Key (alt fixture)
+  - file: true_positives/saas/foursquare_w5.env
+    line: 2
+    detector_id: foursquare_api_key
+    expected_fire: true
+    matched_text_starts: 03ETNQIE
+    notes: Wave 5: Foursquare API Key
+  - file: true_positives/saas/foursquare_w5.env
+    line: 3
+    detector_id: foursquare_api_key
+    expected_fire: true
+    matched_text_starts: JJT5KVXV
+    notes: Wave 5: Foursquare API Key (alt fixture)
+  - file: true_positives/saas/mindmeister_w5.env
+    line: 2
+    detector_id: mindmeister_api_key
+    expected_fire: true
+    matched_text_starts: alrIN4Un
+    notes: Wave 5: MindMeister API Key
+  - file: true_positives/saas/mindmeister_w5.env
+    line: 3
+    detector_id: mindmeister_api_key
+    expected_fire: true
+    matched_text_starts: C9Xfckup
+    notes: Wave 5: MindMeister API Key (alt fixture)
+  - file: true_positives/saas/holidayapi_w5.env
+    line: 2
+    detector_id: holidayapi_api_key
+    expected_fire: true
+    matched_text_starts: 8v0jooc8
+    notes: Wave 5: HolidayAPI API Key
+  - file: true_positives/saas/holidayapi_w5.env
+    line: 3
+    detector_id: holidayapi_api_key
+    expected_fire: true
+    matched_text_starts: bsoyrstp
+    notes: Wave 5: HolidayAPI API Key (alt fixture)
+  - file: true_positives/saas/strava_w5.env
+    line: 2
+    detector_id: strava_client_secret
+    expected_fire: true
+    matched_text_starts: 31fvhdi4
+    notes: Wave 5: Strava Client Secret
+  - file: true_positives/saas/strava_w5.env
+    line: 3
+    detector_id: strava_client_secret
+    expected_fire: true
+    matched_text_starts: 3alcv8x1
+    notes: Wave 5: Strava Client Secret (alt fixture)
+  - file: true_positives/communication/ringcentral_w5.env
+    line: 2
+    detector_id: ringcentral_client_secret
+    expected_fire: true
+    matched_text_starts: aVFtkLY1
+    notes: Wave 5: RingCentral Client Secret
+  - file: true_positives/communication/ringcentral_w5.env
+    line: 3
+    detector_id: ringcentral_client_secret
+    expected_fire: true
+    matched_text_starts: s6bSLK4h
+    notes: Wave 5: RingCentral Client Secret (alt fixture)
+  - file: true_positives/saas/holistic_w5.env
+    line: 2
+    detector_id: holistic_api_key
+    expected_fire: true
+    matched_text_starts: 3d7a4c25
+    notes: Wave 5: Holistic API Key
+  - file: true_positives/saas/holistic_w5.env
+    line: 3
+    detector_id: holistic_api_key
+    expected_fire: true
+    matched_text_starts: cdc05755
+    notes: Wave 5: Holistic API Key (alt fixture)
+  - file: true_positives/saas/ditto_w5.env
+    line: 2
+    detector_id: ditto_api_key
+    expected_fire: true
+    matched_text_starts: sv2ybnsc
+    notes: Wave 5: Ditto API Key
+  - file: true_positives/saas/ditto_w5.env
+    line: 3
+    detector_id: ditto_api_key
+    expected_fire: true
+    matched_text_starts: e3bjukgd
+    notes: Wave 5: Ditto API Key (alt fixture)
