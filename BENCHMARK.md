@@ -42,7 +42,39 @@ from 500 to 699 files with Wave 5 plants. Throughput per byte stayed flat.)
 | Initial (Wave 1-3 only) | 487 | 562 | 81.87% | 98.46% | 70.06% | 2,874 f/s | baseline |
 | Post-fix round (8 engine fixes) | 487 | 562 | 94.46% | 98.08% | 91.10% | ~2,000 f/s | segment-match, vowel-ratio, FP-prefix exemption |
 | First 3-way benchmark | 500 | 562 | 96.46% | 98.34% | 94.66% | 1,991 f/s | published BENCHMARK.md |
-| **Wave 5 plants landed** | **699** | **954** | **97.72%** | **99.03%** | **96.44%** | **724 f/s** | **current** |
+| Wave 5 plants landed | 699 | 954 | 97.72% | 99.03% | 96.44% | 724 f/s | regex-only baseline |
+| **+ AI verifier (threshold=0.7)** | **699** | **954** | **97.76%** | **99.57%** | **96.02%** | **same + ~3s AI roundtrip** | **AI eval run May 2026** |
+
+### AI verifier threshold sweep
+
+Ran `--ai-verify` against the full eval at multiple thresholds.
+Each row = full scan + per-finding AI judgment via Claude Haiku.
+
+| Threshold | TP | FP | FN | Precision | Recall | F1 | Net vs baseline |
+|---:|---:|---:|---:|---:|---:|---:|---|
+| baseline (no AI) | 919 | 10 | 35 | 98.92% | 96.33% | 97.62% | — |
+| 0.6 | 911 | 4 | 43 | 99.56% | 95.49% | 97.49% | over-aggressive |
+| **0.7 ★** | **916** | **4** | **38** | **99.57%** | **96.02%** | **97.76%** | **+0.14pp F1, +0.65pp precision** |
+| 0.8 | 913 | 4 | 41 | 99.56% | 95.70% | 97.59% | slightly worse than 0.7 |
+| 0.9 | 792 | 4 | 162 | 99.50% | 83.02% | 90.51% | too conservative — drops mid-confidence TPs |
+
+At every threshold the AI consistently catches the same 6 FPs (Solana
+program ID, Clerk test-key in placeholders.md, Slack sequential-digit
+example, GitHub PAT in JSDoc, AWS key in test_secrets.py, etc.) that
+the regex+universal-validator chain couldn't suppress. The threshold
+controls how aggressively to drop borderline findings; 0.7 is the
+sweet spot for F1.
+
+Cost: $0.16-0.30 per 1000 findings via Claude Haiku ($0.80 in / $4 out
+per million tokens). One scan of this eval = ~$0.30.
+
+### AI FN recovery result
+
+Ran `--ai-recover` to find credentials regex MISSED. Result: zero new TPs
+on this particular eval. The regex engine + 727 detectors already catch
+everything that single-line AI candidate review could catch. The 35
+remaining FNs are multi-line PEM body cases and paired-credential cases
+(AWS access key needing paired secret) that need different handling.
 
 ## Important context (this is an honest benchmark)
 
